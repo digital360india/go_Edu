@@ -1,11 +1,15 @@
-import { CitySchool } from "@/components/CitySchool";
-import { EnquireNow } from "@/components/EnquireNow";
-import { FeatureSchool } from "@/components/FeatureSchool";
-import Hero from "@/components/Hero";
+// import { CitySchool } from "@/components/CitySchool";
+// import { EnquireNow } from "@/components/EnquireNow";
+// import { FeatureSchool } from "@/components/FeatureSchool";
+// import Hero from "@/components/Hero";
 import "./globals.css";
-import { About } from "@/components/About";
-import { Testimonials } from "@/components/Testimonials";
+// import { About } from "@/components/About";
+// import { Testimonials } from "@/components/Testimonials";
 import PayForm from "@/components/payment/PayForm";
+import HeroGoEdu from "@/components/HeroGoEdu";
+import FormGoEdu from "@/components/FormGoEdu";
+import WhyChooseUsGoEdu from "../components/WhyChooseUsGoEdu";
+import AboutGoEdu from "@/components/AboutGoEdu";
 export default function Home() {
   return (
     <>
@@ -181,7 +185,7 @@ export default function Home() {
         />
       </head>
       <div>
-        <div className="hidden xl:block">
+        {/* <div className="hidden xl:block">
           <Hero
             need="home"
             image={
@@ -189,37 +193,46 @@ export default function Home() {
             }
             height={"100vh"}
           />
-        </div>
-        <div className="hidden md:block xl:hidden">
+        </div> */}
+        {/* <div className="hidden md:block xl:hidden">
           <Hero
             image={
               "https://res.cloudinary.com/eduminatti-com/image/upload/v1725877211/GoEdu/Eduimages/landingpage.png"
             }
             height={"100vh"}
           />
-        </div>
-        <div className="md:hidden">
+        </div> */}
+        {/* <div className="md:hidden">
           <Hero
             image={
               "https://res.cloudinary.com/eduminatti-com/image/upload/v1725877210/GoEdu/Eduimages/landingsmall.png "
             }
             height={"100vh"}
           />
+        </div> */}
+
+
+        <div>
+          <HeroGoEdu />
+          <FormGoEdu />
+
+          <WhyChooseUsGoEdu />
+          <AboutGoEdu />
         </div>
 
         <div className="w-[84vw] mx-auto my-[50px]">
-          <FeatureSchool />
-          <CitySchool />
+          {/* <FeatureSchool /> */}
+          {/* <CitySchool /> */}
         </div>
         {/* <EnquireNow /> */}
         {/* <PayForm /> */}
         <div className="w-[84vw] hidden sm:block mx-auto my-[100px]">
-          <About />
-          <Testimonials />
+          {/* <About /> */}
+          {/* <Testimonials /> */}
         </div>
         <div className="w-[84vw] block sm:hidden mx-auto my-[30px]">
-          <About />
-          <Testimonials />
+          {/* <About /> */}
+          {/* <Testimonials /> */}
         </div>
       </div>
     </>

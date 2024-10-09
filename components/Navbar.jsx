@@ -21,11 +21,11 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/", icon: "iconamoon:home" },
     { name: "About", path: "/about", icon: "mdi:about-circle-outline" },
-    {
-      name: "Compare Schools",
-      path: "/compare-schools",
-      icon: "fluent-mdl2:compare-uneven",
-    },
+    // {
+    //   name: "Compare Schools",
+    //   path: "/compare-schools",
+    //   icon: "fluent-mdl2:compare-uneven",
+    // },
     { name: "Contact", path: "/contact", icon: "tabler:phone" },
     {
       name: "Blogs",
@@ -87,9 +87,15 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="hidden md:block w-full absolute top-0 z-40 bg-white">
-        <div className="justify-between px-4 mx-auto max-w-7xl items-center h-[80px] flex px-8">
-          <div className="flex items-center justify-between py-3 py-7 block">
+      <nav
+        className="hidden md:block w-full absolute top-0 z-40"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(30, 135, 221, 0.3) 0%, rgba(20, 86, 125, 0.6) 63.9%)",
+        }}
+      >
+        <div className="justify-between  mx-auto max-w-7xl items-center h-[80px] flex px-8">
+          <div className="flex items-center justify-between py-7 ">
             <Link href={"/"}>
               <img
                 className="w-14 lg:w-[80px]"
@@ -101,7 +107,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div>
-            <ul className="font-medium items-center w-full opacity-90 text-center justify-center  flex space-x-6  py-10 py-0">
+            <ul className="font-medium items-center w-full opacity-90 text-center justify-center  flex space-x-6  py-10">
               {navLinks.map((link) => {
                 const hideOnMd =
                   link.name === "Compare Schools" || link.name === "Blogs";
@@ -109,11 +115,11 @@ const Navbar = () => {
                 return (
                   <li
                     key={link.name}
-                    className={`hover:bg-gray-200 hover:rounded-lg py-2 px-4 ${
+                    className={`text-[#FFFFFF] text-[1rem] py-2 px-8 ${
                       activeButton === link.name.toLowerCase()
-                        ? "text-[#02618f] font-semibold bg-gray-200 rounded-lg"
+                        ? "text-[#FFFFFF] font-semibold  rounded-lg"
                         : ""
-                    } ${hideOnMd ? "hidden lg:block" : ""}`} // hide on md and show on lg
+                    } ${hideOnMd ? "hidden lg:block" : ""}`}
                   >
                     <Link
                       href={link.path}
@@ -125,14 +131,14 @@ const Navbar = () => {
                   </li>
                 );
               })}
-              <li className="bg-[#02618f] text-white rounded-lg">
+              {/* <li className="bg-[#02618f] text-white rounded-lg">
                 <button
                   onClick={toggleBookingPopup}
                   className="font-medium py-2 px-4"
                 >
                   Get Consultation
                 </button>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
