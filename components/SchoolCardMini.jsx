@@ -1,0 +1,336 @@
+"use client";
+
+import React, { useEffect } from "react";
+import { FaGraduationCap, FaSchool } from "react-icons/fa";
+import { useState } from "react";
+import Link from "next/link";
+import { IoBook, IoLocationSharp, IoPerson } from "react-icons/io5";
+import { RiGraduationCapFill } from "react-icons/ri";
+import { BiSolidPhoneCall } from "react-icons/bi";
+import { StarRating, StarRatingper } from "./StarRating";
+import { PiStudentFill } from "react-icons/pi";
+import Enquire from "./Enquire";
+
+const SchoolCardMini = ({ data, index, citySlug }) => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
+  const [open, setOpen] = useState(false);
+  const [schoolName, setSchoolName] = useState("");
+  const [school, setSchool] = useState("");
+
+  const [isPopupOpen, setPopupOpen] = useState(false);
+
+  const openPopup = () => {
+    document.body.style.overflow = "hidden";
+    setPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    document.body.style.overflow = "auto";
+    setPopupOpen(false);
+  };
+  const [viewers, setViewers] = useState(0);
+
+  useEffect(() => {
+    const randomViewers = Math.floor(Math.random() * (30 - 10 + 1)) + 10;
+    setViewers(randomViewers);
+  }, []);
+
+  return (
+    <>
+      <div className="hidden lg:block">
+        <div className="float-right py-3 px-5 h-[36px] bg-[#FACC13] font-semibold rounded-l-3xl flex items-center gap-2 shadow-counsel">
+          <IoPerson size={16} />
+          <p className="text-[12px]">{viewers}+ people viewed</p>
+        </div>
+
+        <div className="lg:w-[820px] h-[420px] py-[50px] shadow-custom">
+          <div className="flex gap-4 px-6 ">
+            <div className="flex flex-col gap-8">
+              <div>
+                <img
+                  className="w-[300px] h-[210px] object-cover"
+                  src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${citySlug}/G-${data?.fields?.Image_Code}.png`}
+                  alt="img"
+                />
+              </div>
+              <div className="flex justify-between">
+                <img
+                  className="w-[90px] h-[60px] object-cover"
+                  src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${citySlug}/G-${data?.fields?.Image_Code}.png`}
+                  alt="img"
+                />
+                <img
+                  className="w-[90px] h-[60px] object-cover"
+                  src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${citySlug}/H-${data?.fields?.Image_Code}.png`}
+                  alt="img"
+                />
+                <img
+                  className="w-[90px] h-[60px] object-cover"
+                  src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${citySlug}/I-${data?.fields?.Image_Code}.png`}
+                  alt="img"
+                />
+              </div>
+            </div>
+            <div className="w-[59%] flex flex-col justify-between space-y-4">
+              <div>
+                <p className="text-[20px]  font-semibold text-[#02618f]">
+                  <Link href={`/school/${citySlug}/${data?.fields?.slug}`}>
+                    {data?.fields?.name}
+                  </Link>
+                </p>
+              </div>
+              <div className="flex text-[12px] items-center text-[#7A7A7A] gap-2">
+                <IoLocationSharp size={16} />
+                <p className="  "> {data?.fields?.Address}</p>
+              </div>
+              <StarRating
+                className=""
+                rating={data?.fields?.rating}
+                review={data?.fields?.numOfReviews}
+              />
+              <div className="text-[#505050] flex pt-[1px] flex-col ">
+                <p className="text-[12px] xl:text-[14px] text-[#000]">
+                  Annual Fees
+                </p>
+                <p className="text-[16px] xl:text-[24px] text-[#02618f] font-semibold">
+                  ₹{Number(data?.fields?.feefrom).toLocaleString("en-IN")} - ₹
+                  {Number(data?.fields?.feeto).toLocaleString("en-IN")}
+                </p>
+              </div>
+              <div className="flex justify-between text-[10px] text-black font-semibold w-[90%]">
+                <div className="flex flex-col items-center">
+                  <FaGraduationCap size={16} />
+                  <p className=" text-[#505050]">
+                    {data?.fields?.cbse_schools
+                      ? "CBSE"
+                      : data?.fields?.icse_isc_schools
+                      ? "ICSE/ISC"
+                      : data?.fields?.cie_schools
+                      ? "CIE"
+                      : data?.fields?.ib_schools
+                      ? "IB school"
+                      : data?.fields?.igcse_schools
+                      ? "IGCSE"
+                      : null}
+                  </p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <PiStudentFill size={16} />
+                  <p className="text-[#505050]">
+                    {data?.fields?.girls_schools
+                      ? "Girls School"
+                      : data?.fields?.boys_schools
+                      ? "Boys School"
+                      : data?.fields?.coed_schools
+                      ? "Co-Ed"
+                      : null}
+                  </p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <FaSchool size={16} />
+                  <p className="text-[#505050]">
+                    {data?.fields?.day_schools == true
+                      ? "Day School"
+                      : data?.fields?.day_boarding_schools
+                      ? "Day boarding"
+                      : data?.fields?.full_boarding_schools
+                      ? "Boarding"
+                      : null}
+                  </p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <IoBook size={16} />
+                  <p className="text-[#505050]">{data?.fields?.classto}</p>
+                </div>
+              </div>
+              <div className="flex justify-between items-center gap-6">
+                <div className="flex flex-col justify-between h-full w-[50%]">
+                  <div className="flex items-center justify-between">
+                    <p className="text-[#7A7A7A] text-[12px] font-semibold">
+                      Infrastructure
+                    </p>
+                    <StarRatingper percentage={data?.fields?.Infrastructure} />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <p className="text-[#7A7A7A] text-[12px] font-semibold">
+                      Academics
+                    </p>
+                    <StarRatingper percentage={data?.fields?.Academics} />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <p className="text-[#7A7A7A] text-[12px] font-semibold">
+                      Administration
+                    </p>
+                    <StarRatingper percentage={data?.fields?.Administration} />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <p className="text-[#7A7A7A] text-[12px] font-semibold">
+                      Extracurricular
+                    </p>
+                    <StarRatingper percentage={data?.fields?.Extracurricular} />
+                  </div>
+                </div>
+                <div className="w-[220px] space-y-2 text-[12px] font-semibold">
+                  <Link
+                    href={`/school/${citySlug}/${data?.fields?.slug}`}
+                    className="w-full px-5 py-2 rounded-3xl border border-[#02618f] text-[#02618f] flex justify-center items-center gap-2"
+                  >
+                    <RiGraduationCapFill size={16} />
+                    View School
+                  </Link>
+
+                  <button
+                    onClick={openPopup}
+                    className="w-full px-5 py-2 rounded-3xl bg-[#02618f] text-[#fff] flex justify-center items-center gap-2"
+                  >
+                    <BiSolidPhoneCall size={16} />
+                    Enquiry Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="lg:hidden">
+        <div className="float-right py-3 px-5 h-[36px] bg-[#FACC13] font-semibold rounded-l-3xl flex items-center gap-2 shadow-counsel">
+          <IoPerson size={16} />
+          <p className="text-[12px]">{viewers}+ people viewed</p>
+        </div>
+        <div className="w-[85vw] md:w-[80vw] h-[80vh] md:h-[90vh] shadow-counsel px-[25px] py-[43px] space-y-2">
+          <img
+            className="w-full h-[210px] md:h-[300px] object-cover"
+            src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${citySlug}/G-${data?.fields?.Image_Code}.png`}
+            alt="img"
+          />
+
+          <div className="space-y-3 h-[60vh]">
+            <div>
+              <p className="text-[20px]  font-semibold text-[#02618f]">
+                <Link href={`/school/${citySlug}/${data?.fields?.slug}`}>
+                  {data?.fields?.name}
+                </Link>
+              </p>
+            </div>
+            <div className="flex text-[12px] items-center text-[#7A7A7A] gap-2">
+              <IoLocationSharp size={16} />
+              <p> {data?.fields?.fullAddress}</p>
+            </div>
+            <StarRating
+              rating={data?.fields?.rating}
+              review={data?.fields?.numOfReviews}
+            />
+            <div className="text-[#505050] flex pt-[1px] flex-col ">
+              <p className="text-[12px] text-[#7A7A7A]">Annual Fees</p>
+              <p className="text-[24px] text-[#02618f] font-semibold">
+                ₹{Number(data?.fields?.feefrom).toLocaleString("en-IN")} - ₹
+                {Number(data?.fields?.feeto).toLocaleString("en-IN")}
+              </p>
+            </div>
+            <div className="flex justify-between text-[10px] text-black font-semibold w-[90%]">
+              <div className="flex flex-col items-center">
+                <FaGraduationCap size={24} />
+                <p className=" text-[#505050]">
+                  {data?.fields?.cbse_schools
+                    ? "CBSE"
+                    : data?.fields?.icse_isc_schools
+                    ? "ICSE/ISC"
+                    : data?.fields?.cie_schools
+                    ? "CIE"
+                    : data?.fields?.ib_schools
+                    ? "IB school"
+                    : data?.fields?.igcse_schools
+                    ? "IGCSE"
+                    : null}
+                </p>
+              </div>
+              <div className="flex flex-col items-center">
+                <PiStudentFill size={24} />
+                <p className="text-[#505050]">
+                  {data?.fields?.girls_schools
+                    ? "Girls School"
+                    : data?.fields?.boys_schools
+                    ? "Boys School"
+                    : data?.fields?.coed_schools
+                    ? "Co-Ed"
+                    : null}
+                </p>
+              </div>
+              <div className="flex flex-col items-center">
+                <FaSchool size={24} />
+                <p className="text-[#505050]">
+                  {data?.fields?.day_schools == true
+                    ? "Day School"
+                    : data?.fields?.day_boarding_schools
+                    ? "Day boarding"
+                    : data?.fields?.full_boarding_schools
+                    ? "Boarding"
+                    : null}
+                </p>
+              </div>
+              <div className="flex flex-col items-center">
+                <IoBook size={24} />
+                <p className="text-[#505050]">{data?.fields?.classto}</p>
+              </div>
+            </div>
+            <div className="flex flex-col w-[80%]">
+              <div className="flex items-center justify-between">
+                <p className="text-[#7A7A7A] text-[12px] font-semibold">
+                  Infrastructure
+                </p>
+                <StarRatingper percentage={data?.fields?.Infrastructure} />
+              </div>
+              <div className="flex items-center justify-between">
+                <p className="text-[#7A7A7A] text-[12px] font-semibold">
+                  Academics
+                </p>
+                <StarRatingper percentage={data?.fields?.Academics} />
+              </div>
+              <div className="flex items-center justify-between">
+                <p className="text-[#7A7A7A] text-[12px] font-semibold">
+                  Administration
+                </p>
+                <StarRatingper percentage={data?.fields?.Administration} />
+              </div>
+              <div className="flex items-center justify-between">
+                <p className="text-[#7A7A7A] text-[12px] font-semibold">
+                  Extracurricular
+                </p>
+                <StarRatingper percentage={data?.fields?.Extracurricular} />
+              </div>
+            </div>
+            <div className=" flex gap-2 text-[12px] font-semibold">
+              <Link
+                href={`/school/${citySlug}/${data?.fields?.slug}`}
+                className="w-full px-5 py-2 rounded-3xl border border-[#02618f] text-[#02618f] flex justify-center items-center gap-2"
+              >
+                <RiGraduationCapFill size={16} />
+                View School
+              </Link>
+
+              <button
+                onClick={openPopup}
+                className="w-full px-5 py-2 rounded-3xl bg-[#02618f] text-[#fff] flex justify-center items-center gap-2"
+              >
+                <BiSolidPhoneCall size={16} />
+                Enquiry Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Enquire
+        isOpen={isPopupOpen}
+        onClose={closePopup}
+        school={data?.fields?.name}
+      />
+    </>
+  );
+};
+
+export default SchoolCardMini;
