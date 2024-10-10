@@ -10,6 +10,7 @@ import HeroGoEdu from "@/components/HeroGoEdu";
 import FormGoEdu from "@/components/FormGoEdu";
 import WhyChooseUsGoEdu from "../components/WhyChooseUsGoEdu";
 import AboutGoEdu from "@/components/AboutGoEdu";
+import TestimonailGoEdu from "@/components/TestimonailGoEdu";
 export default function Home() {
   return (
     <>
@@ -218,6 +219,7 @@ export default function Home() {
 
           <WhyChooseUsGoEdu />
           <AboutGoEdu />
+          <TestimonailGoEdu />
         </div>
 
         <div className="w-[84vw] mx-auto my-[50px]">
