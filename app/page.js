@@ -11,6 +11,7 @@ import FormGoEdu from "@/components/FormGoEdu";
 import WhyChooseUsGoEdu from "../components/WhyChooseUsGoEdu";
 import AboutGoEdu from "@/components/AboutGoEdu";
 import TestimonailGoEdu from "@/components/TestimonailGoEdu";
+import MapGoEdu from "@/components/MapGoEdu";
 export default function Home() {
   return (
     <>
@@ -185,7 +186,7 @@ export default function Home() {
           }}
         />
       </head>
-      <div>
+      <>
         {/* <div className="hidden xl:block">
           <Hero
             need="home"
@@ -217,26 +218,27 @@ export default function Home() {
           <HeroGoEdu />
           <FormGoEdu />
 
+          <MapGoEdu />
           <WhyChooseUsGoEdu />
           <AboutGoEdu />
           <TestimonailGoEdu />
         </div>
 
-        <div className="w-[84vw] mx-auto my-[50px]">
-          {/* <FeatureSchool /> */}
-          {/* <CitySchool /> */}
+        {/* <div className="w-[84vw] mx-auto my-[50px]">
+          <FeatureSchool />
+          <CitySchool />
         </div>
-        {/* <EnquireNow /> */}
-        {/* <PayForm /> */}
+        <EnquireNow />
+        <PayForm />
         <div className="w-[84vw] hidden sm:block mx-auto my-[100px]">
-          {/* <About /> */}
-          {/* <Testimonials /> */}
+          <About />
+          <Testimonials />
         </div>
         <div className="w-[84vw] block sm:hidden mx-auto my-[30px]">
-          {/* <About /> */}
-          {/* <Testimonials /> */}
-        </div>
-      </div>
+          <About />
+          <Testimonials />
+        </div> */}
+      </>
     </>
   );
 }
