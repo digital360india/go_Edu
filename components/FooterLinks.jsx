@@ -5,8 +5,8 @@ export const FooterLinks = () => {
   return (
     <div className="w-[98.9vw] text-[14px] text-[#323232] bg-[#F3F3F3] pb-2 h-fit">
       <div className=" px-2 sm:px-10 ">
-        <div className="text-center text-[24px] underline mt-4 font-bold"><p>Explore top Cities</p></div>
-        <div className=" flex flex-col sm:flex-row gap-2 sm:gap-0   p-6 md:p-8 ">
+        <div className="text-center text-[24px] underline font-bold"><p>Explore top Cities</p></div>
+        <div className=" flex flex-col sm:flex-row gap-2 sm:gap-0   p-6 ">
           <div className="flex  flex-col  sm:items-center lg:w-[25vw]       ">
             <div className="flex flex-col">
               <Link
