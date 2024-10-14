@@ -12,6 +12,7 @@ import SchoolCardMini from "./SchoolCardMini";
 import Filter from "./Filter";
 import EnquireForm from "./EnquireForm";
 import { Icon } from "@iconify/react";
+import Image from "next/image";
 const SchoolCard = ({ categoryData }) => {
   const [citySlug, setCitySlug] = useState("");
   const [filterdata, setfilterdata] = useState({
@@ -54,7 +55,6 @@ const SchoolCard = ({ categoryData }) => {
       setCitySlug(city[city.length - 1]);
     }
   }, [categoryData]);
-  
 
   useEffect(() => {
     if (citySlug) {
@@ -120,18 +120,43 @@ const SchoolCard = ({ categoryData }) => {
 
   return (
     <>
-      <div className="">
-        <h2 className="w-[85vw]  sm:w-full  pl-7 md:px-[110px] my-8 lg:my-4 sm:text-[30px] text-black text-[20px] font-bold">
-          {" "}
-          List of {Math.ceil(filterdata?.employees.length)} Best Schools in{" "}
-          {citySlug[0]?.toUpperCase() + citySlug.slice(1, citySlug.length)}
-        </h2>
+      <div className=" ">
+        <div className="bg-[#1B6EA1] w-full h-[400px]flex justify-center items-center p-10">
+          <h2 className="md:px-[45px] my-8 lg:my-4 sm:text-[30px] text-[#FFFFFF] text-[20px]">
+            {" "}
+            List of {Math.ceil(filterdata?.employees.length)} Best Schools in{" "}
+            {citySlug[0]?.toUpperCase() + citySlug.slice(1, citySlug.length)}
+          </h2>
+          <div className="flex  justify-center sm:justify-start    items-center p-10">
+            <div className="flex   justify-start w-[291px] h-[32px] sm:w-[100%] lg:h-[59px] lg:w-[100%] xl:w-[620px]  border-2 outline-none rounded-3xl   bg-[#1B6EA1]">
+              <input
+                onChange={handleSearch}
+                className="xl:w-[890px] p-3 text-[#FFFFFF] rounded-3xl h-full bg-[#1B6EA1] placeholder:text-[#FFFFFF]  outline-none"
+                type="text"
+                placeholder="Search School"
+              />
+              <Image
+                src="/searching.svg"
+                width={1000}
+                height={1000}
+                className="w-[30px] rounded-full m-3  h-[30px] text-[#FFFFFF] cursor-pointer"
+              ></Image>
+            </div>
+            <FiFilter
+              onClick={() => {
+                setfilterdata({ ...filterdata, toggle: true });
+              }}
+              className="text-2xl xl:hidden"
+              categoryData={categoryData}
+            ></FiFilter>
+          </div>
+        </div>
       </div>
       <div className="  flex justify-center md:justify-start xl:justify-between sm:px-[100px] lg:gap-6">
         <div className="bg-white ">
           <div className=" bg-white">
             <div className="items-center bg-white justify-between md:mt-8 pb-8">
-              <div className="flex  justify-center sm:justify-start gap-4   items-center">
+              {/* <div className="flex  justify-center sm:justify-start gap-4   items-center">
                 <div className="flex   justify-start w-[291px] h-[32px] sm:w-[100%] lg:h-[46px] lg:w-[100%] xl:w-[820px] border-2 outline-none rounded-r-xl rounded-l-xl bg-[#F8F8F8]">
                   <BsSearch className="w-10 p-2 h-full text-[#AEAEAE] "></BsSearch>
                   <input
@@ -148,7 +173,7 @@ const SchoolCard = ({ categoryData }) => {
                   className="text-2xl xl:hidden"
                   categoryData={categoryData}
                 ></FiFilter>
-              </div>
+              </div> */}
             </div>
           </div>
 
