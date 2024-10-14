@@ -4,14 +4,25 @@ import React, { useEffect } from "react";
 import { FaGraduationCap, FaSchool } from "react-icons/fa";
 import { useState } from "react";
 import Link from "next/link";
-import { IoBook, IoLocationSharp, IoPerson } from "react-icons/io5";
+import {
+  IoBook,
+  IoLocationSharp,
+  IoPerson,
+  IoPersonOutline,
+} from "react-icons/io5";
 import { RiGraduationCapFill } from "react-icons/ri";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { StarRating, StarRatingper } from "./StarRating";
 import { PiStudentFill } from "react-icons/pi";
 import Enquire from "./Enquire";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Thumbs } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/thumbs";
 
 const SchoolCardMini = ({ data, index, citySlug }) => {
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
@@ -41,13 +52,16 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
   return (
     <>
       <div className="hidden lg:block">
-        <div className="float-right py-3 px-5 h-[36px] bg-[#FACC13] font-semibold rounded-l-3xl flex items-center gap-2 shadow-counsel">
-          <IoPerson size={16} />
-          <p className="text-[12px]">{viewers}+ people viewed</p>
-        </div>
+        {/* <div className="float-right py-3 px-5 h-[36px] bg-[#F97B24] rounded-l-3xl flex items-center gap-2 shadow-counsel">
+          <IoPersonOutline className="text-white" size={16} />
+          <p className="text-[12px] text-[#FFFFFF]">{viewers}+ people viewed</p>
+        </div> */}
 
         <div className="lg:w-[820px] h-[420px] py-[50px] shadow-custom">
-          <div className="flex gap-4 px-6 ">
+          <div className="flex gap-9  ">
+            <div className="">
+
+         
             <div className="flex flex-col gap-8">
               <div>
                 <img
@@ -74,109 +88,115 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                 />
               </div>
             </div>
-            <div className="w-[59%] flex flex-col justify-between space-y-4">
-              <div>
-                <p className="text-[20px]  font-semibold text-[#02618f]">
-                  <Link href={`/school/${citySlug}/${data?.fields?.slug}`}>
-                    {data?.fields?.name}
-                  </Link>
-                </p>
+            </div>
+
+           
+            <div className="w-[59%] flex flex-col justify-between space-y-1">
+              <div className="flex justify-between">
+                <div>
+                  <p className="text-[20px] text-[#1B6EA1]">
+                    <Link href={`/school/${citySlug}/${data?.fields?.slug}`}>
+                      {data?.fields?.name}
+                    </Link>
+                  </p>
+                </div>
+                <div className="float-right py-3 px-5 h-[40px] bg-[#F97B24] rounded-l-3xl flex items-center gap-2 shadow-counsel">
+                  <IoPersonOutline className="text-white" size={16} />
+                  <p className="text-[12px] text-[#FFFFFF]">
+                    {viewers}+ people viewed
+                  </p>
+                </div>
               </div>
-              <div className="flex text-[12px] items-center text-[#7A7A7A] gap-2">
-                <IoLocationSharp size={16} />
+              <div className="flex text-[12px] items-center text-[#898989] gap-2">
+                <IoLocationSharp size={12} />
                 <p className="  "> {data?.fields?.Address}</p>
               </div>
-              <StarRating
-                className=""
-                rating={data?.fields?.rating}
-                review={data?.fields?.numOfReviews}
-              />
-              <div className="text-[#505050] flex pt-[1px] flex-col ">
-                <p className="text-[12px] xl:text-[14px] text-[#000]">
-                  Annual Fees
-                </p>
-                <p className="text-[16px] xl:text-[24px] text-[#02618f] font-semibold">
+              <div className="text-[#323232] text-[12px] font-light">
+                <StarRating
+                  className=""
+                  rating={data?.fields?.rating}
+                  review={data?.fields?.numOfReviews}
+                />
+              </div>
+              <div className="text-[#898989] flex pt-[1px] flex-col ">
+                <p className="text-[12px]  text-[#898989]">Annual Fees</p>
+                <p className="text-[16px] xl:text-[22px] text-[#1B6EA1]">
                   ₹{Number(data?.fields?.feefrom).toLocaleString("en-IN")} - ₹
                   {Number(data?.fields?.feeto).toLocaleString("en-IN")}
                 </p>
               </div>
-              <div className="flex justify-between text-[10px] text-black font-semibold w-[90%]">
-                <div className="flex flex-col items-center">
-                  <FaGraduationCap size={16} />
-                  <p className=" text-[#505050]">
-                    {data?.fields?.cbse_schools
-                      ? "CBSE"
-                      : data?.fields?.icse_isc_schools
-                      ? "ICSE/ISC"
-                      : data?.fields?.cie_schools
-                      ? "CIE"
-                      : data?.fields?.ib_schools
-                      ? "IB school"
-                      : data?.fields?.igcse_schools
-                      ? "IGCSE"
-                      : null}
-                  </p>
-                </div>
-                <div className="flex flex-col items-center">
-                  <PiStudentFill size={16} />
-                  <p className="text-[#505050]">
-                    {data?.fields?.girls_schools
-                      ? "Girls School"
-                      : data?.fields?.boys_schools
-                      ? "Boys School"
-                      : data?.fields?.coed_schools
-                      ? "Co-Ed"
-                      : null}
-                  </p>
-                </div>
-                <div className="flex flex-col items-center">
-                  <FaSchool size={16} />
-                  <p className="text-[#505050]">
-                    {data?.fields?.day_schools == true
-                      ? "Day School"
-                      : data?.fields?.day_boarding_schools
-                      ? "Day boarding"
-                      : data?.fields?.full_boarding_schools
-                      ? "Boarding"
-                      : null}
-                  </p>
-                </div>
-                <div className="flex flex-col items-center">
-                  <IoBook size={16} />
-                  <p className="text-[#505050]">{data?.fields?.classto}</p>
+
+              <div className="w-full h-[60px] bg-[#1B6EA1] rounded-l-2xl flex justify-center items-center float-right">
+                <div className="flex justify-between text-[10px] text-[#FFFFFF] w-[90%]">
+                  <div className="flex flex-col items-center space-y-1">
+                    <p className="">Curriculum</p>
+                    <p className=" ">
+                      {data?.fields?.cbse_schools
+                        ? "CBSE"
+                        : data?.fields?.icse_isc_schools
+                        ? "ICSE/ISC"
+                        : data?.fields?.cie_schools
+                        ? "CIE"
+                        : data?.fields?.ib_schools
+                        ? "IB school"
+                        : data?.fields?.igcse_schools
+                        ? "IGCSE"
+                        : null}
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center space-y-1">
+                    <p className="">School Gender</p>
+                    <p className="font-normal">
+                      {data?.fields?.girls_schools
+                        ? "Girls School"
+                        : data?.fields?.boys_schools
+                        ? "Boys School"
+                        : data?.fields?.coed_schools
+                        ? "Co-Ed"
+                        : null}
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center space-y-1">
+                    <p className="">School Type</p>
+                    <p className="">
+                      {data?.fields?.day_schools == true
+                        ? "Day School"
+                        : data?.fields?.day_boarding_schools
+                        ? "Day boarding"
+                        : data?.fields?.full_boarding_schools
+                        ? "Boarding"
+                        : null}
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center space-y-1">
+                    <p className="">Classes</p>
+                    <p className="">{data?.fields?.classto}</p>
+                  </div>
                 </div>
               </div>
-              <div className="flex justify-between items-center gap-6">
-                <div className="flex flex-col justify-between h-full w-[50%]">
+              <div className="flex justify-between items-center gap-6 pt-2">
+                <div className="flex flex-col justify-between h-full text-[12px] text-[#898989] w-[50%]">
                   <div className="flex items-center justify-between">
-                    <p className="text-[#7A7A7A] text-[12px] font-semibold">
-                      Infrastructure
-                    </p>
+                    <p className=" ">Infrastructure</p>
                     <StarRatingper percentage={data?.fields?.Infrastructure} />
                   </div>
                   <div className="flex items-center justify-between">
-                    <p className="text-[#7A7A7A] text-[12px] font-semibold">
-                      Academics
-                    </p>
+                    <p className=" ">Academics</p>
                     <StarRatingper percentage={data?.fields?.Academics} />
                   </div>
                   <div className="flex items-center justify-between">
-                    <p className="text-[#7A7A7A] text-[12px] font-semibold">
-                      Administration
-                    </p>
+                    <p className=" ">Administration</p>
                     <StarRatingper percentage={data?.fields?.Administration} />
                   </div>
                   <div className="flex items-center justify-between">
-                    <p className="text-[#7A7A7A] text-[12px] font-semibold">
-                      Extracurricular
-                    </p>
+                    <p className=" ">Extracurricular</p>
                     <StarRatingper percentage={data?.fields?.Extracurricular} />
                   </div>
                 </div>
-                <div className="w-[220px] space-y-2 text-[12px] font-semibold">
+                <div className="w-[200px] space-y-4 text-[12px] mr-8">
                   <Link
                     href={`/school/${citySlug}/${data?.fields?.slug}`}
-                    className="w-full px-5 py-2 rounded-3xl border border-[#02618f] text-[#02618f] flex justify-center items-center gap-2"
+                    className="w-full px-5 py-2 rounded-3xl border border-[#02618f] text-[#1B6EA1] flex justify-center items-center gap-2"
                   >
                     <RiGraduationCapFill size={16} />
                     View School
@@ -187,7 +207,7 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                     className="w-full px-5 py-2 rounded-3xl bg-[#02618f] text-[#fff] flex justify-center items-center gap-2"
                   >
                     <BiSolidPhoneCall size={16} />
-                    Enquiry Now
+                    Get a Call
                   </button>
                 </div>
               </div>

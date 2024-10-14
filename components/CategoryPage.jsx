@@ -6,7 +6,7 @@ export default function CategoryPage({ categoryData }) {
   return (
     <div className="flex md:flex-col flex-col-reverse">
       <div>
-        <Article categoryData={categoryData} />
+        {/* <Article categoryData={categoryData} /> */}
       </div>
       <div className="w-[95vw] sm:w-[100vw] mx-auto">
         <SchoolCard categoryData={categoryData} />

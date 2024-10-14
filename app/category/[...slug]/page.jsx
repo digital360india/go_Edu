@@ -2,6 +2,7 @@ import { base } from "@/app/api/airtable.jsx";
 import Hero from "@/components/Hero";
 import FAQ from "@/components/FAQ";
 import CategoryPage from "@/components/CategoryPage";
+import CategoryHeroGoEdu from "@/components/CategoryHeroGoEdu";
 
 async function getCategoryData(slug) {
   const categoryData = await base("category 2")
@@ -78,7 +79,7 @@ export default async function ListingPage({ params }) {
           }}
         />
       </head>
-      <div className="bg-white overflow-x-hidden">
+      {/* <div className="bg-white overflow-x-hidden">
         <div className="hidden sm:block">
           <Hero
             image="https://res.cloudinary.com/eduminatti-com/image/upload/v1726733029/Edu123/Eduimages/banner_desktop_2.jpg"
@@ -92,6 +93,13 @@ export default async function ListingPage({ params }) {
             height="65vh"
           />
         </div>
+        <CategoryPage categoryData={categoryData} />
+        <FAQ categoryData={categoryData} />
+      </div> */}
+
+
+      <div className="overflow-hidden">
+        <CategoryHeroGoEdu />
         <CategoryPage categoryData={categoryData} />
         <FAQ categoryData={categoryData} />
       </div>
