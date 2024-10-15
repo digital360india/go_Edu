@@ -263,14 +263,14 @@ const SchoolCard = ({ categoryData }) => {
         </div>
 
         <div className="hidden xl:block mt-8 space-y-5">
-          <div className=" top-8">
-            <div className="w-[340px] h-[776px] bg-[#F8F8F8] rounded-lg">
+          <div className="sticky top-0 z-50">
+            <div className="w-[340px] h-[600px] bg-[#F8F8F8] rounded-lg ">
               <Filter filterdata={filterdata} setfilterdata={setfilterdata} />
             </div>
-            <div className="w-[340px] h-[436px] bg-[#F8F8F8] rounded-lg mt-5">
-              <p className="text-[24px] font-medium mt-10 ml-5">Enquire Now</p>
-              <EnquireForm />
-            </div>
+            {/* <div className="w-[340px] h-[436px] bg-[#F8F8F8] rounded-lg mt-5">
+      <p className="text-[24px] font-medium mt-10 ml-5">Enquire Now</p>
+      <EnquireForm />
+    </div> */}
           </div>
         </div>
 

@@ -9,13 +9,19 @@ export function StarRatingper({ percentage = 0 }) {
   const fullStars = Math.floor(stars);
   const halfStars = stars - fullStars >= 0.5 ? 1 : 0;
   const emptyStars = Math.max(0, 5 - fullStars - halfStars);  
+  const getColor = () => {
+    if (validPercentage < 25) return '#F44336'; 
+    if (validPercentage >= 25 && validPercentage <= 75) return '#FFC107'; 
+    if (validPercentage > 75) return '#4CAF50'; 
+    return '#FFFFFF'; 
+  };
 
   return (
-    <div className="flex gap-2 text-[#02618f]">
+    <div className="flex gap-2" >
       {[...Array(fullStars)].map((_, i) => (
-        <IoStarSharp key={`full-${i}`} />
+        <IoStarSharp key={`full-${i}`} color={getColor()} />
       ))}
-      {halfStars === 1 && <IoStarHalfSharp key="half-star" />}
+      {halfStars === 1 && <IoStarHalfSharp key="half-star" color={getColor()} />}
       {[...Array(emptyStars)].map((_, i) => (
         <IoStarSharp key={`empty-${i}`} color="#7A7A7A" />
       ))}
