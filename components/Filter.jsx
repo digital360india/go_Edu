@@ -2,8 +2,16 @@ import React, { useState } from "react";
 
 export default function Filter({ filterdata, setfilterdata }) {
   const [board, setboard] = useState("");
+  const [selectedBoards, setSelectedBoards] = useState([]);
 
+  const removeBoard = (board) => {
+    setSelectedBoards(selectedBoards.filter((b) => b !== board));
+  };
   function handleboards(info) {
+    if (!selectedBoards.includes(board)) {
+      setSelectedBoards([...selectedBoards, board]);
+    }
+
     const filter1 = filterdata?.globaldata.filter((item) => {
       return filterdata?.search?.toLowerCase() === "" || undefined || null
         ? item
@@ -230,104 +238,44 @@ export default function Filter({ filterdata, setfilterdata }) {
 
   return (
     <>
-      <div className="p-5 ">
-        <div className=" space-y-3 sm:space-y-5 ">
-          <p className="text-[24px] font-medium">Filter</p>
-          <div className=" space-y-5">
-            <p className="text-[18px] mt-5">Sort</p>
+      <div className="p-5 text-[#000000]">
+        <div className=" space-y-3 sm:space-y-3 ">
+          <p className="text-[24px] ">Filter</p>
+          <div className=" space-y-3">
+            <p className="text-[14px] mt-5 font-semibold">Sort</p>
+
             <div className="flex justify-between">
               <p className="text-[12px]">Popularity</p>
-              <div className="flex gap-2">
-                <button className="bg-[#02618f] w-[20px] h-[20px] grid place-content-center rounded-md">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 256 256"
-                  >
-                    <path
-                      fill="#fff"
-                      d="M208.49 120.49a12 12 0 0 1-17 0L140 69v147a12 12 0 0 1-24 0V69l-51.51 51.49a12 12 0 0 1-17-17l72-72a12 12 0 0 1 17 0l72 72a12 12 0 0 1 0 17Z"
-                    />
-                  </svg>
-                </button>
-                <button className="bg-[#02618f70] w-[20px] h-[20px] grid place-content-center mx-auto rounded-md">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 256 256"
-                  >
-                    <g transform="rotate(180 128 128)">
-                      <path
-                        fill="#02618f"
-                        d="M208.49 120.49a12 12 0 0 1-17 0L140 69v147a12 12 0 0 1-24 0V69l-51.51 51.49a12 12 0 0 1-17-17l72-72a12 12 0 0 1 17 0l72 72a12 12 0 0 1 0 17Z"
-                      />
-                    </g>
-                  </svg>
-                </button>
+              <div className="flex gap-2 text-[12px]">
+                <select className="bg-white text-[#7A7A7A] w-[110px] h-[28px]  focus:outline-none border-b-[1px] ">
+                  <option value="top-to-bottom text-[#7A7A7A]">Select</option>
+                  <option value="top-to-bottom">Top to Bottom</option>
+                  <option value="bottom-to-top">Bottom to Top</option>
+                </select>
               </div>
             </div>
+
             <div className="flex justify-between">
               <p className="text-[12px]">Price</p>
-              <div className="flex gap-2">
-                <button className="bg-[#02618f60] w-[20px] h-[20px] grid place-content-center rounded-md">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 256 256"
-                  >
-                    <path
-                      fill="#02618f"
-                      d="M208.49 120.49a12 12 0 0 1-17 0L140 69v147a12 12 0 0 1-24 0V69l-51.51 51.49a12 12 0 0 1-17-17l72-72a12 12 0 0 1 17 0l72 72a12 12 0 0 1 0 17Z"
-                    />
-                  </svg>
-                </button>
-                <button className="bg-[#02618f] w-[20px] h-[20px] grid place-content-center mx-auto rounded-md">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 256 256"
-                  >
-                    <g transform="rotate(180 128 128)">
-                      <path
-                        fill="#fff"
-                        d="M208.49 120.49a12 12 0 0 1-17 0L140 69v147a12 12 0 0 1-24 0V69l-51.51 51.49a12 12 0 0 1-17-17l72-72a12 12 0 0 1 17 0l72 72a12 12 0 0 1 0 17Z"
-                      />
-                    </g>
-                  </svg>
-                </button>
+              <div className="flex gap-2 text-[12px]">
+                <select className="bg-white text-[#7A7A7A] w-[110px] h-[28px]  focus:outline-none border-b-[1px] ">
+                  <option value="top-to-bottom text-[#7A7A7A]">Select</option>
+                  <option value="top-to-bottom">Top to Bottom</option>
+                  <option value="bottom-to-top">Bottom to Top</option>
+                </select>
               </div>
             </div>
-            <div className="flex justify-between">
-              <p className="text-[12px]">Recommendation</p>
-              <button className="bg-[#02618f70] w-[20px] h-[20px] grid place-content-center rounded-md">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill="none"
-                    stroke="#02618f"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="m2.75 8.75l3.5 3.5l7-7.5"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div>
-            <p className="text-[18px]">Fee Range</p>
           </div>
 
-          <div className="space-y-5">
-            <p className="text-[18px]">Boards</p>
+          <hr />
+
+          <div>
+            <p className="text-[14px] font-semibold">Fee Range</p>
+          </div>
+          <hr />
+
+          {/* <div className="space-y-3">
+            <p className="text-[14px] font-semibold">Boards</p>
             <div className="flex flex-wrap gap-x-5 gap-y-3 text-[12px]">
               <div className="flex  justify-between pr-3 min-w-[140px]">
                 <p>CBSE</p>
@@ -475,15 +423,56 @@ export default function Filter({ filterdata, setfilterdata }) {
                 </button>
               </div>
             </div>
-          </div>
+          </div>  */}
+          <div className="space-y-3">
+            <p className="text-[14px] font-semibold">Boards</p>
+            <div className="flex flex-wrap gap-x-5 gap-y-3 text-[12px]">
+              <div className="flex justify-between text-[#7A7A7A] pr-3 min-w-[140px]">
+                <select
+                  className="bg-white text-[#7A7A7A]  w-[350px] h-[28px]  focus:outline-none border-b-[1px]"
+                  onChange={(e) => handleboards(e.target.value)}
+                >
+                  <option value="" disabled selected>
+                    Select the BOARD
+                  </option>
+                  <option value="cbse">CBSE</option>
+                  <option value="icse_isc">ICSE/ISC</option>
+                  <option value="cie">CIE</option>
+                  <option value="ib">IB</option>
+                  <option value="igcse">IGCSE</option>
+                </select>
+              </div>
+            </div>
 
-          <div className="space-y-5">
-            <p className="text-[18px]">Classification</p>
+            {/* Render selected boards below the dropdown */}
+            <div className="flex flex-wrap gap-3 mt-3">
+              {selectedBoards.map((board) => (
+                <div
+                  key={board}
+                  className="flex items-center bg-white border border-gray-300 px-3 py-1 rounded-md"
+                >
+                  <p className="text-[12px] mr-2 text-black">
+                    {board.toUpperCase()}
+                  </p>
+                  <button
+                    onClick={() => removeBoard(board)}
+                    className="text-gray-500 hover:text-black"
+                  >
+                    X
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+          <hr />
+
+          <div className="space-y-3">
+            <p className="text-[14px] font-semibold">Classification</p>
             <div className="flex flex-wrap gap-x-5 gap-y-3 text-[12px]">
               <div className="flex justify-between w-[140px] pr-3 ">
                 <p>CO-ED</p>
                 <button
-                  className="bg-[#02618f70] w-[20px] h-[20px] grid place-content-center rounded-md"
+                  className="bg-[#D9D9D9] w-[20px] h-[20px] grid place-content-center rounded-sm"
                   onClick={() => handleClassification("co-ed")}
                 >
                   {filterdata.classification.includes("co-ed") ? (
@@ -510,7 +499,7 @@ export default function Filter({ filterdata, setfilterdata }) {
               <div className="flex justify-between w-[140px] pr-3">
                 <p>Girls Only</p>
                 <button
-                  className="bg-[#02618f70] w-[20px] h-[20px] grid place-content-center rounded-md"
+                  className="bg-[#D9D9D9] w-[20px] h-[20px] grid place-content-center rounded-sm"
                   onClick={() => handleClassification("girls")}
                 >
                   {filterdata.classification.includes("girls") ? (
@@ -537,7 +526,7 @@ export default function Filter({ filterdata, setfilterdata }) {
               <div className="flex justify-between w-[140px] pr-3">
                 <p>Boys-Only</p>
                 <button
-                  className="bg-[#02618f70] w-[20px] h-[20px] grid place-content-center rounded-md"
+                  className="bg-[#D9D9D9] w-[20px] h-[20px] grid place-content-center rounded-sm"
                   onClick={() => handleClassification("boys")}
                 >
                   {filterdata.classification.includes("boys") ? (
@@ -564,13 +553,15 @@ export default function Filter({ filterdata, setfilterdata }) {
             </div>
           </div>
 
-          <div className="space-y-5">
-            <p className="text-[18px]">Type</p>
+          <hr />
+
+          <div className="space-y-3">
+            <p className="text-[14px] font-semibold">Type</p>
             <div className="flex flex-wrap gap-x-3 gap-y-5 text-[12px]">
               <div className="flex justify-between min-w-[140px] pr-3">
                 <p>Boarding</p>
                 <button
-                  className="bg-[#02618f70] w-[20px] h-[20px] grid place-content-center rounded-md"
+                  className="bg-[#D9D9D9] w-[20px] h-[20px] grid place-content-center rounded-sm"
                   onClick={() => handleType("full_boarding_schools")}
                 >
                   {filterdata.type.includes("full_boarding_schools") ? (
@@ -598,7 +589,7 @@ export default function Filter({ filterdata, setfilterdata }) {
               <div className="flex justify-between pl-1 min-w-[140px] pr-2">
                 <p>Day Boarding</p>
                 <button
-                  className="bg-[#02618f70] w-[20px] h-[20px] grid place-content-center rounded-md"
+                  className="bg-[#D9D9D9] w-[20px] h-[20px] grid place-content-center rounded-sm"
                   onClick={() => handleType("day_boarding_schools")}
                 >
                   {filterdata.type.includes("day_boarding_schools") ? (
@@ -625,7 +616,7 @@ export default function Filter({ filterdata, setfilterdata }) {
               <div className="flex justify-between  min-w-[140px] pr-3">
                 <p>Day School</p>
                 <button
-                  className="bg-[#02618f70] w-[20px] h-[20px] grid place-content-center rounded-md"
+                  className="bg-[#D9D9D9] w-[20px] h-[20px] grid place-content-center rounded-sm"
                   onClick={() => handleType("day_schools")}
                 >
                   {filterdata.type.includes("day_schools") ? (
@@ -649,6 +640,17 @@ export default function Filter({ filterdata, setfilterdata }) {
                   )}
                 </button>
               </div>
+            </div>
+          </div>
+
+          <div className="pt-3">
+            <div className="flex justify-center items-center border rounded-3xl h-[30px] w-[259px] border-[#898989] mx-auto cursor-pointer">
+              <button
+                // onClick={resetFilters}
+                className="text-[#898989] text-[12px]"
+              >
+                Remove All Filters
+              </button>
             </div>
           </div>
         </div>
