@@ -15,13 +15,10 @@ import { BiSolidPhoneCall } from "react-icons/bi";
 import { StarRating, StarRatingper } from "./StarRating";
 import { PiStudentFill } from "react-icons/pi";
 import Enquire from "./Enquire";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Thumbs } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/thumbs";
+import CategoryGalleryGoEdu from "./CategoryGalleryGoEdu";
+
 
 const SchoolCardMini = ({ data, index, citySlug }) => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -57,20 +54,22 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
           <p className="text-[12px] text-[#FFFFFF]">{viewers}+ people viewed</p>
         </div> */}
 
-        <div className="lg:w-[820px] h-[420px] py-[50px] shadow-custom">
-          <div className="flex gap-9  ">
+        <div className="lg:w-[810px] h-[500px] py-[50px] shadow-custom">
+          <div className="flex  gap-5">
             <div className="">
 
          
-            <div className="flex flex-col gap-8">
-              <div>
+            <div className=" ">
+              {/* <div>
                 <img
                   className="w-[300px] h-[210px] object-cover"
                   src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${citySlug}/G-${data?.fields?.Image_Code}.png`}
                   alt="img"
                 />
-              </div>
-              <div className="flex justify-between">
+              </div> */}
+
+              <CategoryGalleryGoEdu data={data} index={index} citySlug={citySlug} />
+              {/* <div className="flex justify-between">
                 <img
                   className="w-[90px] h-[60px] object-cover"
                   src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${citySlug}/G-${data?.fields?.Image_Code}.png`}
@@ -86,12 +85,12 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                   src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${citySlug}/I-${data?.fields?.Image_Code}.png`}
                   alt="img"
                 />
-              </div>
+              </div> */}
             </div>
             </div>
 
            
-            <div className="w-[59%] flex flex-col justify-between space-y-1">
+            <div className="w-[59%] flex flex-col space-y-4 ">
               <div className="flex justify-between">
                 <div>
                   <p className="text-[20px] text-[#1B6EA1]">

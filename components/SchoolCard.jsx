@@ -152,7 +152,7 @@ const SchoolCard = ({ categoryData }) => {
           </div>
         </div>
       </div>
-      <div className="  flex justify-center md:justify-start xl:justify-between sm:px-[100px] lg:gap-6">
+      <div className="  flex justify-center md:justify-start xl:justify-between sm:px-[70px] lg:gap-6">
         <div className="bg-white ">
           <div className=" bg-white">
             <div className="items-center bg-white justify-between md:mt-8 pb-8">
