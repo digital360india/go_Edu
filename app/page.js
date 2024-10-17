@@ -12,6 +12,13 @@ import WhyChooseUsGoEdu from "../components/WhyChooseUsGoEdu";
 import AboutGoEdu from "@/components/AboutGoEdu";
 import TestimonailGoEdu from "@/components/TestimonailGoEdu";
 import MapGoEdu from "@/components/MapGoEdu";
+import Popup from "@/components/Popup";
+import Aisi from "@/components/Aisi";
+import Scale from "@/components/Scale";
+import Blink from "@/components/Blink";
+import ScrollPage from "@/components/Both";
+import IntegratedGalleryBlink from "@/components/Both";
+import CombinedComponent from "@/components/Both";
 export default function Home() {
   return (
     <>
@@ -215,10 +222,14 @@ export default function Home() {
 
 
         <div>
+          {/* <Blink /> */}
           <HeroGoEdu />
+          {/* <Aisi /> */}
+          {/* <CombinedComponent /> */}
           <FormGoEdu />
-
+          {/* <Popup /> */}
           <MapGoEdu />
+          <Scale />
           <WhyChooseUsGoEdu />
           <AboutGoEdu />
           <TestimonailGoEdu />

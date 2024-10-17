@@ -10,7 +10,7 @@ import {
 import Link from "next/link";
 import "react-modern-drawer/dist/index.css";
 import { Icon } from "@iconify/react";
-import Counsltation from "@/components/Counsltation";
+import ConsultationPopup from "@/components/ConsultationPopup"; // Make sure to import your ConsultationPopup component
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
@@ -94,7 +94,7 @@ const Navbar = () => {
             "linear-gradient(180deg, rgba(30, 135, 221, 0.3) 0%, rgba(20, 86, 125, 0.6) 63.9%)",
         }}
       >
-        <div className="justify-between  mx-auto max-w-7xl items-center h-[80px] flex px-8">
+        <div className="justify-between mx-auto max-w-7xl items-center h-[80px] flex px-8">
           <div className="flex items-center justify-between py-7 ">
             <Link href={"/"}>
               <img
@@ -107,7 +107,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div>
-            <ul className="font-medium items-center w-full opacity-90 text-center justify-center  flex space-x-6  py-10">
+            <ul className="font-medium items-center w-full opacity-90 text-center justify-center flex space-x-6 py-10">
               {navLinks.map((link) => {
                 const hideOnMd =
                   link.name === "Compare Schools" || link.name === "Blogs";
@@ -117,7 +117,7 @@ const Navbar = () => {
                     key={link.name}
                     className={`text-[#FFFFFF] text-[1rem] py-2 px-8 ${
                       activeButton === link.name.toLowerCase()
-                        ? "text-[#FFFFFF] font-semibold  rounded-lg"
+                        ? "text-[#FFFFFF] font-semibold rounded-lg"
                         : ""
                     } ${hideOnMd ? "hidden lg:block" : ""}`}
                   >
@@ -131,21 +131,21 @@ const Navbar = () => {
                   </li>
                 );
               })}
-              {/* <li className="bg-[#02618f] text-white rounded-lg">
+              <li>
                 <button
                   onClick={toggleBookingPopup}
-                  className="font-medium py-2 px-4"
+                  className="bg-[#02618f] text-white rounded-lg py-2 px-4"
                 >
                   Get Consultation
                 </button>
-              </li> */}
+              </li>
             </ul>
           </div>
         </div>
       </nav>
 
       <nav className="block md:hidden w-full absolute top-0 z-40 bg-white">
-        <div className="justify-between px-4 mx-auto  h-[80px] md:px-8">
+        <div className="justify-between px-4 mx-auto h-[80px] md:px-8">
           <div className="flex items-center justify-between py-3 md:py-7 lg:block">
             <Link href={"/"}>
               <img
@@ -156,7 +156,7 @@ const Navbar = () => {
                 height={56}
               />
             </Link>
-            <div className=" flex gap-5 text-[#02618f]">
+            <div className="flex gap-5 text-[#02618f]">
               <Link href="whatsapp://send?abid=+9557695360">
                 <Icon icon="logos:whatsapp-icon" className="inline w-7 h-7" />
               </Link>
@@ -202,7 +202,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {isOpenpopup && <Counsltation setClose={toggleBookingClosePopup} />}
+      {isOpenpopup && <ConsultationPopup setClose={toggleBookingClosePopup} />}
 
       <React.Fragment>
         <Drawer
@@ -226,44 +226,39 @@ const Navbar = () => {
             </Link>
             <Icon
               icon="charm:cross"
-              className="w-10 h-10 mt-3"
+              className="w-10 h-10 cursor-pointer"
               onClick={toggleDrawer}
             />
           </div>
-
-          <div className="flex flex-col gap-10 mt-12 text-[14px] font-light">
-            {navLinks.map((link) => {
-              const hide = link.name === "Compare Schools";
-              return (
+          <ul className="flex flex-col justify-center items-center space-y-3 mt-8">
+            {navLinks.map((link) => (
+              <li key={link.name}>
                 <Link
-                  key={link.name}
                   href={link.path}
+                  className="text-xl"
                   onClick={() => {
-                    if (!link.external) toggleDrawer();
+                    handleButtonClick(link.name.toLowerCase());
+                    toggleDrawer();
                   }}
                   target={link.external ? "_blank" : "_self"}
-                  className={`flex items-center gap-4 ${hide ? "hidden" : ""} `}
                 >
-                  <Icon icon={link.icon} className="w-5 h-5" />
                   {link.name}
                 </Link>
-              );
-            })}
-            <button className="flex gap-2" onClick={toggleBookingPopupSmall}>
-              <Icon icon="ph:book-light" className="w-5 h-5" />
-              Get Consultation
-            </button>
-          </div>
-
-          <div className="flex flex-col gap-5 mt-[250px] text-[12px] font-light">
-            <Link href={"/privacy-policy"}>Privacy Policies</Link>
-            <Link href={"/terms-and-condition"}>Terms & Conditions</Link>
-          </div>
-
-          <div className="text-xl text-white flex gap-10 mt-12">
-            {socialLinks.map((social, index) => (
-              <Link key={index} href={social.href} target="_blank">
-                {social.icon}
+              </li>
+            ))}
+            <li>
+              <button
+                onClick={toggleBookingPopupSmall}
+                className="bg-[#02618f] text-white rounded-lg py-2 px-4"
+              >
+                Get Consultation
+              </button>
+            </li>
+          </ul>
+          <div className="flex justify-center gap-4 mt-8">
+            {socialLinks.map(({ href, icon }, index) => (
+              <Link href={href} target="_blank" key={index}>
+                <div className="text-white">{icon}</div>
               </Link>
             ))}
           </div>
