@@ -17,9 +17,7 @@ import { PiStudentFill } from "react-icons/pi";
 import Enquire from "./Enquire";
 import CategoryGalleryGoEdu from "./CategoryGalleryGoEdu";
 
-
 const SchoolCardMini = ({ data, index, citySlug }) => {
-
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
@@ -54,13 +52,11 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
           <p className="text-[12px] text-[#FFFFFF]">{viewers}+ people viewed</p>
         </div> */}
 
-        <div className="lg:w-[810px] h-[500px] py-[50px] shadow-custom">
+        <div className="lg:w-[810px] h-[500px] py-[25px] shadow-custom">
           <div className="flex  gap-5">
             <div className="">
-
-         
-            <div className=" ">
-              {/* <div>
+              <div className=" ">
+                {/* <div>
                 <img
                   className="w-[300px] h-[210px] object-cover"
                   src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${citySlug}/G-${data?.fields?.Image_Code}.png`}
@@ -68,8 +64,12 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                 />
               </div> */}
 
-              <CategoryGalleryGoEdu data={data} index={index} citySlug={citySlug} />
-              {/* <div className="flex justify-between">
+                <CategoryGalleryGoEdu
+                  data={data}
+                  index={index}
+                  citySlug={citySlug}
+                />
+                {/* <div className="flex justify-between">
                 <img
                   className="w-[90px] h-[60px] object-cover"
                   src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${citySlug}/G-${data?.fields?.Image_Code}.png`}
@@ -86,12 +86,11 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                   alt="img"
                 />
               </div> */}
-            </div>
+              </div>
             </div>
 
-           
             <div className="w-[59%] flex flex-col space-y-4 ">
-              <div className="flex justify-between">
+              <div className="flex justify-between mt-8">
                 <div>
                   <p className="text-[20px] text-[#1B6EA1]">
                     <Link href={`/school/${citySlug}/${data?.fields?.slug}`}>
@@ -216,26 +215,26 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
       </div>
 
       <div className="lg:hidden">
-        <div className="float-right py-3 px-5 h-[36px] bg-[#FACC13] font-semibold rounded-l-3xl flex items-center gap-2 shadow-counsel">
+        <div className="float-right py-3 px-5 h-[36px] bg-[#F97B24] font-semibold rounded-l-3xl flex items-center gap-2 shadow-counsel">
           <IoPerson size={16} />
           <p className="text-[12px]">{viewers}+ people viewed</p>
         </div>
-        <div className="w-[85vw] md:w-[80vw] h-[80vh] md:h-[90vh] shadow-counsel px-[25px] py-[43px] space-y-2">
+        <div className="w-[85vw] md:w-[80vw]  md:h-[90vh] shadow-counsel px-[25px] py-[43px] space-y-2">
           <img
-            className="w-full h-[210px] md:h-[300px] object-cover"
+            className="w-full h-[167px] md:h-[300px] object-cover"
             src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${citySlug}/G-${data?.fields?.Image_Code}.png`}
             alt="img"
           />
 
-          <div className="space-y-3 h-[60vh]">
+          <div className="space-y-2 h-auto">
             <div>
-              <p className="text-[20px]  font-semibold text-[#02618f]">
+              <p className="text-[1rem]  font-semibold text-[#1B6EA1]">
                 <Link href={`/school/${citySlug}/${data?.fields?.slug}`}>
                   {data?.fields?.name}
                 </Link>
               </p>
             </div>
-            <div className="flex text-[12px] items-center text-[#7A7A7A] gap-2">
+            <div className="flex text-[12px] items-center text-[#898989] gap-2">
               <IoLocationSharp size={16} />
               <p> {data?.fields?.fullAddress}</p>
             </div>
@@ -244,58 +243,73 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
               review={data?.fields?.numOfReviews}
             />
             <div className="text-[#505050] flex pt-[1px] flex-col ">
-              <p className="text-[12px] text-[#7A7A7A]">Annual Fees</p>
-              <p className="text-[24px] text-[#02618f] font-semibold">
+              <p className="text-[12px] text-[#898989]">Annual Fees</p>
+              <p className="text-[18px] font-semibold text-[#1B6EA1] ">
                 ₹{Number(data?.fields?.feefrom).toLocaleString("en-IN")} - ₹
                 {Number(data?.fields?.feeto).toLocaleString("en-IN")}
               </p>
             </div>
-            <div className="flex justify-between text-[10px] text-black font-semibold w-[90%]">
-              <div className="flex flex-col items-center">
-                <FaGraduationCap size={24} />
-                <p className=" text-[#505050]">
-                  {data?.fields?.cbse_schools
-                    ? "CBSE"
-                    : data?.fields?.icse_isc_schools
-                    ? "ICSE/ISC"
-                    : data?.fields?.cie_schools
-                    ? "CIE"
-                    : data?.fields?.ib_schools
-                    ? "IB school"
-                    : data?.fields?.igcse_schools
-                    ? "IGCSE"
-                    : null}
-                </p>
+
+            {/* <div className="w-full bg-[#1B6EA1] rounded-l-2xl flex justify-center items-center float-right">
+                <div className="flex justify-between text-[10px] text-[#FFFFFF] w-[90%]">
+                  <div className="flex flex-col items-center space-y-1">
+                    <p className="">Curriculum</p>
+
+            </div>
+            </div>
+            </div> */}
+            <div className="flex justify-between p-3 font-semibold  m-6   text-[10px] bg-[#1B6EA1] rounded-l-2xl text-white  w-full">
+              <div className="space-y-3">
+                <div className="flex flex-col items-center">
+                  <p>Curriculum</p>
+                  <p className=" text-white">
+                    {data?.fields?.cbse_schools
+                      ? "CBSE"
+                      : data?.fields?.icse_isc_schools
+                      ? "ICSE/ISC"
+                      : data?.fields?.cie_schools
+                      ? "CIE"
+                      : data?.fields?.ib_schools
+                      ? "IB school"
+                      : data?.fields?.igcse_schools
+                      ? "IGCSE"
+                      : null}
+                  </p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <p>School Gender</p>
+                  <p className="text-white">
+                    {data?.fields?.girls_schools
+                      ? "Girls School"
+                      : data?.fields?.boys_schools
+                      ? "Boys School"
+                      : data?.fields?.coed_schools
+                      ? "Co-Ed"
+                      : null}
+                  </p>
+                </div>
               </div>
-              <div className="flex flex-col items-center">
-                <PiStudentFill size={24} />
-                <p className="text-[#505050]">
-                  {data?.fields?.girls_schools
-                    ? "Girls School"
-                    : data?.fields?.boys_schools
-                    ? "Boys School"
-                    : data?.fields?.coed_schools
-                    ? "Co-Ed"
-                    : null}
-                </p>
-              </div>
-              <div className="flex flex-col items-center">
-                <FaSchool size={24} />
-                <p className="text-[#505050]">
-                  {data?.fields?.day_schools == true
-                    ? "Day School"
-                    : data?.fields?.day_boarding_schools
-                    ? "Day boarding"
-                    : data?.fields?.full_boarding_schools
-                    ? "Boarding"
-                    : null}
-                </p>
-              </div>
-              <div className="flex flex-col items-center">
-                <IoBook size={24} />
-                <p className="text-[#505050]">{data?.fields?.classto}</p>
+              <div className="space-y-3">
+                <div className="flex flex-col items-center">
+                  <p>School Type</p>
+                  <p className="text-white">
+                    {data?.fields?.day_schools == true
+                      ? "Day School"
+                      : data?.fields?.day_boarding_schools
+                      ? "Day boarding"
+                      : data?.fields?.full_boarding_schools
+                      ? "Boarding"
+                      : null}
+                  </p>
+                </div>
+
+                <div className="flex flex-col items-center">
+                  <p>Classes</p>
+                  <p className="text-white">{data?.fields?.classto}</p>
+                </div>
               </div>
             </div>
+
             <div className="flex flex-col w-[80%]">
               <div className="flex items-center justify-between">
                 <p className="text-[#7A7A7A] text-[12px] font-semibold">
@@ -322,10 +336,10 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                 <StarRatingper percentage={data?.fields?.Extracurricular} />
               </div>
             </div>
-            <div className=" flex gap-2 text-[12px] font-semibold">
+            <div className=" flex gap-2 text-[12px] pt-2">
               <Link
                 href={`/school/${citySlug}/${data?.fields?.slug}`}
-                className="w-full px-5 py-2 rounded-3xl border border-[#02618f] text-[#02618f] flex justify-center items-center gap-2"
+                className="w-full px-5 py-2 rounded-3xl border border-[#1B6EA1] text-[#1B6EA1] flex justify-center items-center gap-2"
               >
                 <RiGraduationCapFill size={16} />
                 View School
@@ -333,7 +347,7 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
 
               <button
                 onClick={openPopup}
-                className="w-full px-5 py-2 rounded-3xl bg-[#02618f] text-[#fff] flex justify-center items-center gap-2"
+                className="w-full px-5 py-2 rounded-3xl bg-[#1B6EA1] text-[#fff] flex justify-center items-center gap-2"
               >
                 <BiSolidPhoneCall size={16} />
                 Enquiry Now

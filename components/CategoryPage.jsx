@@ -8,7 +8,7 @@ export default function CategoryPage({ categoryData }) {
       <div>
         {/* <Article categoryData={categoryData} /> */}
       </div>
-      <div className="w-[95vw] sm:w-[100vw] mx-auto">
+      <div className="w-full  sm:w-[100vw] ">
         <SchoolCard categoryData={categoryData} />
       </div>
     </div>
