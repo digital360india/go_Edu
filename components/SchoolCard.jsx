@@ -120,18 +120,19 @@ const SchoolCard = ({ categoryData }) => {
 
   return (
     <>
-      <div className=" ">
-        <div className="bg-[#1B6EA1] w-full h-[400px]flex justify-center items-center p-10">
+      <div className="">
+        <div className="bg-[#1B6EA1] w-full  md:h-[400px] md:flex md:justify-center md:items-center p-3  md:p-10">
           <h2 className="md:px-[45px] my-8 lg:my-4 sm:text-[30px] text-[#FFFFFF] text-[20px]">
             {" "}
-            List of {Math.ceil(filterdata?.employees.length)} Best Schools in{" "}
+            {/* List of {Math.ceil(filterdata?.employees.length)} Best Schools in */}
+            List of Best Schools in&nbsp;
             {citySlug[0]?.toUpperCase() + citySlug.slice(1, citySlug.length)}
           </h2>
-          <div className="flex  justify-center sm:justify-start    items-center p-10">
-            <div className="flex   justify-start w-[291px] h-[32px] sm:w-[100%] lg:h-[59px] lg:w-[100%] xl:w-[620px]  border-2 outline-none rounded-3xl   bg-[#1B6EA1]">
+          <div className="flex  justify-center sm:justify-start    items-center pb-10 md:pb-0 ">
+            <div className="flex   justify-start w-[291px] h-[35px] sm:w-[100%] lg:h-[50px] lg:w-[100%] xl:w-[620px]  border-2 outline-none rounded-3xl   bg-[#1B6EA1]">
               <input
                 onChange={handleSearch}
-                className="xl:w-[890px] p-3 text-[#FFFFFF] rounded-3xl h-full bg-[#1B6EA1] placeholder:text-[#FFFFFF]  outline-none"
+                className="xl:w-[890px] w-[240px] p-3 text-[#FFFFFF] rounded-3xl h-full bg-[#1B6EA1] placeholder:text-[#FFFFFF]  outline-none"
                 type="text"
                 placeholder="Search School"
               />
@@ -139,14 +140,14 @@ const SchoolCard = ({ categoryData }) => {
                 src="/searching.svg"
                 width={1000}
                 height={1000}
-                className="w-[30px] rounded-full m-3  h-[30px] text-[#FFFFFF] cursor-pointer"
+                className="w-[30px] rounded-full md:m-2  h-[30px] text-[#FFFFFF] cursor-pointer hidden md:block"
               ></Image>
             </div>
             <FiFilter
               onClick={() => {
                 setfilterdata({ ...filterdata, toggle: true });
               }}
-              className="text-2xl xl:hidden"
+              className="text-lg xl:hidden text-white bg-[#FFFFFF20] rounded-full p-2 w-[40px] h-[40px] ml-2"
               categoryData={categoryData}
             ></FiFilter>
           </div>
@@ -178,7 +179,7 @@ const SchoolCard = ({ categoryData }) => {
           </div>
 
           <div>
-            <div className="flex flex-col md:flex-wrap justify-center md:justify-start items-center md:items-start gap-5 ">
+            <div className="flex flex-col md:flex-wrap justify-center md:justify-start items-center md:items-start gap-20 ">
               {filterdata?.employees
                 .filter((item) => {
                   return filterdata?.search.toLowerCase() === "" ||
@@ -301,7 +302,7 @@ const SchoolCard = ({ categoryData }) => {
             <div className=" mt-2 flex justify-center">
               {" "}
               <button
-                className="w-[120px] h-[40px] bg-[#02618f] text-white rounded-lg    "
+                className="w-[259px] h-[30px] text-[12px] bg-[#1B6EA1] text-white rounded-3xl    "
                 onClick={() => {
                   setfilterdata({ ...filterdata, toggle: false });
                 }}

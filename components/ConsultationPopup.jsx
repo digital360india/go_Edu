@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Image from 'next/image'; // Import Image from Next.js
+import React, { useState } from "react";
+import Image from "next/image"; // Import Image from Next.js
 
 export default function ConsultationPopup({ setClose }) {
   const [formData, setFormData] = useState({
@@ -27,27 +27,24 @@ export default function ConsultationPopup({ setClose }) {
   return (
     <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-center items-center">
       <div className="relative flex gap-10 justify-between items-center bg-white rounded-lg shadow-lg">
-        {/* Close button */}
-        <button 
-          onClick={setClose} 
+        <button
+          onClick={setClose}
           className="absolute bg-[#1B6EA1] px-4 z-50 rounded-full py-2 top-2 right-2 text-2xl font-bold text-white hover:text-gray-900"
         >
           &times;
         </button>
 
-        {/* Image section */}
-        <div className="w-[75vw] h-[539px] hidden md:block z-0">
+        <div className="w-[80vw] h-[539px] hidden md:block z-0">
           <Image
             src="/popup.svg"
             alt="School choice"
             width={1000}
             height={1000}
-            className="w-[700px] h-full object-cover rounded-lg"
+            className="w-[660px] h-full object-cover rounded-lg"
           />
         </div>
 
-        {/* Form section */}
-        <div className="w-full z-50 md:w-[580px] h-full rounded-l-2xl p-8 absolute top-0 right-14 bg-white">
+        <div className="w-full z-50 md:w-[470px] h-full rounded-l-2xl p-8 absolute top-0 right-14 bg-white">
           <h3 className="text-xl mb-6 text-[#323232]">
             Fill this form and get in touch with our counsellor
           </h3>
@@ -104,7 +101,6 @@ export default function ConsultationPopup({ setClose }) {
                 <option value="Class 1">Class 1</option>
                 <option value="Class 2">Class 2</option>
                 <option value="Class 3">Class 3</option>
-                {/* Add more class options as needed */}
               </select>
 
               <select
