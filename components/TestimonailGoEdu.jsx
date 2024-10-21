@@ -120,48 +120,41 @@ const TestimonialGoEdu = () => {
 
   const testimonials = [
     {
-      name: "Yogesh Pal",
-      image: "/testimonial.svg",
+      name: "Parul Rawat",
+      image:
+        "https://res.cloudinary.com/eduminatti-com/image/upload/v1725877951/Edu123/Eduimages/WhatsApp_Image_2024-09-09_at_3.53.37_PM.jpg",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda nobis tempore illum ratione. Nobis quod itaque, ipsa repellendus voluptas vitae.",
+        "As a concerned sibling, Edu123 was a lifesaver in the daunting quest for the right boarding school in India. Highly recommended for siblings navigating the complex landscape of boarding school admissions.",
     },
     {
-      name: "John Doe",
-      image: "/consult.svg",
+      name: "Priyangini",
+      image:
+        "https://res.cloudinary.com/eduminatti-com/image/upload/v1725877951/Edu123/Eduimages/WhatsApp_Image_2024-09-09_at_4.01.42_PM.jpg",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda nobis tempore illum ratione. Nobis quod itaque, ipsa repellendus voluptas vitae.",
+        "I stumbled upon Edu123 in my search for the ideal boarding school for my niece. The platform's extensive listings and transparent information made the decision-making process smooth.",
     },
     {
-      name: "Jane Smith",
-      image: "/whychooseus.svg",
+      name: "Priya",
+      image:
+        "https://res.cloudinary.com/eduminatti-com/image/upload/v1725877951/Edu123/Eduimages/WhatsApp_Image_2024-09-09_at_3.59.49_PM.jpg",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda nobis tempore illum ratione. Nobis quod itaque, ipsa repellendus voluptas vitae.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda nobis tempore illum ratione. Nobis quod itaque, ipsa repellendus voluptas vitae.",
+        "Edu123 exceeded my expectations during our search for the perfect boarding school in India. The comprehensive listings provided a wealth of information, making the decision-making process much smoother.",
     },
     {
-      name: "Jane 1",
-      image: "/testimonial.svg",
+      name: "Shivam Panwar",
+      image:
+        "https://res.cloudinary.com/eduminatti-com/image/upload/v1725877951/Edu123/Eduimages/WhatsApp_Image_2024-09-09_at_3.54.31_PM.jpg",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda nobis tempore illum ratione. Nobis quod itaque, ipsa repellendus voluptas vitae.",
-    },
-    {
-      name: "Jane 2",
-      image: "/4.png",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda nobis tempore illum ratione. Nobis quod itaque, ipsa repellendus voluptas vitae.",
-    },
-    {
-      name: "Jane 3",
-      image: "/5.png",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda nobis tempore illum ratione. Nobis quod itaque, ipsa repellendus voluptas vitae.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda nobis tempore illum ratione. Nobis quod itaque, ipsa repellendus voluptas vitae.",
+        "Edu123 caught my attention while researching boarding schools in India, and I'm thrilled with the results. The platform's listings are thorough, and the consultants are knowledgeable.",
     },
   ];
+  
 
   const responsive = {
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
-      slidesToSlide: 1, // Number of slides to scroll
+      slidesToSlide: 1, 
     },
   };
 
@@ -310,7 +303,7 @@ const TestimonialGoEdu = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center space-y-10 px-10"
+              className="flex flex-col items-center text-center space-y-4 px-10"
             >
               <Image
                 src={testimonial.image}
@@ -322,7 +315,7 @@ const TestimonialGoEdu = () => {
               <h2 className="text-xl text-[#000000] font-semibold">
                 {testimonial.name}
               </h2>
-              <p className="text-sm text-[#000000]">
+              <p className="text-sm text-[#000000] text-justify">
                 {testimonial.description}
               </p>
             </div>

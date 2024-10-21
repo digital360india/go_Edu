@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import Hero from "./Hero";
 
 const FormGoEdu = () => {
   const [formData, setFormData] = useState({
@@ -25,6 +26,11 @@ const FormGoEdu = () => {
   };
 
   return (
+
+
+    <>
+    
+   
     <div className="flex gap-20 justify-between items-center">
       <div className="w-[795px] h-[539px] md:block hidden  ">
         <Image
@@ -109,6 +115,9 @@ const FormGoEdu = () => {
         </form>
       </div>
     </div>
+
+<Hero/>
+    </>
   );
 };
 export default FormGoEdu;

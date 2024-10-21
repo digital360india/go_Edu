@@ -149,11 +149,11 @@ const Navbar = () => {
           <div className="flex items-center justify-between py-3 md:py-7 lg:block">
             <Link href={"/"}>
               <img
-                className="w-14 lg:w-22"
-                src="/EDU123.png"
+                className="w-14 h-14 lg:w-22"
+                src="/footerlogo.svg"
                 alt="Logo"
-                width={88}
-                height={56}
+                width={1000}
+                height={1000}
               />
             </Link>
             <div className="flex gap-5 text-[#02618f]">
@@ -210,27 +210,28 @@ const Navbar = () => {
           open={isOpen}
           onClose={toggleDrawer}
           style={{
-            backgroundColor: "#02618f",
+            backgroundColor: "#FFFFFF",
             padding: "32px",
             width: "300px",
           }}
-          className="text-white md:hidden"
+          className="text-[#1B6EA1] text-[14px] md:hidden"
         >
           <div className="flex justify-between">
             <Link href={"/"}>
               <img
                 className="w-[70px] h-[60px]"
-                src="https://res.cloudinary.com/eduminatti-com/image/upload/v1726732485/Edu123/Eduimages/Untitled_98_x_98_px_3.png"
+                src="/footerlogo.svg"
                 alt="Logo"
               />
             </Link>
             <Icon
               icon="charm:cross"
-              className="w-10 h-10 cursor-pointer"
+              className="w-10 h-14  cursor-pointer"
               onClick={toggleDrawer}
             />
           </div>
-          <ul className="flex flex-col justify-center items-center space-y-3 mt-8">
+          <div className="bg-[#1B6EA1] w-60 h-[1px] mt-5"></div>
+          <ul className="flex flex-col  space-y-12 mt-8">
             {navLinks.map((link) => (
               <li key={link.name}>
                 <Link

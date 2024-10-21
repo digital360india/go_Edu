@@ -36,7 +36,7 @@ const HeroGoEdu = () => {
     <>
       <div>
         <div
-          className="w-full h-[100vh] md:h-[100vh] bg-no-repeat bg-cover bg-center"
+          className="w-full h-[710px] md:h-[100vh] bg-no-repeat bg-cover bg-center"
           style={{ backgroundImage: `url(${goedubanner.src})` }}
         >
           <div>
@@ -48,13 +48,22 @@ const HeroGoEdu = () => {
                   for Every <span className="font-bold">Dream</span>
                 </p>
               </div>
-              <div className="absolute right-0 bottom-0 z-0 md:w-[700px] md:h-[470px] w-[290px] h-[195px]">
+              <div className="absolute   right-0 bottom-0 z-0 w-[700px] h-[470px] hidden md:block">
                 <Image
                   src="/herosvg.svg"
                   width={1000}
                   height={1000}
                   alt="hero"
-                  className="md:w-[700px] md:h-[470px] w-[290px] h-auto"
+                  className="w-[700px] h-[470px] "
+                />
+              </div>
+              <div className="absolute top-[515px]  right-0  z-0  w-[290px] h-[195px] md:hidden">
+                <Image
+                  src="/herosvg.svg"
+                  width={1000}
+                  height={1000}
+                  alt="hero"
+                  className="w-[290px] h-auto"
                 />
               </div>
             </div>
@@ -92,6 +101,9 @@ const HeroGoEdu = () => {
         {isOpenpopup && (
           <ConsultationPopup setClose={toggleBookingClosePopup} />
         )}
+
+
+     
       </div>
 
       <style jsx>{`
@@ -114,7 +126,7 @@ const HeroGoEdu = () => {
             transform: translateY(0);
             opacity: 1;
           }
-        } 
+        }
       `}</style>
     </>
   );

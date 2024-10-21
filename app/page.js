@@ -19,6 +19,7 @@ import Blink from "@/components/Blink";
 import ScrollPage from "@/components/Both";
 import IntegratedGalleryBlink from "@/components/Both";
 import CombinedComponent from "@/components/Both";
+import MobileAnimation from "@/components/MobileAnimation";
 export default function Home() {
   return (
     <>
@@ -231,6 +232,10 @@ export default function Home() {
           <MapGoEdu />
           <Scale />
           <WhyChooseUsGoEdu />
+          <div className="md:hidden">
+
+          <MobileAnimation />
+          </div>
           <AboutGoEdu />
           <TestimonailGoEdu />
         </div>

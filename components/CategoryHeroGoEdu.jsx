@@ -13,7 +13,7 @@ const CategoryHeroGoEdu = () => {
             alt="category_hero"
             width={1000}
             height={1000}
-            className="w-full h-[100vh] object-cover"
+            className="w-full h-[80vh]  object-cover "
           />
         </div>
       </div>
