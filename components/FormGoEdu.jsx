@@ -26,7 +26,7 @@ const FormGoEdu = () => {
 
   return (
     <div className="flex gap-20 justify-between items-center">
-      <div className="w-[795px] h-[539px]   ">
+      <div className="w-[795px] h-[539px] md:block hidden  ">
         <Image
           src="/bookingformgoedu.svg"
           alt="School choice"
@@ -36,8 +36,11 @@ const FormGoEdu = () => {
         />
       </div>
 
-      <div className="w-1/2 p-8 bg-white">
-        <h3 className="text-xl mb-6 text-[#323232]">
+      <div className="md:w-1/2 w-full p-6 bg-white">
+        <div className="md:hidden block w-[226px] text-[20px]">
+          Confuse to choose the Best School ?
+        </div>
+        <h3 className="md:text-xl mt-8 text-[12px] mb-6 text-[#323232]">
           Fill this form and get in touch with our counsellor
         </h3>
         <form onSubmit={handleSubmit} className="space-y-7">
@@ -47,7 +50,7 @@ const FormGoEdu = () => {
             placeholder="Your name"
             value={formData.name}
             onChange={handleChange}
-            className=" p-2 border border-[#D9D9D9] rounded w-[462px] h-[39px] placeholder:text-[#898989]"
+            className="p-2 border-b-2 border-[#D9D9D9] w-full h-[39px] placeholder:text-[#898989] sm:border sm:rounded sm:w-[462px] sm:border-[#D9D9D9]"
           />
           <input
             type="email"
@@ -55,10 +58,10 @@ const FormGoEdu = () => {
             placeholder="Your email"
             value={formData.email}
             onChange={handleChange}
-            className="w-[462px] h-[39px] p-2 border border-[#D9D9D9] rounded placeholder:text-[#898989]"
+            className="p-2 border-b-2 border-[#D9D9D9] w-full h-[39px] placeholder:text-[#898989] sm:border sm:rounded sm:w-[462px] sm:border-[#D9D9D9]"
           />
           <div className="flex">
-            <select className="w-[64px] h-[39px] p-2 border border-[#D9D9D9] rounded-l text-[#898989]">
+            <select className="w-[64px] h-[39px] border-b-2 border-[#D9D9D9] rounded-l placeholder:text-[#898989] sm:border sm:rounded-l sm:p-2 sm:border-[#D9D9D9]">
               <option className="text-[#898989]">🇮🇳</option>
             </select>
             <input
@@ -67,15 +70,16 @@ const FormGoEdu = () => {
               placeholder="Your mobile number"
               value={formData.phone}
               onChange={handleChange}
-              className=" p-2 border border-[#D9D9D9] rounded-r w-[398px] h-[39px] placeholder:text-[#898989]"
+              className="w-full h-[39px] p-2 border-b-2 border-[#D9D9D9] placeholder:text-[#898989] sm:border sm:rounded-r sm:w-[398px] sm:border-[#D9D9D9]"
             />
           </div>
-          <div className="flex gap-20">
+
+          <div className="flex md:gap-20 gap-8">
             <select
               name="class"
               value={formData.class}
               onChange={handleChange}
-              className=" p-2 border border-[#D9D9D9] rounded w-[143px] h-[39px] text-[#898989]"
+              className="p-2 border-b-2 border-[#D9D9D9] rounded md:w-[143px] w-[120px] h-[39px] placeholder:text-[#898989] md:border md:rounded "
             >
               <option value="" className="text-[#898989]">
                 Class
@@ -86,7 +90,7 @@ const FormGoEdu = () => {
               name="board"
               value={formData.board}
               onChange={handleChange}
-              className=" p-2 border border-[#D9D9D9] rounded w-[143px] h-[39px] text-[#898989]"
+              className="p-2 border-b-2 border-[#D9D9D9] rounded md:w-[143px] w-[120px] h-[39px] placeholder:text-[#898989] md:border md:rounded"
             >
               <option value="" className="text-[#898989]">
                 BOARD
@@ -94,10 +98,10 @@ const FormGoEdu = () => {
               {/* Add board options */}
             </select>
           </div>
-          <div className="pt-20 cursor-pointer">
+          <div className="md:pt-20 pt-8 cursor-pointer">
             <button
               type="submit"
-              className="w-[177px] h-[60px]  bg-[#1B6EA1] text-white p-2 rounded-lg hover:bg-[#1b6ea1c9]"
+              className="md:w-[177px] md:h-[60px] md:px-0 px-8 md:py-0 py-3  bg-[#1B6EA1] text-white p-2 rounded-lg hover:bg-[#1b6ea1c9]"
             >
               Submit
             </button>
