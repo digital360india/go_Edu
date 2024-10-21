@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from 'next/image';
+import MobileSwiper from './MobileSwiper';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -110,9 +111,9 @@ export default function Scale() {
       duration: 0.5,
       onComplete: () => setShowGallery(true),
     })
-    .to({}, {duration: 4}) // Longer pause for gallery scrolling
+    .to({}, {duration: 4}) 
     .to(circle, {
-      opacity: 0, // Keep circle hidden
+      opacity: 0, 
       scale: 1,
       duration: 0.5,
     });
@@ -123,7 +124,11 @@ export default function Scale() {
   }, []);
 
   return (
-    <div className="h-[450vh]"> {/* Taller container for smoother scrolling */}
+
+    <>
+    
+  
+    <div className="h-[450vh] hidden md:block"> 
       <div
         ref={containerRef}
         className="w-full h-screen bg-blue-400 flex justify-end items-center overflow-hidden relative"
@@ -144,5 +149,10 @@ export default function Scale() {
         )}
       </div>
     </div>
+
+        <div className='md:hidden'>
+          <MobileSwiper />
+        </div>
+    </>
   );
 }

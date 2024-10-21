@@ -138,6 +138,7 @@ const SchoolCard = ({ categoryData }) => {
               />
               <Image
                 src="/searching.svg"
+                alt="search"
                 width={1000}
                 height={1000}
                 className="w-[30px] rounded-full md:m-2  h-[30px] text-[#FFFFFF] cursor-pointer hidden md:block"
