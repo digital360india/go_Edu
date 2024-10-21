@@ -10,16 +10,12 @@ const AboutGoEdu = () => {
 
   return (
     <>
-
-    {/* mobile */}
-      <div className="md:hidden">
-        <div
-          className="w-full h-[400px] bg-no-repeat bg-cover bg-center"
-          style={{ backgroundImage: `url(${Aboutusgoedu.src})` }}
-        >
-
-          <div className="flex justify-center">
-          <div className=" text-white grid grid-cols-2  gap-24 p-10">
+      <div
+        className="relative w-full h-[400px] bg-no-repeat bg-cover bg-center overflow-hidden md:hidden"
+        style={{ backgroundImage: `url(${Aboutusgoedu.src})` }}
+      >
+        <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center z-10">
+          <div className="text-white grid grid-cols-2 gap-24 p-10">
             <div className="space-y-10">
               <div className="space-y-1">
                 <Image
@@ -75,22 +71,49 @@ const AboutGoEdu = () => {
                 <p className="text-[12px] md:text-[24px]">Cities</p>
               </div>
             </div>
-          </div></div>
-
-          <div className="flex justify-center items-center ">
-            <div className="bg-white rounded-3xl cursor-pointer text-[#1B6EA1] w-[140px] h-[38px] flex justify-center items-center">
-              <button className="z-20">Read More</button>
-            </div>
           </div>
         </div>
 
-        <SchoolByCitiesGoedu />
+        <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 z-20">
+          <div className="bg-white rounded-3xl cursor-pointer text-[#1B6EA1] w-[140px] h-[38px] flex justify-center items-center">
+            <button onClick={() => setShowContent(true)}>Read More</button>
+          </div>
+        </div>
+
+        <div
+          className={`absolute top-0 left-0 w-full h-[396px] mt-[2px] mb-[2px] bg-[#F3F3F3] text-[#323232] transition-transform duration-700 ease-in-out z-30 ${
+            showContent ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <button
+            className="absolute w-[30px] h-[30px] rounded-full text-white text-[1.3rem] bg-[#1B6EA1] top-52 left-3"
+            onClick={() => setShowContent(false)}
+          >
+            &lt;
+          </button>
+
+          <div className="p-[46px] text-justify overflow-y-auto h-full text-[13px]">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam amet
+            veniam soluta ratione laboriosam animi accusantium similique nihil
+            voluptates, eveniet minima ducimus magnam sunt a quis incidunt
+            nesciunt. Facere ea ducimus fugiat laudantium totam, voluptas
+            voluptatibus aspernatur deleniti officiis unde! Dolorum itaque rerum
+            quos temporibus accusantium nisi totam vel quis!
+            <br />
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+            laboriosam illum, maxime obcaecati ratione laborum cum hic. Nostrum
+            laudantium suscipit ullam, incidunt at, laboriosam consequatur odio
+            recusandae qui facere id accusamus ratione nam nesciunt aut,
+            inventore accusantium debitis neque tempore quasi? Iure
+            consequuntur, consequatur quae vero veritatis ipsam ex autem!
+          </div>
+        </div>
       </div>
 
-
-
-
-
+      <div className="md:hidden">
+        <SchoolByCitiesGoedu />
+      </div>
 
       <div className="hidden md:block">
         <div
