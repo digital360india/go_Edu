@@ -34,7 +34,7 @@ const MapGoEdu = () => {
     <>
    
     <div 
-      className="relative text-white h-screen md:hidden"
+      className="relative text-white h-screen hidden md:block"
       onMouseEnter={() => setShowContent(true)}
       onMouseLeave={() => setShowContent(false)}
     >

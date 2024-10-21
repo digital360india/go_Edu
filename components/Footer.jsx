@@ -96,6 +96,7 @@ export const Footer = () => {
 
               <Image
                 src="/TwitterX.svg"
+                alt="twitter"
                 width={1000}
                 height={1000}
                 className="w-[23px] h-[23px]"
