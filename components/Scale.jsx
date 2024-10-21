@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,20 +44,36 @@ const Gallery = () => {
 
   return (
     <div className="w-full h-full overflow-hidden bg-white">
-      <div ref={galleryRef} className="flex h-full">
-        {Array(7).fill().map((_, index) => (
-          <div
-            key={index}
-            ref={el => cardsRef.current[index] = el}
-            className="flex-shrink-0 w-[25vw] h-full p-6 pt-40"
-          >
-            <div className="w-full h-[400px] bg-gradient-to-r from-black to-gray-600 shadow-lg rounded-lg flex items-center justify-center">
-              <span className="text-white text-2xl font-bold">Card {index + 1}</span>
+    <div ref={galleryRef} className="flex h-full">
+      {Array(7).fill().map((_, index) => (
+        <div
+          key={index}
+          ref={el => cardsRef.current[index] = el}
+          className="flex-shrink-0 w-[30vw] h-full p-6 pt-40"
+        >
+          <div className="flex flex-col items-center w-[350px] border border-white h-[400px] shadow-lg rounded-2xl">
+            <div
+              className="w-full h-[280px] rounded-b-2xl flex items-center justify-center bg-[#29A2D5]"
+              style={{ boxShadow: "0px 7px 6px 0px #0C263F40" }}
+            >
+              <Image
+                src="/mayoschool.svg"
+                alt="Mayo's College"
+                width={1000}
+                height={1000}
+                className="object-cover p-14"
+              />
+            </div>
+  
+            <div className="w-full flex justify-center items-center h-[118px]">
+              <h2 className="text-[24px] text-[#1B6EA1]">MAYO&apos;S COLLEGE</h2>
             </div>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
+  </div>
+  
   );
 };
 
