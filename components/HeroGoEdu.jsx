@@ -36,30 +36,30 @@ const HeroGoEdu = () => {
     <>
       <div>
         <div
-          className="w-full h-[100vh] bg-no-repeat bg-cover bg-center"
+          className="w-full h-[100vh] md:h-[100vh] bg-no-repeat bg-cover bg-center"
           style={{ backgroundImage: `url(${goedubanner.src})` }}
         >
           <div>
             <div className="flex justify-between">
-              <div className="text-[#0C263F] text-[2.9rem] pt-56 px-[100px] z-10">
+              <div className="text-[#0C263F] text-[1.5rem] md:text-[2.9rem] pt-40 md:pt-56 px-10 md:px-[100px] z-10">
                 <p>Find the</p>
                 <p className="font-bold">Perfect School</p>
                 <p>
                   for Every <span className="font-bold">Dream</span>
                 </p>
               </div>
-              <div className="absolute right-0 bottom-0 z-0">
+              <div className="absolute right-0 bottom-0 z-0 md:w-[700px] md:h-[470px] w-[290px] h-[195px]">
                 <Image
                   src="/herosvg.svg"
                   width={1000}
                   height={1000}
                   alt="hero"
-                  className="w-[700px] h-[470px]"
+                  className="md:w-[700px] md:h-[470px] w-[290px] h-auto"
                 />
               </div>
             </div>
 
-            <div className="flex px-[250px] absolute bottom-0">
+            <div className="hidden md:flex px-[250px] absolute bottom-0">
               <div className="owl-message-container animate-slide-up z-10">
                 <Image
                   src="/messageowl.svg"

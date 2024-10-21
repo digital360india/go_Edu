@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Aboutusgoedu from "@/public/Aboutusgoedu.svg";
+import SchoolByCitiesGoedu from "./SchoolByCitiesGoedu";
 
 const AboutGoEdu = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -9,7 +10,89 @@ const AboutGoEdu = () => {
 
   return (
     <>
-      <div>
+
+    {/* mobile */}
+      <div className="md:hidden">
+        <div
+          className="w-full h-[400px] bg-no-repeat bg-cover bg-center"
+          style={{ backgroundImage: `url(${Aboutusgoedu.src})` }}
+        >
+
+          <div className="flex justify-center">
+          <div className=" text-white grid grid-cols-2  gap-24 p-10">
+            <div className="space-y-10">
+              <div className="space-y-1">
+                <Image
+                  src="/cap.svg"
+                  width={1000}
+                  height={1000}
+                  className="w-[47px] h-[39px]"
+                  alt="img"
+                />
+                <p className="text-[20px] md:text-[29px] font-semibold">500+</p>
+                <p className="w-[2.5rem] h-[3px] bg-white rounded-3xl"></p>
+                <p className="text-[12px] md:text-[24px]">Schools</p>
+              </div>
+
+              <div className="space-y-1">
+                <Image
+                  src="/parent.svg"
+                  width={1000}
+                  height={1000}
+                  className="w-[47px] h-[39px]"
+                  alt="img"
+                />
+                <p className="text-[20px] md:text-[29px] font-semibold">500+</p>
+                <p className="w-[2.5rem] h-[3px] bg-white rounded-3xl"></p>
+                <p className="text-[12px] md:text-[24px]">Parents</p>
+              </div>
+            </div>
+
+            <div className="space-y-10">
+              <div className="space-y-1">
+                <Image
+                  src="/head.svg"
+                  width={1000}
+                  height={1000}
+                  className="w-[47px] h-[39px]"
+                  alt="img"
+                />
+                <p className="text-[20px] md:text-[29px] font-semibold">500+</p>
+                <p className="w-[2.5rem] h-[3px] bg-white rounded-3xl"></p>
+                <p className="text-[12px] md:text-[24px]">Counsellors</p>
+              </div>
+
+              <div className="space-y-1">
+                <Image
+                  src="/city.svg"
+                  width={1000}
+                  height={1000}
+                  className="w-[47px] h-[39px]"
+                  alt="img"
+                />
+                <p className="text-[20px] md:text-[29px] font-semibold">500+</p>
+                <p className="w-[2.5rem] h-[3px] bg-white rounded-3xl"></p>
+                <p className="text-[12px] md:text-[24px]">Cities</p>
+              </div>
+            </div>
+          </div></div>
+
+          <div className="flex justify-center items-center ">
+            <div className="bg-white rounded-3xl cursor-pointer text-[#1B6EA1] w-[140px] h-[38px] flex justify-center items-center">
+              <button className="z-20">Read More</button>
+            </div>
+          </div>
+        </div>
+
+        <SchoolByCitiesGoedu />
+      </div>
+
+
+
+
+
+
+      <div className="hidden md:block">
         <div
           className="w-full h-[463px] bg-no-repeat bg-cover bg-center relative overflow-hidden"
           style={{ backgroundImage: `url(${Aboutusgoedu.src})` }}
@@ -84,7 +167,7 @@ const AboutGoEdu = () => {
                 onMouseLeave={() => setIsHovered(false)}
                 onClick={() => setShowContent(true)}
               >
-                <button>Read More</button>
+                <button className="z-20">Read More</button>
               </div>
             </div>
 
@@ -95,10 +178,10 @@ const AboutGoEdu = () => {
             >
               <div className="relative ">
                 <Image
-                  src="/Line.png"
+                  src="/linesvg.svg"
                   width={1000}
                   height={1000}
-                  className="absolute w-[210px] h-[330px] ml-[800px] bottom-5 z-10"
+                  className="absolute w-[500px] h-[330px]  right-80 bottom-5 z-10"
                   alt="Line"
                 />
                 <Image

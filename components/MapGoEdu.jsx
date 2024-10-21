@@ -30,8 +30,11 @@ const MapGoEdu = () => {
   ];
 
   return (
-    <div
-      className="relative text-white h-screen"
+
+    <>
+   
+    <div 
+      className="relative text-white h-screen md:hidden"
       onMouseEnter={() => setShowContent(true)}
       onMouseLeave={() => setShowContent(false)}
     >
@@ -127,6 +130,10 @@ const MapGoEdu = () => {
         }
       `}</style>
     </div>
+
+
+   
+    </>
   );
 };
 
