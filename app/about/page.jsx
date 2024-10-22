@@ -1,7 +1,5 @@
 
-import AboutHero from "@/components/AboutHero";
-import ReviewEdu from "@/components/ReviewEdu";
-import ReviewCarousel from "@/components/ReviewSection";
+
 // import Hero from "@/components/Hero";
 
 export async function generateMetadata() {
