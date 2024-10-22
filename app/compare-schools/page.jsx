@@ -8,17 +8,17 @@ export default function page() {
       <div className="hidden md:block">
         <Hero
           image={
-            "https://res.cloudinary.com/eduminatti-com/image/upload/v1726733029/Edu123/Eduimages/banner_desktop_2.jpg"
+            "/categorygoedu.svg"
           }
           height={"67vh"}
         />
       </div>
-      <div className="md:hidden">
+      <div className="md:hidden  ">
         <Hero
           image={
-            "https://res.cloudinary.com/eduminatti-com/image/upload/v1726733028/Edu123/Eduimages/mobile_banner.png"
+            "/categorygoedu.svg"
           }
-          height={"70vh"}
+          height={"60vh"}
         />
       </div>
       <div>

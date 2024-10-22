@@ -57,7 +57,7 @@ export default function Hero({ image, height, need }) {
               <>
                 <div className="headfont text-[40px] md:text-[60px] font-bold">
                   <p>Find</p>
-                  <p className="text-[#02618f]">Best School</p>
+                  <p className="text-[#1B6EA1]">Best School</p>
                   <p>for you</p>
                 </div>
                 <div className="text-[#666666]">
@@ -65,10 +65,10 @@ export default function Hero({ image, height, need }) {
                     Explore the best Boarding Schools for you, all over India
                   </p>
                 </div>
-              </>
+              </> 
             ) : (
               <>
-                <div className="headfont text-[28px] md:text-[60px] text-[#02618f] font-bold w-full text-center mt-10 mb-16 md:mt-0 md:mb-0 ">
+                <div className="headfont text-[28px] md:text-[60px] text-[#1B6EA1] font-bold w-full text-center pt-10 mt-20 mb-16 md:mt-0 md:mb-0 ">
                   <p>
                     Find
                     <span> Best School </span>
@@ -237,7 +237,7 @@ export default function Hero({ image, height, need }) {
               <div>
                 <button
                   onClick={navigatePage}
-                  className="bg-[#02618f] px-6 py-4 text-white rounded-md border border-white"
+                  className="bg-[#1B6EA1] px-6 py-4 text-white rounded-md border border-white"
                 >
                   <div className="flex gap-2 items-center">
                     <p>Search School</p>

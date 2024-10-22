@@ -33,33 +33,33 @@ const getBoardOfSchool = (school) => {
 const checkStatus = (status) => (status ? "YES" : "");
 
 const renderRow = (title, data1, data2, data3, data4) => (
-  <tr className="border border-[#02618f]">
-    <td className="w-72 border border-[#02618f] py-2 px-4 font-semibold">
+  <tr className="border border-[#B8BBC2]">
+    <td className="w-72 border border-[#B8BBC2] py-2 px-4 font-semibold">
       {title}
     </td>
     <td
-      className={`border border-[#02618f] w-[300px] py-2 px-4 ${
+      className={`border border-[#B8BBC2] w-[300px] py-2 px-4 ${
         data1 === "YES" ? "text-green-500" : ""
       }`}
     >
       {data1 || ""}
     </td>
     <td
-      className={`border border-[#02618f] w-[300px]  py-2 px-4 ${
+      className={`border border-[#B8BBC2] w-[300px]  py-2 px-4 ${
         data2 === "YES" ? "text-green-500" : ""
       }`}
     >
       {data2 || ""}
     </td>
     <td
-      className={`border border-[#02618f] w-[300px]  py-2 px-4 ${
+      className={`border border-[#B8BBC2] w-[300px]  py-2 px-4 ${
         data3 === "YES" ? "text-green-500" : ""
       }`}
     >
       {data3 || ""}
     </td>
     <td
-      className={`border border-[#02618f] w-[300px]  py-2 px-4 ${
+      className={`border border-[#B8BBC2] w-[300px]  py-2 px-4 ${
         data4 === "YES" ? "text-green-500" : ""
       }`}
     >
@@ -76,11 +76,11 @@ export default function CompareSchoolTable({
 }) {
   return (
     <>
-      <div className="container mx-auto px-10 py-8 ">
-        <h2 className="text-2xl font-bold mb-4 text-[#02618f]">
+      <div className="container mx-auto  py-8 ">
+        <h2 className="text-2xl font-bold mb-4 text-[#0C263F]">
           Basic School Stats
         </h2>
-        <table className="w-full border border-collapse border-[#02618f] ">
+        <table className="w-full border border-collapse border-[#B8BBC2] ">
           <tbody>
             {renderRow(
               "Type of School",
@@ -121,9 +121,9 @@ export default function CompareSchoolTable({
         </table>
       </div>
 
-      <div className="container mx-auto px-10 py-8">
-        <h2 className="text-2xl font-bold mb-4 text-[#02618f]">School Details</h2>
-        <table className="w-full border border-collapse border-[#02618f]">
+      <div className="container mx-auto  py-8">
+        <h2 className="text-2xl font-bold mb-4 text-[#0C263F]">School Details</h2>
+        <table className="w-full border border-collapse border-[#B8BBC2]">
           <tbody>
             {renderRow(
               "Principal Name",
@@ -143,9 +143,9 @@ export default function CompareSchoolTable({
         </table>
       </div>
 
-      <div className="container mx-auto px-10 py-8">
-        <h2 className="text-2xl font-bold mb-4 text-[#02618f]">Fees Structure</h2>
-        <table className="w-full border-collapse border-[#02618f]">
+      <div className="container mx-auto  py-8">
+        <h2 className="text-2xl font-bold mb-4 text-[#0C263F]">Fees Structure</h2>
+        <table className="w-full border-collapse border-[#B8BBC2]">
           <tbody>
             {renderRow(
               "Maximum Fees",
@@ -165,11 +165,11 @@ export default function CompareSchoolTable({
         </table>
       </div>
 
-      <div className="container mx-auto px-10 py-8">
-        <h2 className="text-2xl font-bold mb-4 text-[#02618f]">
+      <div className="container mx-auto  py-8">
+        <h2 className="text-2xl font-bold mb-4 text-[#0C263F]">
           School Facilities
         </h2>
-        <table className="w-full border border-collapse border-[#02618f]">
+        <table className="w-full border border-collapse border-[#B8BBC2]">
           <tbody>
             {renderRow(
               "Online Class",

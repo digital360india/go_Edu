@@ -9,11 +9,11 @@ const CategoryHeroGoEdu = () => {
         <Blink />
         <div className="absolute top-0 min-h-screen">
           <Image
-            src="/categoryhero.svg"
+            src="/categorygoedu.svg"
             alt="category_hero"
             width={1000}
             height={1000}
-            className="w-full h-[80vh]  object-cover "
+            className="w-full h-[100vh]  object-cover "
           />
         </div>
       </div>

@@ -68,10 +68,10 @@ const CompareSchoolCard = ({ onSchoolDataFetched }) => {
   return (
     <>
       {schooldetail == "" ? (
-        <div className="rounded px-3 p-4 space-y-6 border-r border-[#02618f60] last:border-none">
+        <div className="rounded px-3 p-2 space-y-3 border-r border-[#B8BBC2] last:border-none">
           <div className="flex justify-center">
-            <div className="mt-4 w-20 h-20 rounded-full border-2 border-[#02618f60] flex items-center justify-center">
-              <svg
+            <div className="  flex items-center justify-center">
+              {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="39"
                 height="39"
@@ -81,16 +81,24 @@ const CompareSchoolCard = ({ onSchoolDataFetched }) => {
                   fill="#02618f60"
                   d="M216 44H40a12 12 0 0 0-12 12v144a12 12 0 0 0 12 12h176a12 12 0 0 0 12-12V56a12 12 0 0 0-12-12M40 52h176a4 4 0 0 1 4 4v112.4l-32.89-32.89a12 12 0 0 0-17 0l-22.83 22.83l-46.82-46.83a12 12 0 0 0-17 0L36 159V56a4 4 0 0 1 4-4m-4 148v-29.66l53.17-53.17a4 4 0 0 1 5.66 0L181.66 204H40a4 4 0 0 1-4-4m180 4h-23l-40-40l22.83-22.83a4 4 0 0 1 5.66 0L220 179.71V200a4 4 0 0 1-4 4m-68-104a8 8 0 1 1 8 8a8 8 0 0 1-8-8"
                 />
-              </svg>
+              </svg> */}
+
+              <Image
+                src="/school-building.svg"
+                alt="Add Image"
+                width={1000}
+                height={1000}
+                className="w-[210px] h-[140px]"
+                />
             </div>
           </div>
-          <h3 className="text-center text-[#02618f]">Add school</h3>
+          <h3 className="text-center text-[#0C263F]">Add school</h3>
           <div className="space-y-2">
             <div className="relative">
               <select
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
-                className="w-full px-3 py-2 text-[#02618f] bg-white border border-gray-300 rounded-md appearance-none focus:outline-none focus:ring-2 focus:ring-[#02618f]"
+                className="w-full px-3 py-2 text-[#7A7A7A] bg-white border border-[#B8BBC2] rounded-md appearance-none focus:outline-none focus:ring-2 focus:ring-[#B8BBC2]"
               >
                 <option value="">Location</option>
                 <option value="dehradun">Dehradun</option>
@@ -114,7 +122,7 @@ const CompareSchoolCard = ({ onSchoolDataFetched }) => {
                 <option value="darjeeling">Darjeeling</option>
                 <option value="ajmer">Ajmer</option>
               </select>
-              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-[#7A7A7A]">
                 <svg
                   className="fill-current h-4 w-4"
                   xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +136,7 @@ const CompareSchoolCard = ({ onSchoolDataFetched }) => {
               <select
                 value={schoolName}
                 onChange={(e) => setSchoolName(e.target.value)}
-                className="w-full px-3 py-2 text-[#02618f] bg-white border border-gray-300 rounded-md appearance-none focus:outline-none focus:ring-2 focus:ring-[#02618f]"
+                className="w-full px-3 py-2 text-[#7A7A7A] bg-white border border-[#B8BBC2] rounded-md appearance-none focus:outline-none focus:ring-2 focus:ring-[#B8BBC2]"
                 disabled={!location}
               >
                 <option value="">School Name</option>
@@ -138,7 +146,7 @@ const CompareSchoolCard = ({ onSchoolDataFetched }) => {
                   </option>
                 ))}
               </select>
-              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-[#7A7A7A]">
                 <svg
                   className="fill-current h-4 w-4"
                   xmlns="http://www.w3.org/2000/svg"
@@ -176,11 +184,11 @@ const CompareSchoolCard = ({ onSchoolDataFetched }) => {
             </div>
           </div>
           <div className="space-y-2">
-            <p className="text-center text-[#02618f] font-semibold">
+            <p className="text-center text-[#0C263F] font-semibold">
               {schooldetail.name}
             </p>
             <div className="flex justify-center pb-3 sm:pb-0">
-              <button className="px-4 py-2 bg-[#02618f] sm:mb-4 text-white rounded hover:bg-[#02618f60]">
+              <button className="px-4 py-2 bg-[#02618f] sm:mb-4 text-white rounded hover:bg-[#02618f90]">
                 View School
               </button>
             </div>
