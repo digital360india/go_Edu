@@ -21,11 +21,11 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/", icon: "iconamoon:home" },
     { name: "About", path: "/about", icon: "mdi:about-circle-outline" },
-    // {
-    //   name: "Compare Schools",
-    //   path: "/compare-schools",
-    //   icon: "fluent-mdl2:compare-uneven",
-    // },
+    {
+      name: "Compare Schools",
+      path: "/compare-schools",
+      icon: "fluent-mdl2:compare-uneven",
+    },
     { name: "Contact", path: "/contact", icon: "tabler:phone" },
     {
       name: "Blogs",

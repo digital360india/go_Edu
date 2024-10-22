@@ -47,19 +47,19 @@ export default function Blink() {
   return (
     <>
       <div
-        className="absolute top-[137px] right-[185px] cursor-pointer flex"
+        className="absolute top-[156px] right-8 md:top-[137px] md:right-[185px] cursor-pointer flex"
         onClick={toggleBookingPopup}
       >
-        <di v className="w-[300px] z-10">
+        <div className="w-[270px] md:w-[300px] z-10">
           <p
             style={{ boxShadow: "0px 2.1px 6.31px 0px #0000004D" }}
-            className="rounded-l-2xl p-[10px] text-[12px] text-[#323232] cursor-pointer z-10"
+            className="rounded-l-2xl p-[10px] text-[11px] md:text-[12px] text-[#323232] cursor-pointer z-10"
           >
             No more struggle to find your Best School. <br />
             <span className="font-bold">Click here</span> to talk to our
-            counselor today
+            counselor today.
           </p>
-        </di>
+        </div>
         <Image
           src="/goEdulogo.svg"
           alt="logo"
@@ -70,7 +70,7 @@ export default function Blink() {
       </div>
 
       <div className="overflow-hidden w-full h-screen relative bg-gray-100">
-        <div className="absolute top-28 right-40 z-20">
+        <div className="absolute top-[132px] right-2 md:top-28 md:right-40 z-20">
           <div
             ref={circleRef}
             className="w-[100px] h-[100px] rounded-full bg-gradient-to-r from-[#1B6EA1] to-[#29A2D5]"

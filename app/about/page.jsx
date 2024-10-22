@@ -20,8 +20,8 @@ const About = () => {
             <p className=" text-[16px] sm:text-[24px] font-semibold">WHO WE ARE</p>
             <p className=" text-[12px] sm:text-[16px]">Edu 123 is a pioneering online platform dedicated to connecting students and parents with the finest boarding schools across India. Our portal is a comprehensive resource, offering detailed listings and insights into each institution, making the decision-making process for parents and students both efficient and informed.</p>
           </div>
-          <div className=" order-1 sm:order-2  flex justify-center  sm:w-[25%]">
-            <img src="https://res.cloudinary.com/eduminatti-com/image/upload/v1726732485/Edu123/Eduimages/Untitled_98_x_98_px_2.png" className=" w-[180px] h-[160px]" alt="" />
+          <div className=" order-1 sm:order-2  flex justify-center  sm:w-[20%]">
+            <img src="/footerlogo.svg" className=" w-[150px] h-[130px] md:h-[160px]" alt="" />
           </div>
          </div>
          <hr className=" hidden sm:block  border border-gray-300 " />
