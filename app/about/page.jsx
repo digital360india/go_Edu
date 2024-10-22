@@ -1,4 +1,8 @@
-import Hero from "@/components/Hero";
+
+import AboutHero from "@/components/AboutHero";
+import ReviewEdu from "@/components/ReviewEdu";
+import ReviewCarousel from "@/components/ReviewSection";
+// import Hero from "@/components/Hero";
 
 export async function generateMetadata() {
   return {
@@ -11,7 +15,14 @@ export async function generateMetadata() {
 const About = () => {
   return (
     <>
-      {/* <Hero /> */}
+      {/* <div className="mt-16 sm:mt-[80px] ">
+        <AboutHero />
+        <ReviewEdu />
+        <ReviewCarousel />
+
+      </div> */}
+
+
       <div className="mt-16 sm:mt-5 sm:p-[35px] md:p-[100px] ">
         <div className=" sm:bg-[#F8F8F8] p-[40px] space-y-5">
           <p className=" text-[22px] sm:text-[28px] mb-0 sm:mb-10 font-semibold">About Us</p>
@@ -79,7 +90,7 @@ const About = () => {
           </div>
         
          </div>
-         {/* <hr className=" hidden sm:block  border border-gray-300 " /> */}
+         
         </div>
       </div>
     </>
