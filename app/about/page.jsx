@@ -1,4 +1,6 @@
+
 import AboutGoEDU2 from "@/components/AboutGoEDU2";
+
 
 export async function generateMetadata() {
   return {
@@ -11,7 +13,11 @@ export async function generateMetadata() {
 const About = () => {
   return (
     <>
+
       <AboutGoEDU2 />
+
+     
+
     </>
   );
 };
