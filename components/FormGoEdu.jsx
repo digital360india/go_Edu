@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import Hero from "./Hero";
+// import Hero from "./Hero";
 
 const FormGoEdu = () => {
   const [formData, setFormData] = useState({
@@ -116,7 +116,7 @@ const FormGoEdu = () => {
       </div>
     </div>
 
-<Hero/>
+{/* <Hero/> */}
     </>
   );
 };

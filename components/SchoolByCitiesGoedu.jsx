@@ -1,26 +1,32 @@
 import React from "react";
 import schoolbycities from "@/public/schoolbycities.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 const SchoolByCitiesGoedu = () => {
   const cities = [
     {
-      cityName: "City Name 1",
+      name: "india",
       bannerSrc: "/locationbanner.svg",
       bottomSrc: "/locationbottom.svg",
     },
     {
-      cityName: "City Name 2",
+      name: "mussoorie",
       bannerSrc: "/locationbanner.svg",
       bottomSrc: "/locationbottom.svg",
     },
     {
-      cityName: "City Name 3",
+      name: "dehradun",
       bannerSrc: "/locationbanner.svg",
       bottomSrc: "/locationbottom.svg",
     },
     {
-      cityName: "City Name 4",
+      name: "bengaluru",
+      bannerSrc: "/locationbanner.svg",
+      bottomSrc: "/locationbottom.svg",
+    },
+    {
+      name: "shimla",
       bannerSrc: "/locationbanner.svg",
       bottomSrc: "/locationbottom.svg",
     },
@@ -44,6 +50,8 @@ const SchoolByCitiesGoedu = () => {
               {cities.map((city, index) => (
                 <div key={index} className=" text-center">
                   <div className={`bounce-slow ${index} custom-shadow`}>
+                  <Link href={`/category/boarding-schools-in-${city.name}`}>
+
                     <Image
                       src={city.bannerSrc}
                       alt="location banner"
@@ -51,6 +59,7 @@ const SchoolByCitiesGoedu = () => {
                       height={1000}
                       className="w-[80px] h-[90px] mx-4"
                     />
+                    </Link>
                   </div>
                   <div
                     className={`resize-bottom ${index} custom-shadow-bottom`}
@@ -63,7 +72,9 @@ const SchoolByCitiesGoedu = () => {
                       className="w-[60px] h-[8px] mx-6"
                     />
                   </div>
-                  <p className="mt-4 text-[12px]">{city.cityName}</p>
+                  <Link href={`/category/boarding-schools-in-${city.name}`}>
+                  <p className="mt-4">{city.name}</p>
+                </Link>
                 </div>
               ))}
             </div>

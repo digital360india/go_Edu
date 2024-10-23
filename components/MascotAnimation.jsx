@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Aisi() {
+export default function MascotAnimation() {
   const containerRef = useRef(null);
   const owlRef = useRef(null);
 
@@ -67,15 +67,15 @@ export default function Aisi() {
   }, []);
 
   return (
-    <div className="mt-28">
+    <div className="mt-28 overflow-hidden">
       <div ref={containerRef} id="container" className="w-full h-[200vh] relative">
+        {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aliquam, repellat sapiente labore perspiciatis sint. Et ad ratione magni dolores, accusamus, debitis quisquam voluptas sequi adipisci suscipit temporibus nisi dolore?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aliquam, repellat sapiente labore perspiciatis sint. Et ad ratione magni dolores, accusamus, debitis quisquam voluptas sequi adipisci suscipit temporibus nisi dolore?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aliquam, repellat sapiente labore perspiciatis sint. Et ad ratione magni dolores, accusamus, debitis quisquam voluptas sequi adipisci suscipit temporibus nisi dolore?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aliquam, repellat sapiente labore perspiciatis sint. Et ad ratione magni dolores, accusamus, debitis quisquam voluptas sequi adipisci suscipit temporibus nisi dolore?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aliquam, repellat sapiente labore perspiciatis sint. Et ad ratione magni dolores, accusamus, debitis quisquam voluptas sequi adipisci suscipit temporibus nisi dolore?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aliquam, repellat sapiente labore perspiciatis sint. Et ad ratione magni dolores, accusamus, debitis quisquam voluptas sequi adipisci suscipit temporibus nisi dolore?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aliquam, repellat sapiente labore perspiciatis sint. Et ad ratione magni dolores, accusamus, debitis quisquam voluptas sequi adipisci suscipit temporibus nisi dolore?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aliquam, repellat sapiente labore perspiciatis sint. Et ad ratione magni dolores, accusamus, debitis quisquam voluptas sequi adipisci suscipit temporibus nisi dolore?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aliquam, repellat sapiente labore perspiciatis sint. Et ad ratione magni dolores, accusamus, debitis quisquam voluptas sequi adipisci suscipit temporibus nisi dolore?</p> */}
         
         <div ref={owlRef} className="fixed top-2 -right-16 z-50" id="owl">
           <div id="message" className="absolute right-20 -top-5">
@@ -83,7 +83,7 @@ export default function Aisi() {
           </div>
           <img
             className="w-36"
-            src="https://img.icons8.com/?size=94&id=zSISljXDJjZo&format=png"
+            src="/edugo.gif"
             alt="Owl"
           />
         </div>

@@ -41,7 +41,7 @@ const HeroGoEdu = () => {
         >
           <div>
             <div className="flex justify-between">
-              <div className="text-[#0C263F] text-[1.5rem] md:text-[2.9rem] pt-40 md:pt-56 px-10 md:px-[100px] z-10">
+              <div className="text-[#0C263F] text-[2.3rem] md:text-[2.9rem] pt-44 md:pt-56 px-10 md:px-[100px] z-10">
                 <p>Find the</p>
                 <p className="font-bold">Perfect School</p>
                 <p>
