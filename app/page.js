@@ -1,25 +1,13 @@
-// import { CitySchool } from "@/components/CitySchool";
-// import { EnquireNow } from "@/components/EnquireNow";
-// import { FeatureSchool } from "@/components/FeatureSchool";
-// import Hero from "@/components/Hero";
+
 import "./globals.css";
-// import { About } from "@/components/About";
-// import { Testimonials } from "@/components/Testimonials";
-import PayForm from "@/components/payment/PayForm";
 import HeroGoEdu from "@/components/HeroGoEdu";
 import FormGoEdu from "@/components/FormGoEdu";
 import WhyChooseUsGoEdu from "../components/WhyChooseUsGoEdu";
 import AboutGoEdu from "@/components/AboutGoEdu";
 import TestimonailGoEdu from "@/components/TestimonailGoEdu";
 import MapGoEdu from "@/components/MapGoEdu";
-import Popup from "@/components/Popup";
-import Aisi from "@/components/Aisi";
-import Scale from "@/components/Scale";
-import Blink from "@/components/Blink";
-import ScrollPage from "@/components/Both";
-import IntegratedGalleryBlink from "@/components/Both";
-import CombinedComponent from "@/components/Both";
 import MobileAnimation from "@/components/MobileAnimation";
+import FeaturedGoEduLaptop from "@/components/FeaturedGoEduLaptop";
 export default function Home() {
   return (
     <>
@@ -223,14 +211,13 @@ export default function Home() {
 
 
         <div>
-          {/* <Blink /> */}
+        
           <HeroGoEdu />
-          {/* <Aisi /> */}
-          {/* <CombinedComponent /> */}
+          
           <FormGoEdu />
-          {/* <Popup /> */}
+        
           <MapGoEdu />
-          <Scale />
+          <FeaturedGoEduLaptop />
           <WhyChooseUsGoEdu />
           <div className="md:hidden">
 

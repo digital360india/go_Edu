@@ -7,7 +7,15 @@ const CategoryHeroGoEdu = () => {
     <>
       <div className="relative">
         <Blink />
-        <div className="absolute top-0 min-h-screen">
+        <div className="absolute top-0 max-h-screen">
+          <div className=" top-[50vh] absolute text-[#0C263F] text-[40px] text-center md:left-[50vh]">
+            <h1 className="font-bold text-center">Confusion!? </h1>
+
+            <h2 className="text-center">
+              to choose the <span className="font-bold">Right School</span> for
+              you?
+            </h2>
+          </div>
           <Image
             src="/categorygoedu.svg"
             alt="category_hero"

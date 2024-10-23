@@ -238,10 +238,10 @@ export default function Filter({ filterdata, setfilterdata }) {
 
   return (
     <>
-      <div className="p-5 text-[#000000]">
-        <div className=" space-y-3 sm:space-y-3 ">
-          <p className="text-[24px] ">Filter</p>
-          <div className=" space-y-3">
+      <div className="px-5 pt-3 text-[#000000]">
+        <div className=" space-y-3 sm:space-y-2 ">
+          <p className="text-[22px] ">Filter</p>
+          <div className=" space-y-2">
             <p className="text-[14px] mt-5 font-semibold">Sort</p>
 
             <div className="flex justify-between">
@@ -274,14 +274,14 @@ export default function Filter({ filterdata, setfilterdata }) {
           </div>
           <hr />
 
-          {/* <div className="space-y-3">
-            <p className="text-[14px] font-semibold">Boards</p>
+           <div className="space-y-3">
+            <p className="text-[14px] font-semibold text-[#000000]">Boards</p>
             <div className="flex flex-wrap gap-x-5 gap-y-3 text-[12px]">
               <div className="flex  justify-between pr-3 min-w-[140px]">
                 <p>CBSE</p>
                 <button
                   onClick={() => handleboards("cbse")}
-                  className="bg-[#02618f70] w-[20px] h-[20px] grid place-content-center rounded-md"
+                  className="bg-[#D9D9D9] w-[20px] h-[20px] grid place-content-center rounded-md"
                   onChange={(e) => {
                     setboard(e.target.value);
                   }}
@@ -312,7 +312,7 @@ export default function Filter({ filterdata, setfilterdata }) {
                 <p>ICSE/ISC</p>
                 <button
                   onClick={() => handleboards("icse_isc")}
-                  className="bg-[#02618f70] w-[20px] h-[20px] grid place-content-center rounded-md"
+                  className="bg-[#D9D9D9] w-[20px] h-[20px] grid place-content-center rounded-md"
                   onChange={(e) => {
                     setboard(e.target.value);
                   }}
@@ -343,7 +343,7 @@ export default function Filter({ filterdata, setfilterdata }) {
                 <p>CIE</p>
                 <button
                   onClick={() => handleboards("cie")}
-                  className="bg-[#02618f70] w-[20px] h-[20px] grid place-content-center rounded-md"
+                  className="bg-[#D9D9D9] w-[20px] h-[20px] grid place-content-center rounded-md"
                 >
                   {filterdata.boards.includes("cie") ? (
                     <svg
@@ -371,7 +371,7 @@ export default function Filter({ filterdata, setfilterdata }) {
                 <p>IB</p>
                 <button
                   onClick={() => handleboards("ib")}
-                  className="bg-[#02618f70] w-[20px] h-[20px] grid place-content-center rounded-md"
+                  className="bg-[#D9D9D9] w-[20px] h-[20px] grid place-content-center rounded-md"
                 >
                   {filterdata.boards.includes("ib") ? (
                     <svg
@@ -399,7 +399,7 @@ export default function Filter({ filterdata, setfilterdata }) {
                 <p>IGCSE</p>
                 <button
                   onClick={() => handleboards("igcse")}
-                  className="bg-[#02618f70] w-[20px] h-[20px] grid place-content-center rounded-md"
+                  className="bg-[#D9D9D9] w-[20px] h-[20px] grid place-content-center rounded-md"
                 >
                   {filterdata.boards.includes("igcse") ? (
                     <svg
@@ -423,8 +423,8 @@ export default function Filter({ filterdata, setfilterdata }) {
                 </button>
               </div>
             </div>
-          </div>  */}
-          <div className="space-y-3">
+          </div>  
+          {/* <div className="space-y-3">
             <p className="text-[14px] font-semibold">Boards</p>
             <div className="flex flex-wrap gap-x-5 gap-y-3 text-[12px]">
               <div className="flex justify-between text-[#7A7A7A] pr-3 min-w-[140px]">
@@ -444,7 +444,6 @@ export default function Filter({ filterdata, setfilterdata }) {
               </div>
             </div>
 
-            {/* Render selected boards below the dropdown */}
             <div className="flex flex-wrap gap-3 mt-3">
               {selectedBoards.map((board) => (
                 <div
@@ -463,7 +462,7 @@ export default function Filter({ filterdata, setfilterdata }) {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
           <hr />
 
           <div className="space-y-3">
