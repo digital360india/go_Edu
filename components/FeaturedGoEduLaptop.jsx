@@ -9,131 +9,130 @@ import FeaturedGoEduMobile from "./FeaturedGoEduMobile";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
-
 const schools = [
   {
     school: "Jain International School",
     logo: "/mayoschool.svg", 
     url: "/school/bengaluru/jain-international-residential-school-bangalore-karnataka",
-
   },
   {
     school: "Wellham Girls School",
     logo: "/Welham_Girls.svg", 
     url: "/school/dehradun/welham-girls'-school-dehradun-uttarakhand",
-
   },
   {
     school: "Mayo College",
     logo: "/mayoschool.svg", 
     url: "/school/india/mayo-college-india",
-
   },
   {
     school: "Mussoorie International School",
     logo: "/mayoschool.svg", 
     url: "/school/mussoorie/mussoorie-international-school-mussoorie-uttarakhand ",
-
   },
   {
     school: "The Doon School",
     logo: "/The_Doon_School.svg", 
     url: "/school/dehradun/the-doon-school-dehradun-uttarakhand",
-
   },
 ];
-
 
 const Gallery = () => {
   const galleryRef = useRef(null);
   const cardsRef = useRef([]);
   const router = useRouter();
+  const [scrollTriggerLoaded, setScrollTriggerLoaded] = useState(false);
 
   useEffect(() => {
-    const gallery = galleryRef.current;
-    const cards = cardsRef.current;
+    let ScrollTrigger;
 
-    if (!gallery || cards.length === 0) return;
-
-    const cardWidth = window.innerWidth * 0.25; 
-    const totalWidth = cardWidth * cards.length;
-
-    gsap.to(gallery, {
-      x: -totalWidth + cardWidth, 
-      ease: "none",
-      scrollTrigger: {
-        trigger: gallery,
-        start: "top top",
-        end: `+=${totalWidth}`,
-        scrub: 1,
-        snap: {
-          snapTo: 1 / (cards.length - 1),
-          duration: { min: 0.2, max: 0.3 }, 
-          delay: 0.1, 
-        },
-        pin: true,
-      },
-    });
-
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
+    const loadScrollTrigger = async () => {
+      if (typeof window !== 'undefined') {
+        try {
+          ScrollTrigger = (await import('gsap/ScrollTrigger')).default;
+          gsap.registerPlugin(ScrollTrigger);
+          setScrollTriggerLoaded(true);
+        } catch (error) {
+          console.error('Failed to load ScrollTrigger:', error);
+        }
+      }
     };
-  }, []);
+
+    loadScrollTrigger();
+
+    if (scrollTriggerLoaded) {
+      const gallery = galleryRef.current;
+      const cards = cardsRef.current;
+
+      // Safety check: Ensure elements are present
+      if (!gallery || cards.length === 0) {
+        console.warn('Gallery or cards are not properly initialized');
+        return;
+      }
+
+      // Additional check: Ensure the window object is available
+      if (typeof window === 'undefined') {
+        console.warn('Window object is not available');
+        return;
+      }
+
+      const cardWidth = window.innerWidth * 0.25; 
+      const totalWidth = cardWidth * cards.length;
+
+      const animation = gsap.to(gallery, {
+        x: -totalWidth + cardWidth, 
+        ease: "none",
+        scrollTrigger: {
+          trigger: gallery,
+          start: "top top",
+          end: `+=${totalWidth}`,
+          scrub: 1,
+          snap: {
+            snapTo: 1 / (cards.length - 1),
+            duration: { min: 0.2, max: 0.3 }, 
+            delay: 0.1, 
+          },
+          pin: true,
+        },
+      });
+
+      // Cleanup function to remove GSAP animations
+      return () => {
+        ScrollTrigger?.getAll().forEach((t) => t.kill());
+        animation.scrollTrigger?.kill();
+        animation.kill();
+      };
+    }
+  }, [scrollTriggerLoaded]);
 
   const handleCardClick = (url) => {
-    router.push(url); // Navigate to the specified URL
+    if (url) {
+      router.push(url);
+    } else {
+      console.warn('Invalid URL:', url);
+    }
   };
 
   return (
     <div className="w-full h-full overflow-hidden bg-white">
       <div ref={galleryRef} className="flex h-full">
-        {/* {Array(7)
-          .fill()
-          .map((_, index) => (
-            <div
-              key={index}
-              ref={(el) => (cardsRef.current[index] = el)}
-              className="flex-shrink-0 w-[30vw] h-full p-6 pt-40"
-            >
-              <div className="flex flex-col items-center w-[350px] border border-white h-[400px] shadow-lg rounded-2xl">
-                <div
-                  className="w-full h-[280px] rounded-b-2xl flex items-center justify-center bg-[#29A2D5]"
-                  style={{ boxShadow: "0px 7px 6px 0px #0C263F40" }}
-                >
-                  <Image
-                    src="/mayoschool.svg"
-                    alt="Mayo's College"
-                    width={1000}
-                    height={1000}
-                    className="object-cover p-14"
-                  />
-                </div>
-
-                <div className="w-full flex justify-center items-center h-[118px]">
-                  <h2 className="text-[24px] text-[#1B6EA1]">
-                    MAYO&apos;S COLLEGE
-                  </h2>
-                </div>
-              </div>
-            </div>
-          ))} */}
-          {schools.map((school, index) => (
+        {schools.map((school, index) => (
           <div
             key={index}
             ref={(el) => (cardsRef.current[index] = el)}
-            className="flex-shrink-0 w-[30vw] h-full p-6 pt-40 "
+            className="flex-shrink-0 w-[30vw] h-full p-6 pt-40"
           >
             <div
-                        onClick={() => handleCardClick(school.url)}
-            className="flex flex-col items-center w-[350px] border border-white h-[400px] shadow-lg rounded-2xl">
+              onClick={() => handleCardClick(school.url)}
+              className="flex flex-col items-center w-[350px] border border-white h-[400px] shadow-lg rounded-2xl"
+            >
               <div
                 className="w-full h-[280px] rounded-b-2xl flex items-center justify-center bg-[#29A2D5]"
                 style={{ boxShadow: "0px 7px 6px 0px #0C263F40" }}
               >
                 <Image
                   src={school.logo}
-                  alt={school.name}
+                  alt={school.school}
                   width={1000}
                   height={1000}
                   className="object-cover p-14 cursor-pointer"
@@ -161,7 +160,10 @@ export default function FeaturedGoEduLaptop() {
     const container = containerRef.current;
     const circle = circleRef.current;
 
-    if (!container || !circle) return;
+    if (!container || !circle) {
+      console.warn('Container or circle elements are not properly initialized');
+      return;
+    }
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -192,8 +194,10 @@ export default function FeaturedGoEduLaptop() {
         duration: 0.5,
       });
 
+    // Cleanup on unmount
     return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
+      ScrollTrigger?.getAll().forEach((t) => t.kill());
+      tl.kill();
     };
   }, []);
 
@@ -202,14 +206,13 @@ export default function FeaturedGoEduLaptop() {
       <div className="h-[450vh] hidden md:block">
         <div
           ref={containerRef}
-          className="w-full h-screen  flex justify-end items-center overflow-hidden relative"
+          className="w-full h-screen flex justify-end items-center overflow-hidden relative"
           style={{
             background: `linear-gradient(90deg, #1B6EA1 1.4%, rgba(41, 162, 213, 0) 100%), url('/featuredschool.svg')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          
           <div className="absolute top-[50%] left-10 text-[50px] font-bold text-white z-10">
             FEATURED SCHOOL
           </div>
@@ -228,7 +231,6 @@ export default function FeaturedGoEduLaptop() {
               height={1000}
               className="object-cover w-[200px] h-[120px]"
             />
-            {/* <span className="text-2xl font-bold">Explore</span> */}
           </div>
 
           {showGallery && (
@@ -245,5 +247,3 @@ export default function FeaturedGoEduLaptop() {
     </>
   );
 }
-
-
