@@ -46,7 +46,7 @@ export function StarRating({ rating, review }) {
           <div className="flex text-[#F97B24] items-center gap-2">
             {whole_stars}
             {review !== -1 && (
-              <span className="text-[13px] w-[84px]  lg:flex justify-end text-white  font-semibold -mb-1">
+              <span className="text-[13px] w-[84px]  lg:flex justify-end md:text-white text-[#323232] font-semibold -mb-1">
                 ({review} reviews)
               </span>
             )}
