@@ -15,6 +15,7 @@ import { base } from "@/app/api/airtable";
 import Image from "next/image";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import ConsultationPopup from "./ConsultationPopup";
 
 const getProgressBarColor = (value) => {
   if (value < 25) {
@@ -94,7 +95,7 @@ const facility = [
   },
   {
     imageSrc: "/table-tannis.svg",
-    facility: "Tennis Court",
+    facility: "Table Tennis",
     check: "Tennis_Court",
   },
   {
@@ -109,29 +110,11 @@ const facility = [
     check: "Badminton_Court",
   },
 ];
-// const ReviewCard = ({ userName, userImg, schoolRating, reviewmessage }) => (
-//   <div className="p-4 rounded-lg mb-4 ">
-//     <div className="flex items-center mb-2">
-//       <img
-//         className="w-8 h-8 rounded-full mr-2"
-//         src={userImg}
-//         alt={`${userName}'s Profile`}
-//       />
-//       <div className="flex md:block gap-10">
-//         <p className="text-lg  font-semibold">{userName}</p>
-//         <div className="flex  sm:mt-0 items-center">
-//           <StarRating rating={schoolRating} review={-1} />
-//         </div>
-//       </div>
-//     </div>
-//     <p>{reviewmessage}</p>
-//   </div>
-// );
 
 const ReviewCard = ({ userName, userImg, schoolRating, reviewmessage }) => (
-  <div className="m-20 rounded-lg mb-4">
-    <div className="flex space-x-10 mb-2">
-      <div className="w-20 h-[67px] rounded-[50%]">
+  <div className="md:m-20 p-8 md:p-0  mb-4 ">
+    <div className="flex space-x-10 mb-2 ">
+      <div className="w-20 h-[56px] md:h-[67px] rounded-[50%]">
         <img
           className="w-20 h-20 rounded-full"
           src={userImg}
@@ -143,9 +126,14 @@ const ReviewCard = ({ userName, userImg, schoolRating, reviewmessage }) => (
 
         <StarRating rating={schoolRating} review={-1} />
 
-        <p className="text-[#323232] text-start">{reviewmessage}</p>
+        <p className="text-[#323232] hidden md:block text-start">
+          {reviewmessage}
+        </p>
       </div>
     </div>
+    <p className="text-[#323232] md:hidden text-justify mt-8">
+      {reviewmessage}
+    </p>
   </div>
 );
 
@@ -184,6 +172,26 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
   const closePopup = () => {
     document.body.style.overflow = "auto";
     setPopupOpen(false);
+  };
+
+  // enquire popup
+  const [isOpenpopup, setIsOpenpopup] = useState(false);
+
+  const handleButtonClick = (button) => {
+    setActiveButton(button);
+  };
+
+  const toggleBookingPopup = () => {
+    setIsOpenpopup(true);
+  };
+
+  const toggleBookingPopupSmall = () => {
+    setIsOpenpopup(true);
+    toggleDrawer();
+  };
+
+  const toggleBookingClosePopup = () => {
+    setIsOpenpopup(false);
   };
 
   function handle() {
@@ -248,7 +256,6 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
     averge();
   }, []);
 
-  //right scroll
   const [slideClass, setSlideClass] = useState("translate-x-0");
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -290,7 +297,8 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                 <div className="text-left flex justify-center ">
                   <button
                     className="w-[180px]  shadow-md h-[40px] bg-[#02618f] text-white rounded-lg"
-                    onClick={openPopup}
+                    // onClick={openPopup}
+                    onClick={toggleBookingPopup}
                   >
                     Enquire Now
                   </button>
@@ -307,6 +315,9 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                 review={school?.numOfReviews}
               />
             </div>
+            {isOpenpopup && (
+              <ConsultationPopup setClose={toggleBookingClosePopup} />
+            )}
           </div>
         </div>
       </section>
@@ -314,7 +325,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
         <div
           className="relative  grid place-content-center bg-no-repeat h-[65vh] mt-10"
           style={{
-            backgroundImage: `url("https://res.cloudinary.com/eduminatti-com/image/upload/v1726733028/Edu123/Eduimages/mobile_banner.png")`,
+            backgroundImage: `url("/aboutbanner.svg")`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -326,7 +337,8 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                 <div className="text-left flex justify-center ">
                   <button
                     className="w-[180px]  shadow-md h-[40px] bg-[#02618f] text-white rounded-lg"
-                    onClick={openPopup}
+                    // onClick={openPopup}
+                    onClick={toggleBookingPopup}
                   >
                     Enquire Now
                   </button>
@@ -344,25 +356,68 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                 className="text-white"
               />
             </div>
+            {isOpenpopup && (
+              <ConsultationPopup setClose={toggleBookingClosePopup} />
+            )}
           </div>
         </div>
       </section>
+      <section className=" sm:hidden    gap-8 overflow-scroll md:overflow-hidden mt-10 px-5">
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={10}
+          grabCursor={true}
+          loop={true}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          // navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="mySwiper rounded-lg"
+        >
+          <SwiperSlide className="">
+            <img
+              src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${city}/G-${school?.Image_Code}.png`}
+              className="w-[400px] h-[333px] rounded-3xl"
+            />
+            <div className="min-h-10"></div>
+          </SwiperSlide>
+          <SwiperSlide className="">
+            <img
+              src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${city}/H-${school?.Image_Code}.png`}
+              className="w-[400px] h-[333px] rounded-3xl"
+            />
+            <div className="min-h-10"></div>
+          </SwiperSlide>
+          <SwiperSlide className="">
+            <img
+              src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${city}/I-${school?.Image_Code}.png`}
+              className="w-[400px] h-[333px] rounded-3xl"
+            />
+            <div className="min-h-10"></div>
+          </SwiperSlide>
+        </Swiper>
+      </section>
 
-      <div className="w-full  mx-auto mt-10">
+      <div className="w-full  mx-auto mt-10 ">
         <div>
-          <div className="flex justify-center space-x-20 sticky top-0 bg-white">
-            <section className="space-y-5 w-[570px] ">
-              <p className=" text-[24px] sm:text-[32px] -mb-4 sm:mb-0 w-[239px] h-[54px] text-left ">
+          <div className="flex justify-center md:space-x-20 md:sticky md:top-0 bg-white">
+            <section className="space-y-5 md:w-[570px] md:h-[750px] px-6 md:px-0">
+              <p className=" text-[24px] sm:text-[32px] md:w-[239px]  md:h-[54px] md:text-left ">
                 About School
               </p>
-              <hr className="w-[550px] h-0.5 bg-black" />
+              <hr className="w-auto md:w-[550px] h-0.5 bg-black" />
 
-              <Enquire
+              {/* <Enquire
                 isOpen={isPopupOpen}
                 onClose={closePopup}
                 school={school?.name}
-              />
-              <p className="text-left  md:hidden  text-[14px]">
+              /> */}
+              {/* <p className="text-left  md:hidden  text-[14px]">
                 {showFullText
                   ? school?.Long_Description
                   : school?.Long_Description.slice(0, 317)}
@@ -383,7 +438,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                     Read less...
                   </span>
                 )}
-              </p>
+              </p> */}
 
               {/* <p className="hidden md:block md:text-left text-[16px] h-[300px] overflow-y-scroll">
               {showFullText
@@ -408,7 +463,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
               )}
             </p> */}
 
-              <p className="hidden md:block text-[16px] h-[323px] w-[570px] text-[#898989] text-justify p-4 overflow-y-scroll">
+              <p className="text-[16px] h-[323px] md:w-[570px] text-[#898989] text-justify p-2 overflow-y-scroll">
                 {school?.Long_Description}
               </p>
 
@@ -434,8 +489,8 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                         </p>
                       </div>
                     )}
-                    <div className="m-[10px]">
-                      <div className="hidden md:flex items-center gap-3">
+                    <div className="md:m-[10px] pt-4 md:mt-0">
+                      <div className="flex items-center gap-3">
                         <Image
                           src="/map.svg"
                           alt="Rupee Icon"
@@ -454,7 +509,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
               </section>
             </section>
 
-            <section className=" hidden  sm:block gap-8 rounded-t-[30px]   bg-[#F3F3F3]">
+            <section className=" hidden  sm:block gap-8 rounded-t-[30px]  bg-[#F3F3F3]">
               <div className="bg-[#F3F3F3]">
                 <div className="w-[40px] h-[40px] ml-6">
                   <p className="w-[40px] h-[40px] text-center pt-2 mt-8 rounded-full border border-[#27AAE1]">
@@ -563,48 +618,17 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
             </section>
           </div>
 
-          <div className="flex justify-center  space-x-32 sticky top-0 bg-white h-[80vh] ">
-            <section className=" ">
-              <p className="text-[24px] sm:text-[32px] w-[293px] h-[54px] md:mb-[10px] mt-6 text-[#323232] ">
+          <div className="flex justify-center  md:space-x-20 md:sticky md:top-0 mt-6 md:mt-0 bg-white md:h-[100vh] ">
+            <section className=" md:w-[570px] md:h-[750px]  md:px-0">
+              <p className="ml-8 md:ml-0 text-[24px] sm:text-[24px] md:text-[32px] md:w-[293px] h-auto md:h-[54px] md:mb-4 mb-4 mt-6 text-[#323232]">
                 School Statistics
               </p>
-              <hr className="w-[520px] h-0.5 bg-black mb-6" />
-              <div className=" flex-wrap gap-y-5  gap-x-0   sm:gap-y-0   text-[14px] md:text-[18px] space-y-12">
-                {/* <div className="md:flex text-center w-1/2 sm:w-auto items-center justify-center">
-                <div className="space-y-2 flex flex-col items-center">
-                  <div className="flex items-center  justify-center space-x-5">
-                    <Image
-                      src="/infra.svg"
-                      width={1000}
-                      height={1000}
-                      className="w-[66px] h-[66px]"
-                      alt="imgsvg"
-                    />
 
-                    <p>Infrastructure</p>
-                    <p>
-                      {school?.Infrastructure &&
-                        `${Math.round(school.Infrastructure)}%`}
-                    </p>
-                  </div>
-
-                  <div className="relative h-[23px] md:h-[40px] w-[40px] sm:w-auto p-[1px] rounded-full border border-[#02618f70]  ">
-                    <Line
-                      className=" w-[130px] md:w-[280px] h-[100%] rounded-full "
-                      percent={school?.Infrastructure}
-                      strokeWidth={4}
-                      strokeColor="#02618f70"
-                      trailWidth={4}
-                      trailColor="#F8F8F8"
-                    />
-                   
-                  </div>
-                </div>
-              </div> */}
-
-                <div className="md:flex text-center w-1/2 sm:w-auto items-center ">
-                  <div className="space-y-2 flex flex-col items-center">
-                    <div className="flex items-center justify-center ">
+              <hr className=" w-[370px] ml-8 md:ml-0 md:w-[550px] h-0.5 bg-black mb-6" />
+              <div className=" flex-wrap md:gap-y-5  md:gap-x-0   sm:gap-y-0   text-[14px] md:text-[18px] md:space-y-12">
+                <div className="md:flex text-center md:w-1/2 sm:w-auto items-center ">
+                  <div className="space-y-2 flex flex-col items-center ">
+                    <div className="flex items-center justify-center  p-6 md:pb-4 lg:p-0  w-full">
                       {/* SVG Icon and Circular Progress Bar */}
                       <CircularProgressWithIcon
                         value={school?.Infrastructure || 0}
@@ -613,10 +637,10 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                       />
 
                       {/* Description */}
-                      <p className="bg-gradient-to-b  from-[#F1F4F9] to-[#C6D1E3] w-[250px] h-[65px] p-4 rounded-r-full">
+                      <p className="bg-gradient-to-b  from-[#F1F4F9] to-[#C6D1E3] w-[250px] h-[65px] pt-4 md:p-4 rounded-r-full">
                         Infrastructure
                       </p>
-                      <p style={{ color: textColor }} className="pl-8">
+                      <p style={{ color: textColor }} className="md:pl-4 pl-3">
                         {school?.Infrastructure &&
                           `${Math.round(school.Infrastructure)}%`}
                       </p>
@@ -624,39 +648,9 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                   </div>
                 </div>
 
-                {/* <div className="md:flex text-center w-1/2 sm:w-auto  items-center justify-center">
-                <div className="space-y-2 flex flex-col items-center">
-                  <div className="flex items-center justify-center space-x-5">
-                    <Image
-                      src="/administration.svg"
-                      width={1000}
-                      height={1000}
-                      className="w-[66px] h-[66px]"
-                      alt="imgsvg"
-                    />
-                    <p>Administration</p>
-                    <p>
-                      {school?.Administration &&
-                        `${Math.round(school.Administration)}%`}
-                    </p>
-                  </div>
-
-                  <div className="relative h-[23px] w-[90%] sm:w-auto  md:h-[40px] p-[1px] rounded-full border border-[#02618f70]  ">
-                    <Line
-                      className=" w-[132px] md:w-[280px] h-[100%] rounded-full "
-                      percent={school?.Administration}
-                      strokeWidth={4}
-                      strokeColor="#02618f70"
-                      trailWidth={4}
-                      trailColor="#F8F8F8"
-                    />
-                    
-                  </div>
-                </div>
-              </div> */}
-                <div className="md:flex text-center w-1/2 sm:w-auto items-center ">
+                <div className="md:flex text-center md:w-1/2 sm:w-auto items-center ">
                   <div className="space-y-2 flex flex-col items-center">
-                    <div className="flex items-center justify-center ">
+                    <div className="flex items-center justify-center  p-6 md:pb-4 lg:p-0  ">
                       {/* SVG Icon and Circular Progress Bar */}
                       <CircularProgressWithIcon
                         value={school?.Administration || 0}
@@ -668,7 +662,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                       <p className="bg-gradient-to-b  from-[#F1F4F9] to-[#C6D1E3] w-[250px] h-[65px] p-4 rounded-r-full">
                         Administration
                       </p>
-                      <p style={{ color: textColor2 }} className="pl-8">
+                      <p style={{ color: textColor2 }} className="md:pl-4 pl-3">
                         {school?.Administration &&
                           `${Math.round(school.Administration)}%`}
                       </p>
@@ -704,11 +698,11 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                    
                   </div>
                 </div>
-              </div> */}
+               </div> */}
 
-                <div className="md:flex text-center w-1/2 sm:w-auto items-center ">
+                <div className="md:flex text-center md:w-1/2 sm:w-auto items-center ">
                   <div className="space-y-2 flex flex-col items-center">
-                    <div className="flex items-center justify-center ">
+                    <div className="flex items-center justify-center  p-6 md:pb-4 lg:p-0 ">
                       <CircularProgressWithIcon
                         value={school?.Academics || 0}
                         svgSrc="/academics.svg"
@@ -718,7 +712,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                       <p className="bg-gradient-to-b  from-[#F1F4F9] to-[#C6D1E3] w-[250px] h-[65px] p-4 rounded-r-full">
                         Academics
                       </p>
-                      <p style={{ color: textColor3 }} className="pl-8">
+                      <p style={{ color: textColor3 }} className="md:pl-4 pl-3">
                         {school?.Academics &&
                           `${Math.round(school.Academics)}%`}
                       </p>
@@ -757,11 +751,11 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                    
                   </div>
                 </div>
-              </div> */}
+               </div> */}
 
-                <div className="md:flex text-center w-1/2 sm:w-auto items-center ">
+                <div className="md:flex text-center md:w-1/2 sm:w-auto items-center">
                   <div className="space-y-2 flex flex-col items-center">
-                    <div className="flex items-center justify-center ">
+                    <div className="flex items-center justify-center  p-6 md:pb-4 lg:p-0  ">
                       {/* SVG Icon and Circular Progress Bar */}
                       <CircularProgressWithIcon
                         value={school?.Extracurricular || 0}
@@ -773,7 +767,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                       <p className="bg-gradient-to-b  from-[#F1F4F9] to-[#C6D1E3] w-[250px] h-[65px] p-4 rounded-r-full">
                         Extracurricular
                       </p>
-                      <p style={{ color: textColor4 }} className="pl-8">
+                      <p style={{ color: textColor4 }} className="md:pl-4 pl-3">
                         {school?.Extracurricular &&
                           `${Math.round(school.Extracurricular)}%`}
                       </p>
@@ -799,22 +793,22 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
             </section>
           </div>
 
-          <div className="flex justify-center  space-x-20 sticky top-0 bg-white h-[70vh]">
-            <section className=" ">
-              <p className="text-[24px]  sm:text-[32px] w-[323px] h-[54px] mb-[20px] mt-6 md:mb-[10px] ">
+          <div className="flex md:justify-center  md:space-x-20 md:sticky md:top-0 bg-white  md:h-[95vh]">
+            <section className="md:w-[570px] mb-12  md:h-[750px] md:mb-[20px] md:px-0 ">
+              <p className="text-[24px] ml-6 md:ml-0 sm:text-[32px] md:w-[323px] h-[54px]  mt-6 md:mb-6 ">
                 Student Facilities
               </p>
-              <hr className="w-[550px] h-0.5 bg-black mb-6" />
-              <div className="  grid gap-5 grid-cols-3 ">
+              <hr className=" w-[370px] ml-6 md:ml-0 md:w-[550px] h-0.5 bg-black mb-6" />
+              <div className=" grid md:gap-8 grid-cols-3 ">
                 {facility.map(
                   (facility) =>
                     school[`${facility.check}`] === "checked" && (
                       <div className="flex flex-col  items-center space-y-3 ">
-                        <div className=" rounded-xl">
+                        <div className=" rounded-xl mt-4">
                           <img
                             src={facility.imageSrc}
                             alt="image"
-                            className=" h-[54px] w-[98px] sm:w-[173px] sm:h-[120px] "
+                            className=" h-[80px] w-[110px] sm:w-[173px] sm:h-[120px] "
                           />
                         </div>
                         <p className="grid text-center place-content-center text-[#02618f] text-[12px] sm:text-[16px]">
@@ -826,7 +820,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
               </div>
             </section>
 
-            <section className=" hidden  sm:block gap-8 rounded-t-[30px]   bg-[#F3F3F3] ">
+            <section className=" hidden  sm:block gap-8 rounded-t-[30px]  bg-[#F3F3F3] ">
               <div className=" rounded-t-[30px]  bg-[#F3F3F3]">
                 <div className="w-[40px] h-[40px] ml-6">
                   <p className="w-[40px] h-[40px] text-center pt-2 mt-8 rounded-full border border-[#27AAE1]">
@@ -842,53 +836,32 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
             </section>
           </div>
         </div>
-        <section className=" sm:hidden    gap-8 overflow-scroll md:overflow-hidden">
-          <Swiper
-            slidesPerView={1}
-            spaceBetween={10}
-            grabCursor={true}
-            loop={true}
-            autoplay={{
-              delay: 2000,
-              disableOnInteraction: false,
-            }}
-            pagination={{
-              clickable: true,
-            }}
-            // navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper rounded-lg"
-          >
-            <SwiperSlide className="">
-              <img
-                src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${city}/G-${school?.Image_Code}.png`}
-                className="w-[400px] h-[333px] rounded-3xl"
-              />
-              <div className="min-h-10"></div>
-            </SwiperSlide>
-            <SwiperSlide className="">
-              <img
-                src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${city}/H-${school?.Image_Code}.png`}
-                className="w-[400px] h-[333px] rounded-3xl"
-              />
-              <div className="min-h-10"></div>
-            </SwiperSlide>
-            <SwiperSlide className="">
-              <img
-                src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${city}/I-${school?.Image_Code}.png`}
-                className="w-[400px] h-[333px] rounded-3xl"
-              />
-              <div className="min-h-10"></div>
-            </SwiperSlide>
-          </Swiper>
-        </section>
 
-        <section className="sticky top-0">
-          <div className="flex justify-between bg-[#1B6EA1] rounded-b-[100px] h-[487px] p-12 ">
-            <div className="">
-              <p className="text-[24px] sm:text-[28px] text-[#FFFFFF]">
+        <section className="md:sticky md:top-0 ">
+          <div className="md:flex md:justify-between md:w-full md:bg-[#1B6EA1] bg-[#F3F3F3] rounded-b-[100px] md:h-[487px] h-[550px] p-12 w-[412px]">
+            <div className=" ">
+              <div className="flex justify-between">
+
+              
+              <p className="text-[24px] sm:text-[28px] md:text-[#FFFFFF] text-[#323232] md:pb-2 pb-8">
                 Reviews
               </p>
+              <div className="md:hidden">
+                <button
+                  className="md:w-[223px] md:h-[40px] w-[125px] h-[36px] md:bg-[#1B6EA1] md:text-white text-[#323232] rounded-2xl border md:border-white border-[#323232] ml-auto"
+                  onClick={handle}
+                >
+                  Write a review
+                </button>
+                <ReviewForm
+                  toggle1={toggle1}
+                  id={id}
+                  school={school}
+                  user={session?.data?.user}
+                  setToggle1={setToggle1}
+                />
+              </div>
+              </div>
               <div className="">
                 {/* <p className="text-[28px]">{school?.rating.toFixed(1)}/5</p> */}
                 <StarRating
@@ -897,9 +870,9 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                 />
               </div>
             </div>
-            <div className="">
+            <div className="hidden md:block">
               <button
-                className="w-[223px] h-[40px] bg-[#1B6EA1] text-white rounded-2xl border  border-white"
+                className="md:w-[223px] md:h-[40px] w-[125px] h-[36px] md:bg-[#1B6EA1] md:text-white text-[#323232] rounded-2xl border md:border-white border-[#323232] ml-auto"
                 onClick={handle}
               >
                 Write a review
@@ -912,41 +885,67 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                 setToggle1={setToggle1}
               />
             </div>
+
+            <section
+              className="bg-[#F3F3F3]  md:hidden  md:w-full md:h-auto h-[335px] w-auto md:mb-28  md:rounded-t-[100px]  top-6 sticky mt-8"
+              style={{ boxShadow: "0px -15px 15px 0px #0C263F40" }}
+            >
+              <div>
+                <hr className="md:w-[520px] md:h-20 md:bg-white md:opacity-0 md:mb-6 " />
+              </div>
+              <Swiper
+                spaceBetween={30}
+                slidesPerView={2}
+                breakpoints={{
+                  1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                  },
+                  0: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                  },
+                }}
+                navigation={{
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
+                }}
+                modules={[Navigation]}
+              >
+                {reviews.map((review, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="">
+                      <ReviewCard {...review} />
+                      {index % 1 === 0 && (
+                        <div className="w-[2px] h-[180px] bg-[#898989] absolute top-20 hidden md:block"></div>
+                      )}
+                    </div>
+                  </SwiperSlide>
+                ))}
+
+                {/* Left and Right navigation buttons */}
+                <Image
+                  src="/goeduleft.svg"
+                  width={1000}
+                  height={1000}
+                  alt="left"
+                  className="hidden md:block w-[50px] h-[50px] swiper-button-prev absolute top-1/2 transform -translate-y-1/2 left-4"
+                />
+                <Image
+                  src="/goeduright.svg"
+                  width={1000}
+                  height={1000}
+                  alt="right"
+                  className="hidden md:block w-[50px] h-[50px] swiper-button-next absolute top-1/2 transform -translate-y-1/2 right-4"
+                />
+              </Swiper>
+            </section>
           </div>
         </section>
 
-        {/* <section>
-          <div className=" block sm:flex  sm:flex-wrap mt-8 ">
-            {reviews.map(
-              (review, index) =>
-                toggle > index && (
-                  <div className="w-full sm:w-1/2">
-                    <ReviewCard key={index} {...review} />
-                  </div>
-                )
-            )}
-          </div>
-
-          {toggle == 2 ? (
-            <button
-              className="w-[160px] h-[40px] bg-[#02618f] text-white rounded-lg"
-              onClick={() => setToggle(reviews.length)}
-            >
-              View More
-            </button>
-          ) : (
-            <button
-              className="w-[160px] h-[40px] bg-[#02618f] text-white rounded-lg"
-              onClick={() => setToggle(2)}
-            >
-              View Less
-            </button>
-          )}
-        </section> */}
-
-        <div className="mx-10">
+        <div className="mx-6 md:mx-10">
           <section
-            className="bg-white w-full h-[300px] mb-28 rounded-t-[100px] rounded-b-[20px] sticky"
+            className="bg-white  hidden md:block w-full h-[300px] mb-28  rounded-t-[100px] rounded-b-[20px] sticky"
             style={{ boxShadow: "0px -15px 15px 0px #0C263F40" }}
           >
             <div>
@@ -961,8 +960,6 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
               }}
               modules={[Navigation]}
             >
-              {/* <hr className="w-[520px] h-20 bg-[#27AAE1] " /> */}
-
               {reviews.map((review, index) => (
                 <SwiperSlide key={index}>
                   <ReviewCard {...review} />
