@@ -16,6 +16,7 @@ export default async function sitemap() {
   const categoryData = await fetchAllRecords("category 2");
   const categoryLinks = categoryData.map((sing) => {
     return {
+      key: sing.id,
       url: `https://${hostname}/category/${sing.fields.slug}`,
       lastModified: sing.fields.modifiedDate || new Date().toISOString(),
     };

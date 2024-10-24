@@ -8,11 +8,12 @@ import TestimonailGoEdu from "@/components/TestimonailGoEdu";
 import MapGoEdu from "@/components/MapGoEdu";
 import MobileAnimation from "@/components/MobileAnimation";
 import FeaturedGoEduLaptop from "@/components/FeaturedGoEduLaptop";
+import Head from "next/head";
 export default function Home() {
   return (
     <>
-      <head>
-        <meta charset="utf-8" />
+      <Head>
+        <meta charSet="utf-8" />
 
         <meta
           name="viewport"
@@ -118,7 +119,7 @@ export default function Home() {
 
         <script
           type="application/ld+json"
-          class="schemantra"
+          className="schemantra"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
@@ -181,7 +182,7 @@ export default function Home() {
             }),
           }}
         />
-      </head>
+      </Head>
       <>
         {/* <div className="hidden xl:block">
           <Hero

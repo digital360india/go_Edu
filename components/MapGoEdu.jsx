@@ -69,8 +69,8 @@ const MapGoEdu = () => {
                   <Image
                     src={city.bannerSrc}
                     alt="location banner"
-                    width={180}
-                    height={200}
+                    width={1000}
+                    height={1000}
                     className="w-[180px] h-[200px] mx-4"
                   />
                 </div>
@@ -78,8 +78,8 @@ const MapGoEdu = () => {
                   <Image
                     src={city.bottomSrc}
                     alt="location bottom"
-                    width={200}
-                    height={12}
+                    width={1000}
+                    height={1000}
                     className="w-full h-[12px]"
                   />
                 </div>

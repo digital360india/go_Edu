@@ -23,6 +23,7 @@ export default async function sitemap() {
     const schoolData = await fetchAllRecords(sheetName);
     const links = schoolData.map((school) => {
       return {
+        key: school.id || school.fields.slug,
         url: `https://${hostname}/school/${sheetName}/${school.fields.slug}`,
         lastModified: school.fields.modifiedDate || new Date().toISOString(),
       };

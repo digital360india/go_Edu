@@ -5,6 +5,7 @@ import "./globals.css";
 import { FooterLinks } from "@/components/FooterLinks";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import Script from "next/script";
 export async function generateMetadata() {
   return {
     title: "Edu123",
@@ -16,7 +17,7 @@ export async function generateMetadata() {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
+         <head>
         <meta
           name="google-site-verification"
           content="qgn6MqFJA53sQvYVhpT70fVxndZfM0zTF1uSq0Uiy1g"
@@ -25,11 +26,13 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="1OK7AS59HEPlQx7IVp_HdfQIX6PApYm5hRxOTlD9aYc"
         />
-        <script
+     
+        <Script
+         
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-51DFFSG7NZ"
-        ></script>
-        <script
+        ></Script>
+        <Script
           dangerouslySetInnerHTML={{
             __html: `
             window.dataLayer = window.dataLayer || [];
@@ -38,6 +41,8 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-51DFFSG7NZ');
             `,
           }}
+          async
+          
         />
       </head>
       <body className=" overflow-x-hidden">
@@ -50,8 +55,8 @@ export default function RootLayout({ children }) {
           <FooterLinks />
         </Authprovider>
         <script src="https://cdn.tailwindcss.com"></script>
-      </body>
       <script src="https://kwesforms.com/v2/kf-script.js" defer></script>
+      </body>
     </html>
   );
 }
