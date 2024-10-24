@@ -25,6 +25,7 @@ async function get1(params) {
     .then((value) => {
       const r = value.map((a) => {
         return a?.fields;
+        // return { key: a.id, ...a?.fields };
       });
       return r;
     });
@@ -343,7 +344,8 @@ export default async function SchoolPage({ params }) {
       <div>
         <SchoolDetails
           school={schoolData}
-          reviews={review}
+          // reviews={review}
+          reviews={review.map((r, index) => ({ ...r, key: index }))}
           city={params.slug[0]}
           id={id}
         />
