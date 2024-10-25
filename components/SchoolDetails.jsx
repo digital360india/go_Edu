@@ -44,7 +44,7 @@ const CircularProgressWithIcon = ({ value, svgSrc, svgAlt }) => {
       />
 
       {/* SVG Icon Centered */}
-      <div className="absolute inset-0 flex justify-center items-center ">
+      <div className="absolute inset-0 flex justify-center items-center">
         <Image
           src={svgSrc}
           width={1000}
@@ -69,8 +69,8 @@ const facility = [
     check: "Online_Classes",
   },
   {
-    imageSrc: "/photography.svg",
-    facility: "Audio / Video",
+    imageSrc: "/video.svg",
+    facility: "Audio/Video",
     check: "Photography",
   },
   {
@@ -112,7 +112,7 @@ const facility = [
 ];
 
 const ReviewCard = ({ userName, userImg, schoolRating, reviewmessage }) => (
-  <div className="md:m-20 p-8 md:p-0  mb-4 ">
+  <div className="md:m-20 p-8  md:p-0  md:mb-4  ">
     <div className="flex space-x-10 mb-2 ">
       <div className="w-20 h-[56px] md:h-[67px] rounded-[50%]">
         <img
@@ -289,9 +289,9 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
           }}
         >
           <div className=" ">
-            <div className="text-[#1B6EA1] text-center flex flex-col md:justify-center md:items-center ">
+            <div className="md:text-[#1B6EA1]  text-center flex flex-col md:justify-center md:items-center ">
               <div className="flex flex-col gap-6 font-bold p-2">
-                <p className="text-4xl shd1 text-left  md:text-center">
+                <p className="text-4xl  text-left  md:text-center">
                   {school?.name}
                 </p>
                 <div className="text-left flex justify-center ">
@@ -331,9 +331,9 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
           }}
         >
           <div className=" ">
-            <div className="text-white text-center flex flex-col justify-center items-center ">
+            <div className="text-[#02618f] text-center flex flex-col justify-center items-center ">
               <div className="flex flex-col gap-6 font-bold p-2">
-                <p className="text-3xl shd1 text-center">{school?.name}</p>
+                <p className="text-3xl text-center">{school?.name}</p>
                 <div className="text-left flex justify-center ">
                   <button
                     className="w-[180px]  shadow-md h-[40px] bg-[#02618f] text-white rounded-lg"
@@ -520,7 +520,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                 <img
                   src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${city}/G-${school?.Image_Code}.png`}
                   alt="img"
-                  className="w-[570px] h-[285px] mb-5"
+                  className="w-[625px] h-[285px] mb-5"
                 />
               </div>
 
@@ -625,7 +625,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
               </p>
 
               <hr className=" w-[370px] ml-8 md:ml-0 md:w-[550px] h-0.5 bg-black mb-6" />
-              <div className=" flex-wrap md:gap-y-5  md:gap-x-0   sm:gap-y-0   text-[14px] md:text-[18px] md:space-y-12">
+              <div className=" flex-wrap md:gap-y-5  md:gap-x-0   sm:gap-y-0   text-[14px] md:text-[18px] md:space-y-8">
                 <div className="md:flex text-center md:w-1/2 sm:w-auto items-center ">
                   <div className="space-y-2 flex flex-col items-center ">
                     <div className="flex items-center justify-center  p-6 md:pb-4 lg:p-0  w-full">
@@ -779,7 +779,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
 
             <section className=" hidden  sm:block rounded-t-[30px]   bg-[#F3F3F3]  ">
               <div className=" rounded-t-[30px] shadow-black   bg-[#F3F3F3]">
-                <div className="w-[40]px h-[40px] ml-6">
+                <div className="w-[40px] h-[40px] ml-6">
                   <p className="w-[40px] h-[40px] text-center pt-2 mt-8 rounded-full border border-[#27AAE1]">
                     2
                   </p>
@@ -787,7 +787,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                 <hr className=" h-0.5 pt-[1px] bg-[#1B6EA1] ml-6 mr-6 mb-16 mt-4" />
                 <img
                   src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${city}/H-${school?.Image_Code}.png`}
-                  className="w-[570px] h-[285px] mb-40"
+                  className="w-[625px] h-[285px] mb-40"
                 />
               </div>
             </section>
@@ -799,12 +799,14 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                 Student Facilities
               </p>
               <hr className=" w-[370px] ml-6 md:ml-0 md:w-[550px] h-0.5 bg-black mb-6" />
-              <div className=" grid md:gap-8 grid-cols-3 ">
+              <div className=" grid md:gap-4 grid-cols-3 ">
                 {facility.map(
-                  (facility) =>
+                  (facility,index) =>
+                    
                     school[`${facility.check}`] === "checked" && (
-                      <div className="flex flex-col  items-center space-y-3 ">
-                        <div className=" rounded-xl mt-4">
+                      <div key={facility.id || index}
+                       className="flex flex-col  items-center space-y-3 ">
+                        <div className=" rounded-xl mt-3">
                           <img
                             src={facility.imageSrc}
                             alt="image"
@@ -820,7 +822,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
               </div>
             </section>
 
-            <section className=" hidden  sm:block gap-8 rounded-t-[30px]  bg-[#F3F3F3] ">
+            <section className=" hidden  sm:block gap-8 rounded-t-[30px] bg-[#F3F3F3] ">
               <div className=" rounded-t-[30px]  bg-[#F3F3F3]">
                 <div className="w-[40px] h-[40px] ml-6">
                   <p className="w-[40px] h-[40px] text-center pt-2 mt-8 rounded-full border border-[#27AAE1]">
@@ -830,7 +832,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                 <hr className=" h-0.5 pt-[1px] bg-[#1B6EA1] ml-6 mr-6 mb-16 mt-4" />
                 <img
                   src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${city}/I-${school?.Image_Code}.png`}
-                  className="w-[570px] h-[285px] mb-40"
+                  className="w-[625px] h-[285px] mb-40"
                 />
               </div>
             </section>
@@ -838,7 +840,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
         </div>
 
         <section className="md:sticky md:top-0 ">
-          <div className="md:flex md:justify-between md:w-full md:bg-[#1B6EA1] bg-[#F3F3F3] rounded-b-[100px] md:h-[487px] h-[550px] p-12 w-[412px]">
+          <div className="md:flex md:justify-between md:w-full md:bg-[#1B6EA1] bg-[#F3F3F3] rounded-b-[100px] md:h-[487px] h-[503px] p-12 w-[412px]">
             <div className=" ">
               <div className="flex justify-between">
 
@@ -848,7 +850,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
               </p>
               <div className="md:hidden">
                 <button
-                  className="md:w-[223px] md:h-[40px] w-[125px] h-[36px] md:bg-[#1B6EA1] md:text-white text-[#323232] rounded-2xl border md:border-white border-[#323232] ml-auto"
+                  className="md:w-[223px] md:h-[40px] w-[140px] h-[36px] md:bg-[#1B6EA1] md:text-white text-[#323232] rounded-2xl border md:border-white border-[#323232] ml-auto"
                   onClick={handle}
                 >
                   Write a review

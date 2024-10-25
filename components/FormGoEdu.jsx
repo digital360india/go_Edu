@@ -58,14 +58,14 @@ const FormGoEdu = () => {
             onChange={handleChange}
             className="p-2 border-b-2 border-[#D9D9D9] w-full h-[39px] placeholder:text-[#898989] sm:border sm:rounded sm:w-[462px] sm:border-[#D9D9D9]"
           />
-          <input
+          {/* <input
             type="email"
             name="email"
             placeholder="Your email"
             value={formData.email}
             onChange={handleChange}
             className="p-2 border-b-2 border-[#D9D9D9] w-full h-[39px] placeholder:text-[#898989] sm:border sm:rounded sm:w-[462px] sm:border-[#D9D9D9]"
-          />
+          /> */}
           <div className="flex">
             <select className="w-[64px] h-[39px] border-b-2 border-[#D9D9D9] rounded-l placeholder:text-[#898989] sm:border sm:rounded-l sm:p-2 sm:border-[#D9D9D9]">
               <option className="text-[#898989]">🇮🇳</option>
@@ -80,7 +80,7 @@ const FormGoEdu = () => {
             />
           </div>
 
-          <div className="flex md:gap-20 gap-8">
+          {/* <div className="flex md:gap-20 gap-8">
             <select
               name="class"
               value={formData.class}
@@ -90,7 +90,7 @@ const FormGoEdu = () => {
               <option value="" className="text-[#898989]">
                 Class
               </option>
-              {/* Add class options */}
+              
             </select>
             <select
               name="board"
@@ -101,10 +101,10 @@ const FormGoEdu = () => {
               <option value="" className="text-[#898989]">
                 BOARD
               </option>
-              {/* Add board options */}
+              
             </select>
-          </div>
-          <div className="md:pt-20 pt-8 cursor-pointer">
+          </div> */}
+          <div className="md:pt-2 pt-8 cursor-pointer">
             <button
               type="submit"
               className="md:w-[177px] md:h-[60px] md:px-0 px-8 md:py-0 py-3  bg-[#1B6EA1] text-white p-2 rounded-lg hover:bg-[#1b6ea1c9]"
