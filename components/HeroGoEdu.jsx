@@ -11,6 +11,80 @@ const HeroGoEdu = () => {
     "Find the best school with GoEdu!",
   ];
 
+  const text = {
+    line1: ["Find", "the"],
+    line2: ["Perfect", "School"],
+    line3: ["for", "Every", "Dream"],
+  };
+
+  const [displayText, setDisplayText] = useState({
+    line1: "",
+    line2: "",
+    line3: "",
+  });
+
+  const [currentLine, setCurrentLine] = useState("line1");
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [currentLetterIndex, setCurrentLetterIndex] = useState(0);
+
+  useEffect(() => {
+    const currentLineWords = text[currentLine];
+    const currentWord = currentLineWords[currentWordIndex];
+
+    if (!currentWord) {
+      // Move to next line
+      const nextLine = {
+        line1: "line2",
+        line2: "line3",
+        line3: "complete",
+      }[currentLine];
+
+      if (nextLine !== "complete") {
+        setTimeout(() => {
+          setCurrentLine(nextLine);
+          setCurrentWordIndex(0);
+          setCurrentLetterIndex(0);
+        }, 500);
+      }
+      return;
+    }
+
+    if (currentLetterIndex < currentWord.length) {
+      // Type next letter
+      const timer = setTimeout(() => {
+        setDisplayText((prev) => ({
+          ...prev,
+          [currentLine]: prev[currentLine] + currentWord[currentLetterIndex],
+        }));
+        setCurrentLetterIndex((prev) => prev + 1);
+      }, 0.001); // Speed of typing letters
+      return () => clearTimeout(timer);
+    } else {
+      // Move to next word
+      if (currentWordIndex < currentLineWords.length - 1) {
+        setTimeout(() => {
+          setDisplayText((prev) => ({
+            ...prev,
+            [currentLine]: prev[currentLine] + " ",
+          }));
+          setCurrentWordIndex((prev) => prev + 1);
+          setCurrentLetterIndex(0);
+        }, 10); // Delay between words
+      } else {
+        // End of line delay
+        setTimeout(() => {
+          setCurrentWordIndex(currentLineWords.length);
+        }, 10);
+      }
+    }
+  }, [currentLine, currentWordIndex, currentLetterIndex]);
+
+  const getCursor = (line) => {
+    return currentLine === line ? (
+      <span className="inline-block w-0.5 h-8 bg-[#0C263F] animate-blink ml-1"></span>
+    ) : null;
+  };
+
   const [currentMessage, setCurrentMessage] = useState(0);
   const [isOpenpopup, setIsOpenpopup] = useState(false);
 
@@ -41,11 +115,31 @@ const HeroGoEdu = () => {
         >
           <div>
             <div className="flex justify-between">
-              <div className="text-[#0C263F] text-[2.3rem] md:text-[2.9rem] pt-44 md:pt-56 px-10 md:px-[100px] z-10">
+              {/* <div className="text-[#0C263F] text-[2.3rem] md:text-[2.9rem] pt-44 md:pt-56 px-10 md:px-[100px] z-10">
                 <p>Find the</p>
                 <p className="font-bold">Perfect School</p>
                 <p>
                   for Every <span className="font-bold">Dream</span>
+                </p>
+              </div> */}
+
+              <div className="text-[#0C263F] text-[30px] md:text-[2.9rem] pt-44 md:pt-56 px-10 md:px-[100px] z-10">
+                <p className="h-[3rem] flex items-center m-2 md:m-8">
+                  {displayText.line1}
+                  {getCursor("line1")}
+                </p>
+                <p className="font-bold h-[3rem] flex items-center m-2 md:m-8">
+                  {displayText.line2}
+                  {getCursor("line2")}
+                </p>
+                <p className="h-[3rem] flex items-center m-2 md:m-8">
+                  <span>
+                    {displayText.line3.split(" ").slice(0, 2).join(" ")}
+                  </span>
+                  {displayText.line3.includes("Dream") && (
+                    <span className="font-bold ml-2">Dream</span>
+                  )}
+                  {/* {getCursor("line3")} */}
                 </p>
               </div>
               <div className="absolute   right-0 bottom-0 z-0 w-[700px] h-[470px] hidden md:block">
@@ -57,15 +151,25 @@ const HeroGoEdu = () => {
                   className="w-[700px] h-[470px] "
                 />
               </div>
-              <div className="absolute top-[515px]  right-0  z-0  w-[290px] h-[195px] md:hidden">
+              {/* <div className="absolute top-[410px]  right-0  z-0  w-[380px] h-[195px] md:hidden">
                 <Image
-                  src="/herosvg.svg"
+                  src="/bannergoeduhero.svg"
                   width={1000}
                   height={1000}
                   alt="hero"
-                  className="w-[290px] h-auto"
+                  className="w-[380px] h-auto"
                 />
-              </div>
+              </div> */}
+              <div className="absolute top-[410px] right-0 z-0 w-[380px] h-[195px] md:hidden transform translate-y-96 opacity-0 transition duration-700 ease-in-out animate-slideIn">
+  <Image
+    src="/bannergoeduhero.svg"
+    width={1000}
+    height={1000}
+    alt="hero"
+    className="w-[380px] h-auto"
+  />
+</div>
+
             </div>
 
             <div className="hidden md:flex px-[250px] absolute bottom-0">
@@ -101,9 +205,6 @@ const HeroGoEdu = () => {
         {isOpenpopup && (
           <ConsultationPopup setClose={toggleBookingClosePopup} />
         )}
-
-
-     
       </div>
 
       <style jsx>{`
