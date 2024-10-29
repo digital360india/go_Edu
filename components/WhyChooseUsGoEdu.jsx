@@ -12,27 +12,31 @@ const WhyChooseUsGoEdu = () => {
         <div className="flex justify-center items-center">
           <div className="space-y-12 w-[200px] h-[410px]">
             <div className="w-[200px] h-[141px]">
-              <h1 className="text-[#323232] text-[1rem]">Lorem Ipsum</h1>
+              <h1 className="text-[#323232] text-[1rem]">
+                Authentic Recommendations
+              </h1>
               <p className="text-[#898989] text-[12px]">
-                Lorem ipsum dolor sit amet consectetur. Felis nec mi dignissim
-                pharetra placerat faucibus cursus. Erat est massa ultricies
-                porttitor vivamus consequat sit facilisis
+                We prioritize your child&apos;s unique needs over school preferences.
+                Our unbiased recommendations are based solely on what suits your
+                child best, ensuring a genuine selection process.
               </p>
             </div>
             <div className="w-[200px] h-[141px]">
-              <h1 className="text-[#323232] text-[1rem]">Lorem Ipsum</h1>
+              <h1 className="text-[#323232] text-[1rem]">Expert Counseling</h1>
               <p className="text-[#898989] text-[12px]">
-                Lorem ipsum dolor sit amet consectetur. Felis nec mi dignissim
-                pharetra placerat faucibus cursus. Erat est massa ultricies
-                porttitor vivamus consequat sit facilisis
+                Our experienced consultants guide you through each step,
+                offering personalized counseling to help you feel confident
+                about every decision you make for your child&apos;s future.
               </p>
             </div>
             <div className="w-[200px] h-[135px]">
-              <h1 className="text-[#323232] text-[1rem]">Lorem Ipsum</h1>
+              <h1 className="text-[#323232] text-[1rem]">
+                Mock Tests & Assessments
+              </h1>
               <p className="text-[#898989] text-[12px]">
-                Lorem ipsum dolor sit amet consectetur. Felis nec mi dignissim
-                pharetra placerat faucibus cursus. Erat est massa ultricies
-                porttitor vivamus consequat sit facilisis
+                We offer mock tests and customized assessments to evaluate your
+                child&apos;s strengths and needs, allowing for a more accurate school
+                placement tailored to their potential.
               </p>
             </div>
           </div>
@@ -69,24 +73,31 @@ const WhyChooseUsGoEdu = () => {
 
           <div className="space-y-14 w-[200px] h-[410px]">
             <div className="w-[200px] h-[138px] pt-1">
-              <h1 className="text-[#323232] text-[1rem]">Lorem Ipsum</h1>
+              <h1 className="text-[#323232] text-[1rem]">
+                Comprehensive School Insights
+              </h1>
               <p className="text-[#898989] text-[12px]">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Eveniet, rem!
+                Go Edu provides detailed information on each school, from
+                academic programs to extracurriculars, so you can make fully
+                informed choices for your child&apos;s education.
               </p>
             </div>
             <div className="w-[200px] h-[130px]">
-              <h1 className="text-[#323232] text-[1rem]">Lorem Ipsum</h1>
+              <h1 className="text-[#323232] text-[1rem]">
+                Transparent and Trustworthy Service
+              </h1>
               <p className="text-[#898989] text-[12px]">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Eveniet, rem!
+                Built on trust, our approach is straightforward and transparent.
+                We charge parents, not schools, to ensure our advice is honest,
+                reliable, and truly in your child&apos;s best interest.
               </p>
             </div>
             <div className="w-[200px] h-[135px]">
-              <h1 className="text-[#323232] text-[1rem]">Lorem Ipsum</h1>
+              <h1 className="text-[#323232] text-[1rem]">End-to-End Support</h1>
               <p className="text-[#898989] text-[12px]">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Eveniet, rem!
+                From initial consultations to application guidance and admission
+                follow-ups, we&apos;re here to support you throughout the entire
+                school selection process, making it stress-free and successful.
               </p>
             </div>
           </div>

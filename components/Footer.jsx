@@ -28,7 +28,7 @@ export const Footer = () => {
                     src="/Location.svg"
                     className="w-[20px] h-[20px]"
                   />
-                  <p className="">XYZ, street, lane, State, Country</p>{" "}
+                  <p className="">B, 36, Nehru Colony Rd, C Block, Nehru Colony, Dalanwala, Dehradun, Uttarakhand 248001</p>{" "}
                 </div>
 
                 <div className="flex gap-2">
@@ -40,7 +40,7 @@ export const Footer = () => {
                     className="w-[20px] h-[20px]"
                   />
                   <p>
-                    <a href="tel:+XY-1234567890">+XY-1234567890</a>{" "}
+                    +91-01353530324, 9557695360
                   </p>{" "}
                 </div>
 
@@ -53,7 +53,7 @@ export const Footer = () => {
                     className="w-[20px] h-[20px]"
                   />
                   <p>
-                    <a href="mailto:xyz@gmail.com">xyz@gmail.com</a>
+                    info@digital360india.com
                   </p>
                 </div>
               </div>
@@ -90,7 +90,7 @@ export const Footer = () => {
               </p>
             </div>
             <div className="text-xl  flex gap-14 md:gap-7 mt-2  md:mt-4">
-              <Link href="" target="_blank">
+              <Link href="https://www.facebook.com/profile.php?id=61552427439719" target="_blank">
                 <BsFacebook />
               </Link>
 
@@ -106,7 +106,7 @@ export const Footer = () => {
                 <BsLinkedin />
               </Link>
 
-              <Link href="" target="_blank">
+              <Link href="https://www.instagram.com/goedu_india?igsh=MWtyaGFocGo4cHA0bQ==" target="_blank">
                 <BsInstagram />
               </Link>
             </div>

@@ -124,37 +124,36 @@ const TestimonialGoEdu = () => {
       image:
         "https://res.cloudinary.com/eduminatti-com/image/upload/v1725877951/Edu123/Eduimages/WhatsApp_Image_2024-09-09_at_3.53.37_PM.jpg",
       description:
-        "As a concerned sibling, Edu123 was a lifesaver in the daunting quest for the right boarding school in India. Highly recommended for siblings navigating the complex landscape of boarding school admissions.",
+        "Choosing the right school felt overwhelming until we found Go Edu. Their personalized approach and genuine recommendations put our minds at ease. We felt truly supported every step of the way.",
     },
     {
       name: "Priyangini",
       image:
         "https://res.cloudinary.com/eduminatti-com/image/upload/v1725877951/Edu123/Eduimages/WhatsApp_Image_2024-09-09_at_4.01.42_PM.jpg",
       description:
-        "I stumbled upon Edu123 in my search for the ideal boarding school for my niece. The platform's extensive listings and transparent information made the decision-making process smooth.",
+        "I'm so grateful for Go Edus counseling team! They understood our needs and guided us through everything, from mock tests to final recommendations. Thanks to them, we found the perfect school match.",
     },
     {
       name: "Priya",
       image:
         "https://res.cloudinary.com/eduminatti-com/image/upload/v1725877951/Edu123/Eduimages/WhatsApp_Image_2024-09-09_at_3.59.49_PM.jpg",
       description:
-        "Edu123 exceeded my expectations during our search for the perfect boarding school in India. The comprehensive listings provided a wealth of information, making the decision-making process much smoother.",
+        "We were so confused before coming across Go Edu. Their clear, honest advice helped us understand our options and make the best decision with confidence. I couldn't have asked for a better experience!",
     },
     {
       name: "Shivam Panwar",
       image:
         "https://res.cloudinary.com/eduminatti-com/image/upload/v1725877951/Edu123/Eduimages/WhatsApp_Image_2024-09-09_at_3.54.31_PM.jpg",
       description:
-        "Edu123 caught my attention while researching boarding schools in India, and I'm thrilled with the results. The platform's listings are thorough, and the consultants are knowledgeable.",
+        "From assessments to admission support, Go Edu made the entire process so easy. Their attention to detail and commitment to authenticity gave us complete confidence in our school choice. Highly recommend!",
     },
   ];
-  
 
   const responsive = {
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
-      slidesToSlide: 1, 
+      slidesToSlide: 1,
     },
   };
 

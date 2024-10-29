@@ -64,35 +64,36 @@ import React from "react";
 const MobileAnimation = () => {
   const reasons = [
     {
-      title: "Lorem Ipsum",
+      title: "Authentic Recommendations",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Nulla sed dignissim pharetra placerat facilisis cursus. Et sit massa ultrices porttitor ornare varius tempor amet ut.",
+        "We prioritize your child's unique needs over school preferences. Our unbiased recommendations are based solely on what suits your child best, ensuring a genuine selection process.",
     },
     {
-      title: "Lorem Ipsum",
+      title: "Expert Counseling",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Nulla sed dignissim pharetra placerat facilisis cursus. Et sit massa ultrices porttitor ornare varius tempor amet ut.",
+        "Our experienced consultants guide you through each step, offering personalized counseling to help you feel confident about every decision you make for your child's future.",
     },
     {
-      title: "Lorem Ipsum",
+      title: "Mock Tests & Assessments",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Nulla sed dignissim pharetra placerat facilisis cursus. Et sit massa ultrices porttitor ornare varius tempor amet ut.",
+        "We offer mock tests and customized assessments to evaluate your child's strengths and needs, allowing for a more accurate school placement tailored to their potential.",
     },
     {
-      title: "Lorem Ipsum",
+      title: "Comprehensive School Insights",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Nulla sed dignissim pharetra placerat facilisis cursus. Et sit massa ultrices porttitor ornare varius tempor amet ut.",
+        "Go Edu provides detailed information on each school, from academic programs to extracurriculars, so you can make fully informed choices for your child's education.",
     },
     {
-      title: "Lorem Ipsum",
+      title: "Transparent and Trustworthy Service",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Nulla sed dignissim pharetra placerat facilisis cursus. Et sit massa ultrices porttitor ornare varius tempor amet ut.",
+        "Built on trust, our approach is straightforward and transparent. We charge parents, not schools, to ensure our advice is honest, reliable, and truly in your child's best interest.",
     },
     {
-      title: "Lorem Ipsum",
+      title: "End-to-End Support",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Nulla sed dignissim pharetra placerat facilisis cursus. Et sit massa ultrices porttitor ornare varius tempor amet ut.",
+        "From initial consultations to application guidance and admission follow-ups, we're here to support you throughout the entire school selection process, making it stress-free and successful.",
     },
+
   ];
 
   return (

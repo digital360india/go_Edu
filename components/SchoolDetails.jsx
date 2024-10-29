@@ -793,7 +793,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
             </section>
           </div>
 
-          <div className="flex md:justify-center  md:space-x-20 md:sticky md:top-0 bg-white  md:h-[95vh]">
+          <div className="flex md:justify-center  md:space-x-20 md:sticky md:top-0 bg-white  md:h-[97vh]">
             <section className="md:w-[570px] mb-12  md:h-[750px] md:mb-[20px] md:px-0 ">
               <p className="text-[24px] ml-6 md:ml-0 sm:text-[32px] md:w-[323px] h-[54px]  mt-6 md:mb-6 ">
                 Student Facilities

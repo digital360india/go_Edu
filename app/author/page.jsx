@@ -40,44 +40,45 @@ export default function page() {
                 <p className="text-black">Educational Content Specialist</p>
               </div>
               <p>
-                Hello! I'm Vaibhav Negi, a passionate content writer with a
-                deep-rooted love for the educational sector. With over 3 years
-                of experience in the digital marketing industry, I've honed my
-                skills in crafting compelling content that resonates with
-                diverse audiences.
+                Hi, I&apos;m Vaibhav Negi! With a deep passion for education and a
+                knack for crafting meaningful content, I have spent over three
+                years in digital marketing, focusing primarily on the
+                educational sector. Writing has always been my way of connecting
+                with people, and throughout my career, I've been fortunate to
+                create impactful content that helps students, parents, and
+                educators alike.
               </p>
               <p>
-                My professional journey started in the dynamic world of digital
-                content, where I quickly discovered my niche in education. Over
-                the years, I've contributed to various educational websites,
-                providing insightful and informative content that aids students,
-                educators, and parents alike. My work spans a range of topics,
-                from academic advice to the latest educational trends, ensuring
-                that each piece I write is both engaging and enlightening.
+                My journey in content creation began in digital marketing, where
+                I quickly found my true calling within the education niche.
+                Since then, I&apos;ve collaborated with several educational
+                platforms, offering content that guides students and families,
+                explores emerging trends, and supports educators in their
+                mission. My goal is to create content that informs and inspires
+                curiosity and confidence.
               </p>
               <p>
-                Specializing in the educational field, I've developed a keen
-                understanding of the needs and interests of students and
-                educators. This expertise is reflected in my work for Edu123,
-                where I focus on creating content that not only informs but also
-                inspires. My writings are tailored to the Indian context,
-                capturing the essence of the country's rich educational
-                landscape.
+                At Go Edu, I specialize in creating insightful, trustworthy, and
+                contextually relevant content for the Indian education
+                landscape. My writing is tailored to empower parents and
+                students in selecting the best boarding schools by providing
+                in-depth details on each institution&apos;s culture, curriculum, and
+                offerings. I&apos;m committed to ensuring each article, guide, and
+                review is as enlightening as it is engaging, capturing the
+                unique aspects of India&apos;s diverse educational framework.
               </p>
               <p>
-                My versatility as a content writer extends beyond education.
-                I've also collaborated with Sportskeeda, one of India's premier
-                sports news sites, as a freelance content writer. This
-                experience has further refined my ability to adapt my writing
-                style to different niches, while always maintaining a high
-                standard of quality and relevance.
+                Beyond education, I&apos;ve expanded my experience as a freelance
+                writer with Sportskeeda, diving into the sports domain and
+                refining my versatility in adapting to different audiences. This
+                diversity in experience has sharpened my ability to resonate
+                with readers, no matter the topic while maintaining quality and
+                authenticity in each piece.
               </p>
               <p>
-                At Edu123, I am committed to providing comprehensive and
-                accurate information about boarding schools in India. My goal is
-                to help parents and students make informed decisions about their
-                education by offering detailed insights into various
-                institutions, their curriculums, facilities, and cultures
+                At Go Edu, my mission is to simplify and enrich the school
+                selection process by delivering content that helps students and
+                their families make informed decisions.
               </p>
             </div>
           </div>
