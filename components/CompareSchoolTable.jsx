@@ -148,14 +148,14 @@ export default function CompareSchoolTable({
         <table className="w-full border-collapse border-[#B8BBC2]">
           <tbody>
             {renderRow(
-              "Maximum Fees",
+              "Minimum Fees",
               schoolData1?.feefrom || "",
               schoolData2?.feefrom || "",
               schoolData3?.feefrom || "",
               schoolData4?.feefrom || ""
             )}
             {renderRow(
-              "Minimum Fees",
+              "Maximum Fees",
               schoolData1?.feeto || "",
               schoolData2?.feeto || "",
               schoolData3?.feeto || "",

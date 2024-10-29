@@ -22,20 +22,24 @@ const TermsAndCondition = () => {
               alt=""
             />
           </div>
-          <p className="text-[24px] font-semibold">Introduction</p>
-          <p>
-            Terms and Conditions of Edu 123 Introduction Welcome to Edu 123.
-            Your access and use of our website and services indicate your
-            agreement to comply with and be bound by these terms and conditions.
+          <p className="text-[24px] font-semibold">
+            Welcome to Go Edu&apos;s Terms and Conditions
           </p>
-          Please read these terms carefully.
           <p>
-            {" "}
+            Thank you for choosing Go Edu! We&apos;re here to connect students
+            and parents with top boarding schools in India through an accessible
+            and trustworthy platform. By using our website, you agree to these
+            terms, which are designed to ensure a positive, efficient experience
+            for everyone.
+          </p>
+          {/* Please read these terms carefully. */}
+          <p>
+            {/* {" "}
             <p className="text-base font-semibold mb-1">Terms Acceptance</p>
             By using our services, you agree to adhere to the terms outlined
             here. If you disagree with these terms, please refrain from using
-            our website and services.
-            <p>
+            our website and services. */}
+            {/* <p>
               <p className="text-base font-semibold mb-1">Usage of Website</p>
               <p>
                 {" "}
@@ -44,107 +48,119 @@ const TermsAndCondition = () => {
               </p>
               Prohibited Activities: You must not transmit any malicious code or
               engage in activities that disrupt the operation of our website.
-            </p>
-            <p>
+            </p> */}
+            {/* <p>
               <p className="text-base font-semibold mb-1">
                 Service Changes and Pricing
               </p>{" "}
               Edu 123 reserves the right to modify or discontinue any service or
               feature without prior notice. Prices for our services are subject
               to change without warning.
+            </p> */}
+            <p className="pb-4">
+              <p className="text-[20px]  font-bold mb-1">
+                Embracing Responsible Use
+              </p>
+              Go Edu is dedicated to helping you make informed educational
+              choices. We ask that you engage with our platform respectfully,
+              maintaining a safe space for all users.
             </p>
-            <p>
-              <p className="text-base font-semibold mb-1">User Accounts </p>
-              When creating an account on Edu 123, you must provide accurate and
-              complete information. You are responsible for keeping your account
-              information and password confidential.
+            <p className="pb-4">
+              <p className="text-[20px] font-semibold mb-1">
+                Keeping Services Relevant and Evolving
+              </p>
+              To continually meet your needs, Go Edu may enhance or update its
+              offerings and features from time to time. Our goal is to provide
+              you with the most relevant and valuable services possible.
+            </p>
+            <p className="pb-4">
+              <p className="text-[20px] font-semibold mb-1">
+                Secure and Personalized Accounts
+              </p>
+              When creating an account on Go Edu, rest assured that we&apos;re
+              committed to providing a secure experience. We encourage you to
+              keep your login details private for added protection.
+            </p>
+            <p className="pb-4">
+              <p className="text-[20px] font-semibold mb-1">
+                Trusted Information, Every Time
+              </p>
+              Go Edu strives to offer the most accurate and up-to-date
+              information on schools, admissions, and related educational
+              insights. Our content is regularly updated to reflect the latest
+              developments, so you can confidently rely on our resources.
+            </p>
+            <p className="pb-4">
+              <p className="text-[20px] font-semibold mb-1">
+                Valuing Your Feedback
+              </p>
+              Your feedback matters to us! We welcome any comments or
+              suggestions, as they help us improve and better serve you.
+            </p>
+            <p className="pb-4">
+              <p className="text-[20px] font-semibold mb-1">
+                A Commitment to Your Privacy
+              </p>
+              Go Edu respects your privacy. All information you provide is
+              handled with care, and we&apos;re here to answer any questions
+              about how your details are used to enhance your experience.
             </p>{" "}
-            <p className="text-base font-semibold mb-1">Information Accuracy</p>
-            While we aim to ensure that information on our website is accurate,
-            we do not guarantee its completeness or precision.
-            <p>
-              <p className="text-base font-semibold mb-1">
-                Links to Third-Party Websites
+            <p className="pb-4">
+              <p className="text-[20px] font-semibold mb-1">
+                Quick Corrections and Timely Updates
               </p>
-              Our website may include links to websites not associated with Edu
-              123. We are not responsible for the content or practices of these
-              third-party websites.
+              If there&apos;s ever an adjustment needed, our team at Go Edu
+              promptly updates information to maintain clarity and accuracy for
+              all users.
             </p>
-            <p>
-              <p className="text-base font-semibold mb-1">
-                User Feedback and Comments
+            <p className="pb-4">
+              <p className="text-[20px] font-semibold mb-1">
+                Positive Engagement with Content
               </p>
-              Feedback or comments submitted to Edu 123 may be used at our
-              discretion. We are not obligated to maintain the confidentiality
-              of any comments or to compensate for them.
+              At Go Edu, our goal is to support your educational journey. We ask
+              that users engage with our site and its content positively,
+              keeping the experience beneficial for everyone involved.
             </p>
-            <p>
-              <p className="text-base font-semibold mb-1">
-                Personal Information
+            <p className="pb-4">
+              <p className="text-[20px] font-semibold mb-1">
+                Supporting Uninterrupted Access
               </p>
-              The submission of personal information through our website is
-              governed by our Privacy Policy.
+              While we strive for smooth, uninterrupted service, occasional
+              technical issues may occur. Rest assured, our team is committed to
+              resolving any interruptions as quickly as possible.
             </p>
-            <p>
-              <p className="text-base font-semibold mb-1">
-                Corrections and Updates
+            <p className="pb-4">
+              <p className="text-[20px] font-semibold mb-1">
+                Fostering a Safe and Trustworthy Platform
               </p>
-              We reserve the right to correct any errors, inaccuracies, or
-              omissions and to change or update information at any time without
-              prior notice.
+              Using Go Edu means joining a community dedicated to genuine
+              support in the educational journey. We appreciate your role in
+              keeping the experience safe and positive for everyone.
             </p>
-            <p>
-              <p className="text-base font-semibold mb-1">Restricted Uses</p>
-              You are prohibited from using the site or its content for any
-              illegal purpose, soliciting others to perform or participate in
-              unlawful acts, or violating any international, federal, or state
-              laws.
-            </p>
-            <p>
-              <p className="text-base font-semibold mb-1">
-                Warranty Disclaimer;
+            <p className="pb-4">
+              <p className="text-[20px] font-semibold mb-1">
+                Adapting to Your Needs
               </p>
-              Limitation of Liability Edu 123 does not guarantee uninterrupted
-              or error-free use of our service, and we are not liable for any
-              interruptions or errors.
-            </p>{" "}
-            <p>
-              <p className="text-base font-semibold mb-1">Indemnity</p>
-              You agree to indemnify and hold harmless Edu 123 and our
-              affiliates from any claims, demands, and reasonable attorney's
-              fees.
-            </p>
-            <p>
-              <p className="text-base font-semibold mb-1">Severability</p>
-              If any provision of these Terms is found to be unlawful, void, or
-              unenforceable, that provision is severable and does not affect the
-              validity of the remaining provisions.
-            </p>
-            <p>
-              <p className="text-base font-semibold mb-1">Termination</p>
-              These Terms remain effective until terminated by either you or Edu
-              123.
-            </p>
-            <p>
-              <p className="text-base font-semibold mb-1">Applicable Law</p>
-              These Terms and any separate agreements through which we provide
-              services to you shall be governed and interpreted in accordance
-              with the laws of the country.
-            </p>
-            <p>
-              <p className="text-base font-semibold mb-1">
-                Terms of Service Amendments
-              </p>
-              We reserve the right to update, change, or replace any part of
-              these Terms of Service by posting updates on our website.
+              We value flexibility and growth, so Go Edu&apos;s terms may evolve
+              to best serve our users. For any major updates, we will make sure
+              you&apos;re informed and up-to-date on any adjustments to our
+              services.
             </p>
           </p>
-          <p>
-            <p className="text-[24px] font-semibold">Contact Information</p>
-            For inquiries or feedback regarding this privacy policy and our
-            privacy practices, please contact us at:
-            <p>Email: info@edu123.in</p>
-            <p>Contact Number: 9557695360</p>
+          <p className="pb-4">
+            <p className="text-[24px] font-semibold">Contact Us Anytime</p>
+            If you have questions, feedback, or need further assistance,
+            we&apos;re here for you! Please reach out to us at:{" "}
+            <br />
+            <p>Email: info@goedu.in</p>
+            <p>
+              Contact Number: 01353530324, 9557695360
+             
+             <p className="pt-4">
+              Thank you for trusting Go Edu with your educational journey. We
+              look forward to supporting you every step of the way
+              </p>
+            </p>
           </p>
         </div>
       </div>

@@ -18,13 +18,7 @@
 //       } catch (error) {
 //         console.error("Error parsing JSON:", error);
 //       }
-//     }
-//   }, [categoryData]);
-
-//   return (
-//     <>
-//       <div className=" pb-5 lg:pb-20 text-black w-[86vw] mx-auto ">
-//         <div className="flex  gap-2 lg:text-3xl text-2xl mt-10 sm:mt-24 mb-2 sm:mb-10">
+//     }Author Name="flex  gap-2 lg:text-3xl text-2xl mt-10 sm:mt-24 mb-2 sm:mb-10">
 //           <h2 className="text-[24px] sm:text-[28px] font-semibold text-[#000000]">
 //             FAQs
 //           </h2>
@@ -114,6 +108,7 @@
 
 "use client";
 
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 function FAQ({ categoryData }) {
@@ -223,10 +218,12 @@ function FAQ({ categoryData }) {
           feugiat, orci est semper neque, vitae posuere tellus est vel nibh.
           Etiam in consequat mauris.
         </p>
+<Link href="/author">
 
-        <p className="text-white text-[12px] sm:text-[14px] text-center pt-8 pb-8">
-          Author Name
+        <p className="text-white text-[12px] sm:text-[14px] text-center pt-8 pb-8">   Author Name : Vaibhav Negi
         </p>
+</Link>
+       
 
         <hr className="w-full max-w-[600px] border-t-2 border-white hidden md:block pb-10" />
       </div>

@@ -23,69 +23,61 @@ export default function page() {
               alt=""
             />
           </div>
-          <p className="text-[24px] font-semibold">Introduction</p>
+          <p className="text-[24px] font-semibold">
+            Welcome to Go Edu&apos;s Privacy Policy
+          </p>
           <p>
-            Welcome to Edu 123. Your privacy is paramount to us, and this policy
-            outlines our commitment to safeguarding it. This document explains:
-            The nature of the information we collect from you or that you might
-            provide when you visit our website, Edu 123, a platform dedicated to
-            listing boarding schools in India. How we handle, use, protect, and
-            disclose the information collected. This policy is only applicable
-            to information gathered through the Edu 123 website, and in emails,
-            texts, and other electronic messages related to Edu 123.
+            At Go Edu, protecting your privacy is a top priority. This policy
+            outlines the types of information we collect, how it&apos;s used,
+            and our commitment to secure your data. It applies specifically to
+            Go Edu&apos;s website and related electronic communications.
           </p>
           <p>
             {" "}
             <p className="text-[24px] font-semibold">
-              Information Collection and Usage
+              Information We Collect and How It&apos;s Used
             </p>
-            Our website gathers various types of information from its users,
-            including: Identifiable personal details such as name, email
-            address, postal address, and phone number. Information on your
-            internet connection, the device you use to access our website, and
-            usage specifics. User-provided content: feedback, comments, and
-            other forms of communication. Transactional information: necessary
-            details to process your inquiries and payment details.
+            Go Edu collects various details to enhance your experience. This
+            includes basic personal information, connection details, and
+            user-generated content like feedback. Your information helps us
+            deliver tailored services, notify you of updates, and ensure a
+            smooth, personalized experience.
           </p>
           <p>
             <p className="text-base font-semibold mb-1">
-              Usage Details, IP Addresses, Cookies, and Other Technologies
+              Automated Data Collection and Purpose
             </p>
-            As you interact with our website, we employ automated data
-            collection technologies to gather specific information about your
-            device, browsing activities, and patterns.
+            To improve functionality, our site employs technology that gathers
+            insights into device usage, browsing activity, and preferences. This
+            allows us to deliver optimized services, maintain account
+            communication, fulfill agreements, and keep you updated on any
+            website or service changes.
           </p>
           <p>
             <p className="text-base font-semibold mb-1">
-              We utilize this information to:
+              Our Commitment to Data Security
             </p>
-            Deliver Edu 123 services to you. Send notifications related to your
-            account. Fulfill our contractual obligations and enforce our rights
-            from any agreements made between you and us. Inform you about
-            changes to our website or any products or services we offer or
-            provide through it. Improve our service quality and personalize your
-            experience.
-          </p>
-          <p>
-            <p className="text-[24px] font-semibold">Data Security</p>
-            We have put in place measures aimed at safeguarding your information
-            from accidental loss and from unauthorized access, use, alteration,
-            and disclosure. However, the transmission of information over the
-            internet is not completely secure. While we strive to protect your
-            data, we cannot ensure its absolute security.
+            Safeguarding your information is central to our mission. Go Edu has
+            established robust security measures to prevent unauthorized access
+            or alteration. However, while we take extensive precautions,
+            absolute security over the internet cannot be guaranteed.
           </p>
           <p>
             <p className="text-[24px] font-semibold">
-              Disclosure of Your Information{" "}
+              Responsible Information Sharing
             </p>
-            We may disclose aggregated user information and information that
-            does not identify individuals. We may share personal information
-            that we collect or that you provide, as outlined in this privacy
-            policy: With our subsidiaries and affiliates. To contractors,
-            service providers, and other third parties that support our
-            business. For the purpose for which you provided it. For any other
-            purpose disclosed by us when you provide the information. With your
-            consent.
+            Go Edu may share aggregated, anonymized information, or personal
+            data with affiliates and trusted partners to support our services.
+            Personal data sharing occurs only as outlined here, with your
+            consent, or for specific services you&apos;ve requested.
+          </p>
+          <p>
+            <p className="text-[24px] font-semibold">
+              Updates to Our Privacy Policy{" "}
+            </p>
+            As part of our commitment to transparency, Go Edu regularly reviews
+            and updates its privacy practices. Any significant updates will be
+            noted on our homepage, ensuring that you remain informed.
           </p>
           <p>
             <p className="text-[24px] font-semibold">
@@ -96,11 +88,12 @@ export default function page() {
             through a notice on the website's homepage.
           </p>
           <p>
-            <p className="text-[24px] font-semibold">Contact Information</p>
-            For inquiries or feedback regarding this privacy policy and our
-            privacy practices, please contact us at:
-            <p>Email: info@edu123.in</p>
-            <p>Contact Number: 9557695360</p>
+            <p className="text-[24px] font-semibold">How to Reach Us</p>
+            We&apos;re here for any privacy-related inquiries or feedback. You
+            can contact us directly via email or phone for assistance: :
+            <br />
+            <p>Email: info@goedu.in</p>
+            <p>Contact Number:01353530324, 9557695360</p>
           </p>
         </div>
       </div>

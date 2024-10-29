@@ -59,18 +59,18 @@ const AboutGoEDU2 = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 md:space-x-10">
             <div className="flex-1 order-2 md:order-none text-center md:text-left">
               <p className="text-[12px] sm:text-[20px] text-justify mt-4 ">
-                Go edu is a pioneering online platform dedicated to connecting
-                students and parents with the finest boarding schools across
-                India. Our portal is a comprehensive resource, offering detailed
-                listings and insights into each institution, making the
-                decision-making process for parents and students both efficient
-                and informed.
+                At Go Edu, we connect families with the top boarding schools
+                across India, creating a seamless journey for parents and
+                students to find the perfect educational fit. Our platform
+                provides in-depth school profiles and expert insights to
+                simplify this decision-making process.
               </p>
             </div>
             <div className="w-[2px] h-52 bg-[#323232] hidden md:block"></div>
             <div className="flex md:flex-col items-center space-y-2 md:space-y-4 order-1 md:order-none gap-10 md:gap-0">
               <p className="text-[16px] sm:text-[40px] font-semibold text-center md:text-left">
-                WHO WE ARE
+              About Us
+
               </p>
               <img
                 src="/footerlogo.svg"
@@ -88,21 +88,19 @@ const AboutGoEDU2 = () => {
                 alt="Passion logo"
               />
               <p className="text-[16px] sm:text-[40px] font-semibold md:hidden">
-                OUR PASSION FOR EDUCATION
+                Guided by Educational Excellence
               </p>
             </div>
             <div className="w-[2px] h-52 bg-[#323232] hidden md:block"></div>
             <div className="flex-1 text-center md:text-left order-2 md:order-none">
               <p className="text-[16px] sm:text-[40px] font-semibold hidden md:block">
-                OUR PASSION FOR EDUCATION
+                Guided by Educational Excellence
               </p>
               <p className="text-[12px] sm:text-[20px] text-justify">
-                At Edu 123, we are driven by our commitment to educational
-                excellence and our belief in the transformative power of
-                boarding schools. Our team works tirelessly to ensure that our
-                platform reflects the diversity and quality of boarding
-                education offered in Bharat, catering to a wide range of needs
-                and preferences.
+                Driven by a passion for quality education, Go Edu showcases the
+                diversity of boarding schools across India. Our team is
+                dedicated to building a resource that honors each school&apos;s
+                unique offerings.
               </p>
             </div>
           </div>
@@ -110,17 +108,16 @@ const AboutGoEDU2 = () => {
           <div className="flex flex-col md:flex-row md:justify-between items-center  md:space-x-10">
             <div className="flex-1 order-2 md:order-none text-center md:text-left">
               <p className="text-[12px] sm:text-[20px] text-justify">
-                Our mission is to streamline the admission process, provide
-                in-depth analysis of each institution, and assist families in
-                making informed choices regarding their child's educational
-                journey. We aim to be a one-stop destination for everything
-                related to boarding schools in Bharat.
+                Our mission is to make the search for the right school easy,
+                informed, and enjoyable. We streamline the admission journey by
+                providing thorough information and simplifying school
+                comparisons.
               </p>
             </div>
             <div className="w-[2px] h-52 bg-[#323232] hidden md:block"></div>
             <div className="flex md:flex-col items-center order-1 md:order-none gap-10 md:gap-0">
               <p className="text-[16px] sm:text-[40px] font-semibold text-center md:text-left">
-                OUR MISSION
+                Making School Selection Easy
               </p>
               <img
                 src="./ourmission.svg"
@@ -138,20 +135,18 @@ const AboutGoEDU2 = () => {
                 alt="Consultation logo"
               />
               <p className="text-[16px] sm:text-[40px] font-semibold  md:hidden">
-                FREE CONSULTATION
+                Join Our Community
               </p>
             </div>
             <div className="w-[2px] h-52 bg-[#323232] hidden md:block"></div>
             <div className="flex-1 text-center md:text-left order-2 md:order-none">
               <p className="text-[16px] sm:text-[40px] font-semibold hidden md:block">
-                FREE CONSULTATION
+                Join Our Community
               </p>
               <p className="text-[12px] sm:text-[20px] text-justify">
-                Edu 123 offers free consultations to families seeking guidance
-                on the best boarding school options for their children. Our
-                expert advisors help parents navigate the admission process,
-                provide personalized recommendations, and answer any questions
-                they may have.
+                Go Edu invites students, parents, and schools to join our
+                mission of promoting high-quality boarding education. Join a
+                growing community that values excellence and educational growth.
               </p>
             </div>
           </div>
@@ -159,17 +154,15 @@ const AboutGoEDU2 = () => {
           <div className="flex flex-col md:flex-row justify-between items-center md:space-x-10">
             <div className="flex-1 order-2 md:order-none text-center md:text-left">
               <p className="text-[12px] sm:text-[20px] text-justify">
-                Become a part of the Edu 123 community! Whether you are a
-                parent, student, or school representative, we welcome you to
-                join us in our mission to promote quality boarding education in
-                Bharat. Together, we can make a positive impact on the future of
-                education.
+                We&apos;re committed to empowering families with knowledge and
+                confidence. With Go Edu, finding the right boarding school
+                becomes an informed, confident choice.
               </p>
             </div>
             <div className="w-[2px] h-52 bg-[#323232] hidden md:block"></div>
             <div className="flex md:flex-col items-center order-1 md:order-none gap-10 md:gap-0">
               <p className="text-[16px] sm:text-[40px] font-semibold text-center md:text-left">
-                JOIN US
+                Your Path to Informed Choices
               </p>
               <img
                 src="/joinus.svg"
