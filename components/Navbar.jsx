@@ -184,12 +184,12 @@ const Navbar = () => {
               />
             </Link>
             <div className="flex gap-5 text-[#02618f]">
-              <Link href="whatsapp://send?abid=+9557695360">
+              {/* <Link href="whatsapp://send?abid=+9557695360">
                 <Icon icon="logos:whatsapp-icon" className="inline w-7 h-7" />
               </Link>
               <Link href="tel:+9557695360">
                 <BsTelephone className="inline w-6 h-6" />
-              </Link>
+              </Link> */}
               <button
                 className="text-gray-700 rounded-md outline-none focus:border-gray-900 focus:border"
                 onClick={toggleDrawer}

@@ -77,7 +77,7 @@ export default function MascotAnimation() {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aliquam, repellat sapiente labore perspiciatis sint. Et ad ratione magni dolores, accusamus, debitis quisquam voluptas sequi adipisci suscipit temporibus nisi dolore?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aliquam, repellat sapiente labore perspiciatis sint. Et ad ratione magni dolores, accusamus, debitis quisquam voluptas sequi adipisci suscipit temporibus nisi dolore?</p> */}
         
-        <div ref={owlRef} className="fixed top-2 -right-16 z-50" id="owl">
+        <div ref={owlRef} className="fixed top-14 -right-16 z-50" id="owl">
           <div id="message" className="absolute right-20 -top-5 hidden">
             {/* <img src="message.png" className="w-20" alt="Message" /> */}
           </div>
