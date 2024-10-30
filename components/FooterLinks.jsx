@@ -167,7 +167,9 @@ export const FooterLinks = () => {
             </div>
           </div>
         </div>
+        
         <div className="text-center  pb-4">
+          
         <p>copyright@edumynation.com</p>
       </div>
       </div>

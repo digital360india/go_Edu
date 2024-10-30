@@ -84,7 +84,9 @@ const MapGoEdu = () => {
                   />
                 </div>
                 <Link href={`/category/boarding-schools-in-${city.name}`}>
-                  <p className="mt-4">{city.name}</p>
+                  {/* <p className="mt-4">{city.name}</p> */}
+                  <p className="mt-4">{city.name.charAt(0).toUpperCase() + city.name.slice(1)}</p>
+
                 </Link>
               </div>
             ))}
