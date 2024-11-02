@@ -175,7 +175,7 @@ const FeaturedGoEduLaptop = () => {
 
   return (
     <>
-      <div className="h-[2500px] hidden md:block">
+      <div className="h-[468vh] hidden md:block">
         <div
           ref={containerRef}
           className="w-full h-screen flex justify-end items-center overflow-hidden relative"
