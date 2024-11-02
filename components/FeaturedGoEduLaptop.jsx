@@ -47,14 +47,14 @@ const Gallery = () => {
   const cardsRef = useRef([]);
   const router = useRouter();
 
-  useEffect(() => {
+  const setupScrollTrigger = () => {
     const gallery = galleryRef.current;
 
     if (gallery && cardsRef.current.length) {
       const totalWidth = cardsRef.current.length * window.innerWidth * 0.3;
 
       gsap.to(gallery, {
-        x: -totalWidth + window.innerWidth * 0.3,
+        x: -totalWidth + window.innerWidth,
         ease: "none",
         scrollTrigger: {
           trigger: gallery,
@@ -67,11 +67,26 @@ const Gallery = () => {
             delay: 0.1,
           },
           pin: true,
+          invalidateOnRefresh: true, // ensures recalculation on window resize
         },
       });
     }
+  };
 
-    return () => ScrollTrigger.getAll().forEach((t) => t.kill());
+  useEffect(() => {
+    setupScrollTrigger();
+
+    const handleResize = () => {
+      ScrollTrigger.getAll().forEach((t) => t.kill());
+      setupScrollTrigger();
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      ScrollTrigger.getAll().forEach((t) => t.kill());
+    };
   }, []);
 
   const handleCardClick = (url) => {
@@ -140,11 +155,11 @@ const FeaturedGoEduLaptop = () => {
       duration: 1,
       ease: "power2.inOut",
     })
-    .to(circle, {
-      opacity: 0.7, 
-      duration: 0.5,
-      onComplete: () => setShowGallery(true),
-    })
+      .to(circle, {
+        opacity: 0.7,
+        duration: 0.5,
+        onComplete: () => setShowGallery(true),
+      })
       .to({}, { duration: 4 })
       .to(circle, {
         opacity: 0,
@@ -160,7 +175,7 @@ const FeaturedGoEduLaptop = () => {
 
   return (
     <>
-      <div className="h-[450vh] hidden md:block">
+      <div className="h-[2500px] hidden md:block">
         <div
           ref={containerRef}
           className="w-full h-screen flex justify-end items-center overflow-hidden relative"
