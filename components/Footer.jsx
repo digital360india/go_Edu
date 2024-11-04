@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { BsFacebook, BsInstagram, BsLinkedin } from "react-icons/bs";
+import { BsFacebook, BsInstagram, BsLinkedin} from "react-icons/bs";
 
 export const Footer = () => {
   return (
@@ -40,7 +40,20 @@ export const Footer = () => {
                     className="w-[20px] h-[20px]"
                   />
                   <p>
-                    +91-01353530324, 9557695360
+                    +91-01353530324
+                  </p>{" "}
+                </div>
+
+                <div className="flex gap-2">
+                  <Image
+                    width={1000}
+                    height={1000}
+                    alt="logo"
+                    src="/Phone.svg"
+                    className="w-[20px] h-[20px]"
+                  />
+                  <p>
+                    +91-9557695360
                   </p>{" "}
                 </div>
 

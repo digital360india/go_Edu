@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
+
 export const FooterLinks = () => {
   return (
     <div className="w-[98.9vw] text-[14px] text-[#323232] bg-[#F3F3F3] pb-2 h-fit">
