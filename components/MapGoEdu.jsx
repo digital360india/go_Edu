@@ -10,27 +10,27 @@ const MapGoEdu = () => {
   const cities = [
     {
       name: "india",
-      bannerSrc: "/locationbanner.svg",
+      bannerSrc: "/indiaschool.svg",
       bottomSrc: "/locationbottom.svg",
     },
     {
       name: "mussoorie",
-      bannerSrc: "/locationbanner.svg",
+      bannerSrc: "/mussorie.svg",
       bottomSrc: "/locationbottom.svg",
     },
     {
       name: "dehradun",
-      bannerSrc: "/locationbanner.svg",
+      bannerSrc: "/dehradun.svg",
       bottomSrc: "/locationbottom.svg",
     },
     {
       name: "bengaluru",
-      bannerSrc: "/locationbanner.svg",
+      bannerSrc: "/banglore.svg",
       bottomSrc: "/locationbottom.svg",
     },
     {
       name: "shimla",
-      bannerSrc: "/locationbanner.svg",
+      bannerSrc: "/shimla.svg",
       bottomSrc: "/locationbottom.svg",
     },
   ];
@@ -71,7 +71,7 @@ const MapGoEdu = () => {
                     alt="location banner"
                     width={1000}
                     height={1000}
-                    className="w-[180px] h-[200px] mx-4"
+                    className="w-[250px] h-[240px] mx-4"
                   />
                 </div>
                 <div className={`resize-bottom ${index} custom-shadow-bottom`}>

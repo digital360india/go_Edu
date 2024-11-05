@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
+import Popup from "@/components/Popup";
 
 export async function generateMetadata() {
   return {
@@ -63,22 +64,22 @@ export default function RootLayout({ children }) {
         <ToastContainer />
         <Authprovider>
           <Navbar />
+          <Popup/>
           {children}
           <Footer />
           <FooterLinks />
         </Authprovider>
-
         <div className="fixed bottom-4 left-4 z-50">
           <Link href="tel:+9557695360" aria-label="Phone">
-            <button className="bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600">
-              <FaPhoneAlt className="text-xl" />
+            <button className="bg-blue-500 text-white p-4 rounded-full shadow-lg hover:bg-blue-600">
+              <FaPhoneAlt className="text-2xl " />
             </button>
           </Link>
         </div>
         <div className="fixed bottom-4 right-4 z-50">
           <Link href="https://wa.me/9557695360" aria-label="WhatsApp">
-            <button className="bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600">
-              <FaWhatsapp className="text-xl" />
+            <button className="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600">
+              <FaWhatsapp className="text-2xl" />
             </button>
           </Link>
         </div>

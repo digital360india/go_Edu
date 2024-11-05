@@ -7,27 +7,27 @@ const SchoolByCitiesGoedu = () => {
   const cities = [
     {
       name: "india",
-      bannerSrc: "/locationbanner.svg",
+      bannerSrc: "/indiaschool.svg",
       bottomSrc: "/locationbottom.svg",
     },
     {
       name: "mussoorie",
-      bannerSrc: "/locationbanner.svg",
+      bannerSrc: "/mussorie.svg",
       bottomSrc: "/locationbottom.svg",
     },
     {
       name: "dehradun",
-      bannerSrc: "/locationbanner.svg",
+      bannerSrc: "/dehradun.svg",
       bottomSrc: "/locationbottom.svg",
     },
     {
       name: "bengaluru",
-      bannerSrc: "/locationbanner.svg",
+      bannerSrc: "/banglore.svg",
       bottomSrc: "/locationbottom.svg",
     },
     {
       name: "shimla",
-      bannerSrc: "/locationbanner.svg",
+      bannerSrc: "/shimla.svg",
       bottomSrc: "/locationbottom.svg",
     },
   ];
@@ -46,7 +46,7 @@ const SchoolByCitiesGoedu = () => {
               School By Cities
             </h1>
 
-            <div className="grid grid-cols-2  justify-center items-center gap-20 mt-10">
+            <div className="grid grid-cols-2  justify-center items-center gap-16 mt-6">
               {cities.map((city, index) => (
                 <div key={index} className=" text-center">
                   <div className={`bounce-slow ${index} custom-shadow`}>
@@ -57,7 +57,7 @@ const SchoolByCitiesGoedu = () => {
                       alt="location banner"
                       width={1000}
                       height={1000}
-                      className="w-[80px] h-[90px] mx-4"
+                      className="w-[140px] h-[150px] mx-4"
                     />
                     </Link>
                   </div>
@@ -69,7 +69,7 @@ const SchoolByCitiesGoedu = () => {
                       alt="location bottom"
                       width={1000}
                       height={1000}
-                      className="w-[60px] h-[8px] mx-6"
+                      className="w-[120px] h-[6px] mx-6"
                     />
                   </div>
                   <Link href={`/category/boarding-schools-in-${city.name}`}>

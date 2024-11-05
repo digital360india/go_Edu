@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image'; // Import Image from Next.js
+import Image from 'next/image'; 
 
 export default function Popup({ setClose }) {
   const [formData, setFormData] = useState({
@@ -14,12 +14,14 @@ export default function Popup({ setClose }) {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
 
 
+  
   useEffect(() => {
     const timer = setInterval(() => {
       setIsPopupVisible(true); 
-    }, 4000); 
+    }, 40000); 
 
-    return () => clearInterval(timer);
+    return () => clearInterval(timer); 
+
   }, []);
 
   const handleChange = (e) => {
@@ -38,7 +40,9 @@ export default function Popup({ setClose }) {
 
   const handleClose = () => {
     setIsPopupVisible(false); 
-    setClose(); 
+
+    setClose();
+
   };
 
   return (
