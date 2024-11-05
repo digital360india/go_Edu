@@ -218,7 +218,7 @@ export default function Home() {
           <FormGoEdu />
         
           <MapGoEdu />
-          <FeaturedGoEduLaptop />
+          {/* <FeaturedGoEduLaptop /> */}
           <WhyChooseUsGoEdu />
           <div className="md:hidden">
 

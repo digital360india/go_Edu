@@ -13,6 +13,7 @@ export default function Popup({ setClose }) {
   
   const [isPopupVisible, setIsPopupVisible] = useState(false);
 
+
   
   useEffect(() => {
     const timer = setInterval(() => {
@@ -20,6 +21,7 @@ export default function Popup({ setClose }) {
     }, 40000); 
 
     return () => clearInterval(timer); 
+
   }, []);
 
   const handleChange = (e) => {
@@ -38,7 +40,9 @@ export default function Popup({ setClose }) {
 
   const handleClose = () => {
     setIsPopupVisible(false); 
+
     setClose();
+
   };
 
   return (
@@ -46,7 +50,7 @@ export default function Popup({ setClose }) {
       {isPopupVisible && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-center items-center">
           <div className="relative flex gap-10 justify-between items-center bg-white rounded-lg shadow-lg">
-            {/* Close button */}
+       
             <button 
               onClick={handleClose} 
               className="absolute bg-[#1B6EA1] px-4 z-50 rounded-full py-2 top-2 right-2 text-2xl font-bold text-white hover:text-gray-900"
@@ -54,7 +58,7 @@ export default function Popup({ setClose }) {
               &times;
             </button>
 
-            {/* Image section */}
+   
             <div className="w-[75vw] h-[539px] hidden md:block z-0">
               <Image
                 src="/popup.svg"
@@ -65,7 +69,7 @@ export default function Popup({ setClose }) {
               />
             </div>
 
-            {/* Form section */}
+        
             <div className="w-full z-50 md:w-[580px] h-full rounded-l-2xl p-8 absolute top-0 right-14 bg-white">
               <h3 className="text-xl mb-6 text-[#323232]">
                 Fill this form and get in touch with our counsellor
@@ -123,7 +127,7 @@ export default function Popup({ setClose }) {
                     <option value="Class 1">Class 1</option>
                     <option value="Class 2">Class 2</option>
                     <option value="Class 3">Class 3</option>
-                    {/* Add more class options as needed */}
+                
                   </select>
 
                   <select
@@ -140,7 +144,7 @@ export default function Popup({ setClose }) {
                     <option value="ICSE">ICSE</option>
                     <option value="IGCSE">IGCSE</option>
                     <option value="IB">IB</option>
-                    {/* Add more board options if needed */}
+             
                   </select>
                 </div>
 

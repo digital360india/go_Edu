@@ -121,8 +121,8 @@ const SchoolCard = ({ categoryData }) => {
   return (
     <>
       <div className="">
-        <div className="bg-[#1B6EA1] w-full  md:h-[400px] md:flex md:justify-center md:items-center p-3  md:p-10">
-          <h2 className="md:px-[45px] my-8 lg:my-4 sm:text-[30px] text-[#FFFFFF] text-[20px]">
+        <div className="bg-[#1B6EA1] w-full  md:h-[160px] md:flex md:justify-center md:items-center p-3  md:p-10">
+          <h2 className="md:px-[45px] my-8 lg:my-4 sm:text-[30px] text-center text-[#FFFFFF] text-[20px]">
             {" "}
             {/* List of {Math.ceil(filterdata?.employees.length)} Best Schools in */}
             List of Best Schools in&nbsp;

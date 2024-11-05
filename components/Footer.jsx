@@ -20,7 +20,7 @@ export const Footer = () => {
 
               <div className="space-y-2 text-[12px] md:text-[14px] font-semibold text-[#323232]">
                 <p className="text-[20px] text-[#323232] md:hidden">Contact</p>
-                <div className="flex gap-2">
+                {/* <div className="flex gap-2">
                   <Image
                     width={1000}
                     height={1000}
@@ -29,7 +29,7 @@ export const Footer = () => {
                     className="w-[20px] h-[20px]"
                   />
                   <p className="">B, 36, Nehru Colony Rd, C Block, Nehru Colony, Dalanwala, Dehradun, Uttarakhand 248001</p>{" "}
-                </div>
+                </div> */}
 
                 <div className="flex gap-2">
                   <Image
@@ -106,18 +106,18 @@ export const Footer = () => {
               <Link href="https://www.facebook.com/profile.php?id=61552427439719" target="_blank">
                 <BsFacebook />
               </Link>
-
+{/* 
               <Image
                 src="/TwitterX.svg"
                 alt="twitter"
                 width={1000}
                 height={1000}
                 className="w-[23px] h-[23px]"
-              />
-
+              /> */}
+{/* 
               <Link href="/" target="_blank">
                 <BsLinkedin />
-              </Link>
+              </Link> */}
 
               <Link href="https://www.instagram.com/goedu_india?igsh=MWtyaGFocGo4cHA0bQ==" target="_blank">
                 <BsInstagram />
