@@ -4,7 +4,7 @@ import React from "react";
 const WhyChooseUsGoEdu = () => {
   return (
     <>
-      <div className="bg-[#FFFFF] hidden md:block">
+      <div className="bg-[#FFFFF] hidden md:block ">
         <h1 className="text-center text-[#323232] text-[2.25rem] mt-10">
           Why Choose Us?
         </h1>
@@ -29,7 +29,7 @@ const WhyChooseUsGoEdu = () => {
                 about every decision you make for your child&apos;s future.
               </p>
             </div>
-            <div className="w-[200px] h-[135px]">
+            <div className="w-[300px] h-[115px]">
               <h1 className="text-[#323232] text-[1rem]">
                 Mock Tests & Assessments
               </h1>
@@ -72,7 +72,7 @@ const WhyChooseUsGoEdu = () => {
           </div>
 
           <div className="space-y-14 w-[200px] h-[410px]">
-            <div className="w-[200px] h-[138px] pt-1">
+            <div className="w-[300px] h-[138px] pt-1">
               <h1 className="text-[#323232] text-[1rem]">
                 Comprehensive School Insights
               </h1>
@@ -82,7 +82,7 @@ const WhyChooseUsGoEdu = () => {
                 informed choices for your child&apos;s education.
               </p>
             </div>
-            <div className="w-[200px] h-[130px]">
+            <div className="w-[300px] h-[130px]">
               <h1 className="text-[#323232] text-[1rem]">
                 Transparent and Trustworthy Service
               </h1>
@@ -92,7 +92,7 @@ const WhyChooseUsGoEdu = () => {
                 reliable, and truly in your child&apos;s best interest.
               </p>
             </div>
-            <div className="w-[200px] h-[135px]">
+            <div className="w-[300px] h-[135px]">
               <h1 className="text-[#323232] text-[1rem]">End-to-End Support</h1>
               <p className="text-[#898989] text-[12px]">
                 From initial consultations to application guidance and admission

@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image'; // Import Image from Next.js
+import Image from 'next/image'; 
 
 export default function Popup({ setClose }) {
   const [formData, setFormData] = useState({
@@ -13,13 +13,13 @@ export default function Popup({ setClose }) {
   
   const [isPopupVisible, setIsPopupVisible] = useState(false);
 
-  // Show popup every 4 seconds
+  
   useEffect(() => {
     const timer = setInterval(() => {
-      setIsPopupVisible(true); // Open the popup
-    }, 4000); // Interval for 4 seconds
+      setIsPopupVisible(true); 
+    }, 40000); 
 
-    return () => clearInterval(timer); // Cleanup the interval on unmount
+    return () => clearInterval(timer); 
   }, []);
 
   const handleChange = (e) => {
@@ -32,13 +32,13 @@ export default function Popup({ setClose }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData); // Handle form submission logic here
-    setIsPopupVisible(false); // Close the popup on form submit
+    console.log(formData); 
+    setIsPopupVisible(false); 
   };
 
   const handleClose = () => {
-    setIsPopupVisible(false); // Close the popup manually
-    setClose(); // Notify the parent if necessary
+    setIsPopupVisible(false); 
+    setClose();
   };
 
   return (

@@ -93,20 +93,18 @@ const AboutGoEdu = () => {
           </button>
 
           <div className="p-[46px] text-justify overflow-y-auto h-full text-[13px]">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam amet
-            veniam soluta ratione laboriosam animi accusantium similique nihil
-            voluptates, eveniet minima ducimus magnam sunt a quis incidunt
-            nesciunt. Facere ea ducimus fugiat laudantium totam, voluptas
-            voluptatibus aspernatur deleniti officiis unde! Dolorum itaque rerum
-            quos temporibus accusantium nisi totam vel quis!
+            Go Edu is India&apos;s trusted platform for discovering the best boarding
+            schools, dedicated to offering unbiased, detailed information to
+            help families make well-informed choices. We simplify school
+            selection, bringing clarity and confidence to parents and students
+            alike.
             <br />
             <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-            laboriosam illum, maxime obcaecati ratione laborum cum hic. Nostrum
-            laudantium suscipit ullam, incidunt at, laboriosam consequatur odio
-            recusandae qui facere id accusamus ratione nam nesciunt aut,
-            inventore accusantium debitis neque tempore quasi? Iure
-            consequuntur, consequatur quae vero veritatis ipsam ex autem!
+            Driven by a commitment to educational transparency, Go Edu combines
+            insightful listings, genuine reviews, and comprehensive school
+            profiles. Our mission is to empower families with accurate,
+            accessible resources and guide them toward the ideal academic
+            environment tailored to their needs.
           </div>
         </div>
       </div>
@@ -238,21 +236,17 @@ const AboutGoEdu = () => {
               <div
                 className={`h-full px-[100px] overflow-y-auto  text-[1rem]  `}
               >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam
-                amet veniam soluta ratione laboriosam animi accusantium
-                similique nihil voluptates, eveniet minima ducimus magnam sunt a
-                quis incidunt nesciunt. Facere ea ducimus fugiat laudantium
-                totam, voluptas voluptatibus aspernatur deleniti officiis unde!
-                Dolorum itaque rerum quos temporibus accusantium nisi totam vel
-                quis! <br />
+                Go Edu is India&apos;s trusted platform for discovering the best
+                boarding schools, dedicated to offering unbiased, detailed
+                information to help families make well-informed choices. We
+                simplify school selection, bringing clarity and confidence to
+                parents and students alike. <br />
                 <br />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-                laboriosam illum, maxime obcaecati ratione laborum cum hic.
-                Nostrum laudantium suscipit ullam, incidunt at, laboriosam
-                consequatur odio recusandae qui facere id accusamus ratione nam
-                nesciunt aut, inventore accusantium debitis neque tempore quasi?
-                Iure consequuntur, consequatur quae vero veritatis ipsam ex
-                autem!
+                Driven by a commitment to educational transparency, Go Edu
+                combines insightful listings, genuine reviews, and comprehensive
+                school profiles. Our mission is to empower families with
+                accurate, accessible resources and guide them toward the ideal
+                academic environment tailored to their needs.
                 <div className="flex justify-center items-center text-[#323232] space-x-60 pt-10">
                   <div className="space-y-1">
                     <Image
