@@ -15,29 +15,27 @@ export default function TailwindPopupForm() {
   });
   const form = useRef();
 
-  // Reference to hold the interval ID
   const intervalRef = useRef(null);
 
   useEffect(() => {
-    // Open popup every 3 seconds if it's not open
     const startInterval = () => {
       intervalRef.current = setInterval(() => {
         if (!isOpen) {
           setIsOpen(true);
         }
-      }, 30000); // 3000ms = 3 seconds
+      }, 30000); 
     };
 
-    startInterval(); // Initialize interval on component mount
+    startInterval(); 
 
     return () => {
-      clearInterval(intervalRef.current); // Cleanup interval on unmount
+      clearInterval(intervalRef.current); 
     };
   }, [isOpen]);
 
   const closePopup = () => {
     setIsOpen(false);
-    // Clear the existing interval and restart it when the popup is closed
+  
     clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
       if (!isOpen) {

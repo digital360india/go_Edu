@@ -143,7 +143,7 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                     </p>
                   </div>
                   <div className="flex flex-col items-center space-y-1">
-                    <p className="">School Gender</p>
+                    <p className="">School Cetegory</p>
                     <p className="font-normal">
                       {data?.fields?.girls_schools
                         ? "Girls School"
@@ -216,8 +216,8 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
 
       <div className="lg:hidden">
         <div className="float-right py-3 px-5 h-[36px] bg-[#F97B24] font-semibold rounded-l-3xl flex items-center gap-2 shadow-counsel">
-          <IoPerson size={16} />
-          <p className="text-[12px]">{viewers}+ people viewed</p>
+          <IoPerson className="text-white" size={16} />
+          <p className="text-[12px] text-white">{viewers}+ people viewed</p>
         </div>
         <div className="w-[85vw] md:w-[80vw]  md:h-[90vh] shadow-counsel px-[25px] py-[43px] space-y-2">
           <img
@@ -235,8 +235,12 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
               </p>
             </div>
             <div className="flex text-[12px] items-center text-[#898989] gap-2">
-              <IoLocationSharp size={16} />
-              <p> {data?.fields?.fullAddress}</p>
+              <div>
+              <IoLocationSharp className="text-[20px]" />
+              </div>
+              <div className="w-[90%]">
+              <p className=""> {data?.fields?.fullAddress}</p>
+              </div>
             </div>
             <StarRating
               rating={data?.fields?.rating}
@@ -258,10 +262,10 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
             </div>
             </div>
             </div> */}
-            <div className="flex justify-between p-3 font-semibold  m-6   text-[10px] bg-[#1B6EA1] rounded-l-2xl text-white  w-full">
+            <div className="flex justify-between p-3 font-semibold  text-[10px] bg-[#1B6EA1] rounded-l-2xl text-white float-right  w-full">
               <div className="space-y-3">
-                <div className="flex flex-col items-center">
-                  <p>Curriculum</p>
+                <div className="flex flex-col ">
+                  <p className="font-bold text-[11px]">Curriculum</p>
                   <p className=" text-white">
                     {data?.fields?.cbse_schools
                       ? "CBSE"
@@ -276,8 +280,8 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                       : null}
                   </p>
                 </div>
-                <div className="flex flex-col items-center">
-                  <p>School Gender</p>
+                <div className="flex flex-col">
+                  <p className="font-bold text-[11px]">School Category</p>
                   <p className="text-white">
                     {data?.fields?.girls_schools
                       ? "Girls School"
@@ -290,8 +294,8 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                 </div>
               </div>
               <div className="space-y-3">
-                <div className="flex flex-col items-center">
-                  <p>School Type</p>
+                <div className="flex flex-col ">
+                  <p className="font-bold text-[11px]">School Type</p>
                   <p className="text-white">
                     {data?.fields?.day_schools == true
                       ? "Day School"
@@ -303,8 +307,8 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                   </p>
                 </div>
 
-                <div className="flex flex-col items-center">
-                  <p>Classes</p>
+                <div className="flex flex-col">
+                  <p className="font-bold text-[11px]">Classes</p>
                   <p className="text-white">{data?.fields?.classto}</p>
                 </div>
               </div>
@@ -339,18 +343,18 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
             <div className=" flex gap-2 text-[12px] pt-2">
               <Link
                 href={`/school/${citySlug}/${data?.fields?.slug}`}
-                className="w-full px-5 py-2 rounded-3xl border border-[#1B6EA1] text-[#1B6EA1] flex justify-center items-center gap-2"
+                className="w-full px-3 py-2 rounded-3xl border border-[#1B6EA1] text-[#1B6EA1] flex md:justify-center items-center  gap-2"
               >
-                <RiGraduationCapFill size={16} />
+                <RiGraduationCapFill size={14} />
                 View School
               </Link>
 
               <button
                 onClick={openPopup}
-                className="w-full px-5 py-2 rounded-3xl bg-[#1B6EA1] text-[#fff] flex justify-center items-center gap-2"
+                className="w-full px-3 py-2 rounded-3xl bg-[#1B6EA1] text-[#fff] flex justify-center items-center gap-2"
               >
-                <BiSolidPhoneCall size={16} />
-                Enquiry Now
+                <BiSolidPhoneCall size={14} />
+                Enquire Now
               </button>
             </div>
           </div>

@@ -48,7 +48,7 @@ export const FooterLinks = () => {
             </div>
           </div>
 
-          <div className="lg:w-[25vw]     sm:flex sm:justify-center ">
+          {/* <div className="lg:w-[25vw]     sm:flex sm:justify-center ">
             <div className="flex flex-col">
               <Link
                 href={
@@ -86,9 +86,9 @@ export const FooterLinks = () => {
                 Boarding Schools in Varanasi
               </Link>
             </div>
-          </div>
+          </div> */}
 
-          <div className="   flex  sm:justify-center lg:w-[25vw]">
+          {/* <div className="   flex  sm:justify-center lg:w-[25vw]">
             <div className="flex flex-col">
               <Link
                 href={
@@ -126,7 +126,7 @@ export const FooterLinks = () => {
                 Boarding Schools in Sikar
               </Link>
             </div>
-          </div>
+          </div> */}
 
           <div className=" flex sm:justify-center sm:mt-0  lg:w-[27vw]">
             <div className="flex flex-col">
