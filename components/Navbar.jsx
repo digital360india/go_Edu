@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import Drawer from "react-modern-drawer";
 import {
   BsTelephone,
@@ -86,9 +86,9 @@ const Navbar = () => {
     },
   ];
   
-  useEffect(() => {
-    console.log("isOpenpopup state changed:", isOpenpopup);
-  }, [isOpenpopup]);
+  // useEffect(() => {
+  //   console.log("isOpenpopup state changed:", isOpenpopup);
+  // }, [isOpenpopup]);
 
   const toggleDrawer = () => {
     document.body.style.overflow = isOpen ? "auto" : "hidden";

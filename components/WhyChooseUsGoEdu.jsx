@@ -72,7 +72,7 @@ const WhyChooseUsGoEdu = () => {
           </div>
 
           <div className="space-y-14 w-[200px] h-[410px]">
-            <div className="w-[300px] h-[138px] pt-1">
+            <div className="w-[280px] h-[138px] pt-1">
               <h1 className="text-[#323232] text-[1rem]">
                 Comprehensive School Insights
               </h1>
@@ -82,7 +82,7 @@ const WhyChooseUsGoEdu = () => {
                 informed choices for your child&apos;s education.
               </p>
             </div>
-            <div className="w-[300px] h-[130px]">
+            <div className="w-[280px] h-[130px]">
               <h1 className="text-[#323232] text-[1rem]">
                 Transparent and Trustworthy Service
               </h1>

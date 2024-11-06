@@ -171,7 +171,7 @@ export const FooterLinks = () => {
         
         <div className="text-center  pb-4">
           
-        <p>copyright@edumynation.com</p>
+        <p>info@goedu.in</p>
       </div>
       </div>
     </div>

@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
+import Popup from "@/components/Popup";
 // import Popup from "@/components/Ppoup";
 
 export async function generateMetadata() {
@@ -64,7 +65,7 @@ export default function RootLayout({ children }) {
         <ToastContainer />
         <Authprovider>
           <Navbar />
-          {/* <Popup/> */}
+          <Popup/>
           {children}
           <Footer />
           <FooterLinks />

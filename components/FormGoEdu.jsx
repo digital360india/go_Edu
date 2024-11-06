@@ -64,7 +64,56 @@ const FormGoEdu = () => {
           /> */}
             <div className="flex">
               <select className="w-[64px] h-[39px] border-b-2 border-[#D9D9D9] rounded-l placeholder:text-[#898989] sm:border sm:rounded-l sm:p-2 sm:border-[#D9D9D9]">
-                <option className="text-[#898989]">🇮🇳</option>
+              <option value="🇮🇳">🇮🇳 +91</option>
+    <option value="🇺🇸">🇺🇸 +1</option>
+    <option value="🇬🇧">🇬🇧 +44</option>
+    <option value="🇨🇦">🇨🇦 +1</option>
+    <option value="🇦🇺">🇦🇺 +61</option>
+    <option value="🇳🇿">🇳🇿 +64</option>
+    <option value="🇿🇦">🇿🇦 +27</option>
+    <option value="🇸🇬">🇸🇬 +65</option>
+    <option value="🇦🇪">🇦🇪 +971</option>
+    <option value="🇸🇦">🇸🇦 +966</option>
+    <option value="🇫🇷">🇫🇷 +33</option>
+    <option value="🇩🇪">🇩🇪 +49</option>
+    <option value="🇮🇹">🇮🇹 +39</option>
+    <option value="🇪🇸">🇪🇸 +34</option>
+    <option value="🇧🇷">🇧🇷 +55</option>
+    <option value="🇲🇽">🇲🇽 +52</option>
+    <option value="🇯🇵">🇯🇵 +81</option>
+    <option value="🇰🇷">🇰🇷 +82</option>
+    <option value="🇨🇳">🇨🇳 +86</option>
+    <option value="🇹🇷">🇹🇷 +90</option>
+    <option value="🇷🇺">🇷🇺 +7</option>
+    <option value="🇮🇩">🇮🇩 +62</option>
+    <option value="🇵🇭">🇵🇭 +63</option>
+    <option value="🇻🇳">🇻🇳 +84</option>
+    <option value="🇹🇭">🇹🇭 +66</option>
+    <option value="🇲🇾">🇲🇾 +60</option>
+    <option value="🇳🇬">🇳🇬 +234</option>
+    <option value="🇪🇬">🇪🇬 +20</option>
+    <option value="🇮🇱">🇮🇱 +972</option>
+    <option value="🇰🇪">🇰🇪 +254</option>
+    <option value="🇦🇷">🇦🇷 +54</option>
+    <option value="🇨🇱">🇨🇱 +56</option>
+    <option value="🇵🇪">🇵🇪 +51</option>
+    <option value="🇨🇴">🇨🇴 +57</option>
+    <option value="🇻🇪">🇻🇪 +58</option>
+    <option value="🇺🇦">🇺🇦 +380</option>
+    <option value="🇵🇱">🇵🇱 +48</option>
+    <option value="🇳🇱">🇳🇱 +31</option>
+    <option value="🇧🇪">🇧🇪 +32</option>
+    <option value="🇸🇪">🇸🇪 +46</option>
+    <option value="🇨🇭">🇨🇭 +41</option>
+    <option value="🇦🇹">🇦🇹 +43</option>
+    <option value="🇩🇰">🇩🇰 +45</option>
+    <option value="🇫🇮">🇫🇮 +358</option>
+    <option value="🇮🇪">🇮🇪 +353</option>
+    <option value="🇳🇴">🇳🇴 +47</option>
+    <option value="🇨🇿">🇨🇿 +420</option>
+    <option value="🇸🇰">🇸🇰 +421</option>
+    <option value="🇷🇴">🇷🇴 +40</option>
+    <option value="🇭🇺">🇭🇺 +36</option>
               </select>
               <input
                 type="tel"
@@ -103,7 +152,7 @@ const FormGoEdu = () => {
             <div className="md:pt-2 pt-8 cursor-pointer">
               <button
                 type="submit"
-                className="md:w-[177px] md:h-[60px] md:px-0 px-8 md:py-0 py-3  bg-[#1B6EA1] text-white p-2 rounded-lg hover:bg-[#1b6ea1c9]"
+                className="md:w-[160px] md:h-[50px] md:px-0 px-8 md:py-0 py-3  bg-[#1B6EA1] text-white p-2 rounded-lg hover:bg-[#1b6ea1c9]"
               >
                 Submit
               </button>
