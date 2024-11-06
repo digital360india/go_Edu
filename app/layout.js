@@ -78,8 +78,8 @@ export default function RootLayout({ children }) {
         </div>
         <div className="fixed bottom-4 right-4 z-50">
           <Link href="https://wa.me/9557695360" aria-label="WhatsApp">
-            <button className="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600">
-              <FaWhatsapp className="text-2xl" />
+            <button className="bg-green-500 text-white p-[12px] rounded-full shadow-lg hover:bg-green-600">
+              <FaWhatsapp className="md:text-[33px] text-2xl" />
             </button>
           </Link>
         </div>
