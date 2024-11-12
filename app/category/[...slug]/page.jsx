@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import FAQ from "@/components/FAQ";
 import CategoryPage from "@/components/CategoryPage";
 import CategoryHeroGoEdu from "@/components/CategoryHeroGoEdu";
+import Head from "next/head";
 
 async function getCategoryData(slug) {
   const categoryData = await base("category 2")
@@ -58,7 +59,7 @@ export default async function ListingPage({ params }) {
 
   return (
     <>
-      <head>
+      <Head>
         <script
           defer
           type="application/ld+json"
@@ -78,7 +79,7 @@ export default async function ListingPage({ params }) {
             __html: categoryData?.schema3,
           }}
         />
-      </head>
+      </Head>
       {/* <div className="bg-white overflow-x-hidden">
         <div className="hidden sm:block">
           <Hero

@@ -2,7 +2,6 @@
 import React from "react";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
-import { BsSearch, BsNewspaper } from "react-icons/bs";
 import { FiFilter } from "react-icons/fi";
 import { base } from "@/app/api/airtable.jsx";
 import { useState } from "react";
@@ -10,7 +9,6 @@ import { useEffect } from "react";
 import { GrFormPrevious, GrFormNext } from "react-icons/gr";
 import SchoolCardMini from "./SchoolCardMini";
 import Filter from "./Filter";
-import EnquireForm from "./EnquireForm";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 const SchoolCard = ({ categoryData }) => {
@@ -158,24 +156,7 @@ const SchoolCard = ({ categoryData }) => {
         <div className="bg-white ">
           <div className=" bg-white">
             <div className="items-center bg-white justify-between md:mt-8 pb-8">
-              {/* <div className="flex  justify-center sm:justify-start gap-4   items-center">
-                <div className="flex   justify-start w-[291px] h-[32px] sm:w-[100%] lg:h-[46px] lg:w-[100%] xl:w-[820px] border-2 outline-none rounded-r-xl rounded-l-xl bg-[#F8F8F8]">
-                  <BsSearch className="w-10 p-2 h-full text-[#AEAEAE] "></BsSearch>
-                  <input
-                    onChange={handleSearch}
-                    className="xl:w-[890px] w-[242px] h-full bg-[#F8F8F8] outline-none"
-                    type="text"
-                    placeholder="Search"
-                  />
-                </div>
-                <FiFilter
-                  onClick={() => {
-                    setfilterdata({ ...filterdata, toggle: true });
-                  }}
-                  className="text-2xl xl:hidden"
-                  categoryData={categoryData}
-                ></FiFilter>
-              </div> */}
+             
             </div>
           </div>
 
@@ -199,7 +180,8 @@ const SchoolCard = ({ categoryData }) => {
                     <>
                       <SchoolCardMini
                         data={items}
-                        index={index}
+                        index={`${index}-${items.fields.name}`}
+                       
                         citySlug={citySlug}
                       />
                     </>
@@ -269,10 +251,7 @@ const SchoolCard = ({ categoryData }) => {
             <div className="w-[340px] h-[600px] bg-[#F8F8F8] rounded-lg ">
               <Filter filterdata={filterdata} setfilterdata={setfilterdata} />
             </div>
-            {/* <div className="w-[340px] h-[436px] bg-[#F8F8F8] rounded-lg mt-5">
-      <p className="text-[24px] font-medium mt-10 ml-5">Enquire Now</p>
-      <EnquireForm />
-    </div> */}
+           
           </div>
         </div>
 
