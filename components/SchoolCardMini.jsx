@@ -16,6 +16,7 @@ import { StarRating, StarRatingper } from "./StarRating";
 import { PiStudentFill } from "react-icons/pi";
 import Enquire from "./Enquire";
 import CategoryGalleryGoEdu from "./CategoryGalleryGoEdu";
+import ConsultationPopup from "./ConsultationPopup";
 
 const SchoolCardMini = ({ data, index, citySlug }) => {
   useEffect(() => {
@@ -43,6 +44,21 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
     const randomViewers = Math.floor(Math.random() * (30 - 10 + 1)) + 10;
     setViewers(randomViewers);
   }, []);
+
+
+
+    //  popup
+    const [isOpenpopup, setIsOpenpopup] = useState(false);
+  
+    const toggleBookingPopup = () => {
+      setIsOpenpopup(true);
+    };
+  
+ 
+  
+    const toggleBookingClosePopup = () => {
+      setIsOpenpopup(false);
+    };
 
   return (
     <>
@@ -201,7 +217,7 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                   </Link>
 
                   <button
-                    onClick={openPopup}
+                    onClick={toggleBookingPopup}
                     className="w-full px-5 py-2 rounded-3xl bg-[#02618f] text-[#fff] flex justify-center items-center gap-2"
                   >
                     <BiSolidPhoneCall size={16} />
@@ -350,7 +366,7 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
               </Link>
 
               <button
-                onClick={openPopup}
+                onClick={toggleBookingPopup}
                 className="w-full px-3 py-2 rounded-3xl bg-[#1B6EA1] text-[#fff] flex justify-center items-center gap-2"
               >
                 <BiSolidPhoneCall size={14} />
@@ -361,10 +377,14 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
         </div>
       </div>
 
+      {isOpenpopup && (
+              <ConsultationPopup setClose={toggleBookingClosePopup} />
+            )}
+
       <Enquire
-        isOpen={isPopupOpen}
-        onClose={closePopup}
-        school={data?.fields?.name}
+         isOpen={isPopupOpen}
+         onClose={closePopup}
+         school={school?.name}
       />
     </>
   );
