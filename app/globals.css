@@ -232,3 +232,152 @@ body {
 .animate-slideIn {
   animation: slideIn 0.7s forwards;
 }
+
+/* General Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Article Container */
+.article-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    /* background-color: #fff; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .article-container {
+        padding: 15px;
+    }
+
+    .article-container header h1 {
+        font-size: 2rem;
+    }
+
+    .article-container h2 {
+        font-size: 1.8rem;
+    }
+    .article-container h3 {
+        font-size: 1.4rem;
+    }
+
+    .article-container p,
+    .article-container li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .article-container header h1 {
+        font-size: 1.8rem;
+    }
+
+    .article-container h2 {
+        font-size: 1.5rem;
+    }
+    .article-container h3 {
+        font-size: 1.1rem;
+    }
+
+    .article-container p,
+    .article-container li {
+        font-size: 0.9rem;
+    }
+}
+
+/* Header */
+.article-container header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.article-container header h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.article-container header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Blog Title */
+.article-container h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    color: #333;
+    font-weight: bold;
+}
+.article-container h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Paragraphs */
+.article-container p {
+    margin: 15px 0;
+    line-height: 1.7;
+}
+
+/* Links */
+.article-container a {
+    color: #3498db;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+.article-container a:hover {
+    text-decoration-thickness: 1.5px;
+}
+
+/* Images */
+.article-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
+/* Blockquotes */
+.article-container blockquote {
+    font-style: italic;
+    color: #555;
+    padding: 10px 20px;
+    border-left: 5px solid #ccc;
+    background-color: #f0f0f0;
+    margin: 20px 0;
+}
+
+/* Lists */
+.article-container ul,
+.article-container ol {
+    margin: 15px 0;
+    padding-left: 40px;
+}
+
+.article-container li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* List styling */
+.article-container ul {
+    list-style-type: disc;
+}
+
+.article-container ol {
+    list-style-type: decimal;
+}
