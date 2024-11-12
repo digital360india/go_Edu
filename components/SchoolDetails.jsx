@@ -473,7 +473,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                 />
               </div>
 
-              <div>
+              <div className="overflow-hidden">
                 <section
                   className={`bg-[#02618f] mb-32 text-white rounded-md p-4 h-[127px] flex justify-center items-center rounded-l-full top-20 right-0 transform transition-transform duration-[1800ms] ease-in-out ${slideClass}`}
                 >
@@ -529,11 +529,11 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                 School Statistics
               </p>
 
-              <hr className=" w-[370px] ml-5 md:ml-0 md:w-[550px] h-0.5 bg-black mb-6" />
-              <div className=" flex-wrap md:gap-y-5  md:gap-x-0   sm:gap-y-0   text-[14px] md:text-[18px] md:space-y-8">
+              <hr className=" w-[300px] ml-5 md:ml-0 md:w-[550px] h-0.5 bg-black mb-6" />
+              <div className="flex-col space-y-5 md:flex-wrap md:gap-y-5  md:gap-x-0   sm:gap-y-0   text-[14px] md:text-[18px] md:space-y-8">
                 <div className="md:flex text-center md:w-1/2 sm:w-auto md:items-center ">
                   <div className="space-y-2 flex flex-col items-center ">
-                    <div className="flex md:items-center md:justify-center relative p-6 md:pb-4 lg:p-0 w-full">
+                    <div className="flex md:items-center md:justify-center relative  md:p-6 md:pb-4 lg:p-0 w-full">
                       
                       <div>
                         <CircularProgressWithIcon
@@ -544,12 +544,12 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                       </div>
 
                       <div className="flex items-center justify-center absolute inset-y-0 left-14">
-                        <div className="bg-gradient-to-b from-[#F1F4F9] to-[#C6D1E3] md:pl-20 md:pr-14 pl-24 pr-16 h-[65px] flex items-center rounded-r-full">
+                        <div className="bg-gradient-to-b from-[#F1F4F9] to-[#C6D1E3] md:pl-20 md:pr-14 pl-20 pr-14 h-[65px] flex items-center rounded-r-full">
                           <p className="">Infrastructure</p>
                         </div>
                         <p
                           style={{ color: textColor }}
-                          className="md:pl-4 pl-3"
+                          className="md:pl-4 pl-2"
                         >
                           {school?.Infrastructure &&
                             `${Math.round(school.Infrastructure)}%`}
@@ -562,7 +562,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
 
                 <div className="md:flex text-center md:w-1/2 sm:w-auto items-center ">
                   <div className="space-y-2 flex flex-col items-center">
-                    <div className="flex md:items-center md:justify-center relative p-6 md:pb-4 lg:p-0 w-full">
+                    <div className="flex md:items-center md:justify-center  relative md:p-6 md:pb-4 lg:p-0 w-full">
                       <div>
                         <CircularProgressWithIcon
                           value={school?.Administration || 0}
@@ -572,12 +572,12 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                       </div>
 
                       <div className="flex items-center justify-center absolute inset-y-0 left-14">
-                        <div className="bg-gradient-to-b from-[#F1F4F9] to-[#C6D1E3] md:pl-20 md:pr-12 pl-24 pr-16 h-[65px] flex items-center rounded-r-full">
+                        <div className="bg-gradient-to-b from-[#F1F4F9] to-[#C6D1E3] md:pl-20 md:pr-12 pl-20 pr-[50px] h-[65px] flex items-center rounded-r-full">
                           <p className="">Administration</p>
                         </div>
                         <p
                           style={{ color: textColor }}
-                          className="md:pl-4 pl-3"
+                          className="md:pl-4 pl-2"
                         >
                           {school?.Administration &&
                             `${Math.round(school.Administration)}%`}
@@ -589,7 +589,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
 
                 <div className="md:flex text-center md:w-1/2 sm:w-auto items-center ">
                   <div className="space-y-2 flex flex-col items-center">
-                    <div className="flex md:items-center md:justify-center relative p-6 md:pb-4 lg:p-0 w-full">
+                    <div className="flex md:items-center md:justify-center relative md:p-6 md:pb-4 lg:p-0 w-full">
                       <div>
                         <CircularProgressWithIcon
                           value={school?.Academics || 0}
@@ -599,12 +599,12 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                       </div>
 
                       <div className="flex items-center justify-center absolute inset-y-0 left-14">
-                        <div className="bg-gradient-to-b from-[#F1F4F9] to-[#C6D1E3] md:pl-20 md:pr-20 pl-24 pr-20 h-[65px] flex items-center rounded-r-full">
+                        <div className="bg-gradient-to-b from-[#F1F4F9] to-[#C6D1E3] md:pl-20 md:pr-20 pl-[90px] pr-16 h-[65px] flex items-center rounded-r-full">
                           <p className="">Academics</p>
                         </div>
                         <p
                           style={{ color: textColor }}
-                          className="md:pl-4 pl-3"
+                          className="md:pl-4 pl-2"
                         >
                           {school?.Academics &&
                             `${Math.round(school.Academics)}%`}
@@ -616,7 +616,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
 
                 <div className="md:flex text-center md:w-1/2 sm:w-auto items-center">
                   <div className="space-y-2 flex flex-col items-center">
-                    <div className="flex md:items-center md:justify-center relative p-6 md:pb-4 lg:p-0 w-full">
+                    <div className="flex md:items-center md:justify-center relative md:p-6 md:pb-4 lg:p-0 w-full">
                       <div>
                         <CircularProgressWithIcon
                           value={school?.Extracurricular || 0}
@@ -626,12 +626,12 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                       </div>
 
                       <div className="flex items-center justify-center absolute inset-y-0 left-14">
-                        <div className="bg-gradient-to-b from-[#F1F4F9] to-[#C6D1E3] md:pl-20 md:pr-12 pl-24 pr-16 h-[65px] flex items-center rounded-r-full">
+                        <div className="bg-gradient-to-b from-[#F1F4F9] to-[#C6D1E3] md:pl-20 md:pr-12 pl-[72px] pr-14 h-[65px] flex items-center rounded-r-full">
                           <p className="">Extracurricular</p>
                         </div>
                         <p
                           style={{ color: textColor }}
-                          className="md:pl-4 pl-3"
+                          className="md:pl-4 pl-2"
                         >
                           {school?.Extracurricular &&
                             `${Math.round(school.Extracurricular)}%`}
@@ -664,7 +664,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
               <p className="text-[24px] ml-6 md:ml-0 sm:text-[32px] md:w-[323px] h-[54px]  mt-6 md:mb-6 ">
                 Student Facilities
               </p>
-              <hr className=" w-[370px] ml-6 md:ml-0 md:w-[550px] h-0.5 bg-black mb-6" />
+              <hr className=" w-[300px] ml-6 md:ml-0 md:w-[550px] h-0.5 bg-black mb-6" />
               <div className=" grid md:gap-4 grid-cols-3 ">
                 {facility.map(
                   (facility, index) =>
@@ -707,7 +707,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
         </div>
 
         <section className="md:sticky md:top-0 ">
-          <div className="md:flex md:justify-between md:w-full  md:bg-[#1B6EA1] bg-[#F3F3F3] rounded-b-[100px] md:h-[487px] h-[503px] p-12 w-[432px]">
+          <div className="md:flex md:justify-between md:w-full  md:bg-[#1B6EA1] bg-[#F3F3F3] rounded-b-[100px] md:h-[487px] h-[503px] p-12 w-full">
             <div className=" ">
               <div className="flex justify-between">
                 <p className="text-[24px] sm:text-[28px] md:text-[#FFFFFF] text-[#323232] md:pb-2 pb-8">

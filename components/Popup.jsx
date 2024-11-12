@@ -43,7 +43,7 @@ export default function Popup() {
   return (
     <>
       {isPopupVisible && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-center items-center">
+        <div className="fixed inset-0 z-[9999] bg-black bg-opacity-50 flex justify-center items-center">
           <div className="relative md:flex   gap-5  md:items-center bg-white rounded-lg shadow-lg w-full max-w-[90vw] md:max-w-[80vw] ">
             <button
               onClick={handleClose}
