@@ -43,7 +43,7 @@ const CircularProgressWithIcon = ({ value, svgSrc, svgAlt }) => {
         })}
       />
 
-      {/* SVG Icon Centered */}
+     
       <div className="absolute inset-0 flex justify-center items-center">
         <Image
           src={svgSrc}
@@ -412,60 +412,9 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
               </p>
               <hr className="w-auto md:w-[550px] h-0.5 bg-black" />
 
-              {/* <Enquire
-                isOpen={isPopupOpen}
-                onClose={closePopup}
-                school={school?.name}
-              /> */}
-              {/* <p className="text-left  md:hidden  text-[14px]">
-                {showFullText
-                  ? school?.Long_Description
-                  : school?.Long_Description.slice(0, 317)}
-                <span> </span>
-                {!showFullText && school?.Long_Description.length > 316 && (
-                  <span
-                    className="text-[#02618f] font-bold cursor-pointer"
-                    onClick={toggleReadMore}
-                  >
-                    Read more...
-                  </span>
-                )}
-                {showFullText && (
-                  <span
-                    className="text-[#02618f] cursor-pointer"
-                    onClick={toggleReadMore}
-                  >
-                    Read less...
-                  </span>
-                )}
-              </p> */}
-
-              {/* <p className="hidden md:block md:text-left text-[16px] h-[300px] overflow-y-scroll">
-              {showFullText
-                ? school?.Long_Description
-                : school?.Long_Description.slice(0, 800)}
-              <span> </span>
-              {!showFullText && school?.Long_Description.length > 800 && (
-                <span
-                  className="text-[#02618f] cursor-pointer"
-                  onClick={toggleReadMore}
-                >
-                  read more
-                </span>
-              )}
-              {showFullText && (
-                <span
-                  className="text-[#02618f] cursor-pointer"
-                  onClick={toggleReadMore}
-                >
-                  read less
-                </span>
-              )}
-            </p> */}
-
-              <p className="text-[16px] h-[323px] md:w-[570px] text-[#898989] text-justify p-2 overflow-y-scroll">
-                {school?.Long_Description}
-              </p>
+              <div dangerouslySetInnerHTML={{__html:school?.Long_Description}} className="article-container text-[16px] h-[323px] md:w-[570px] text-[#898989] text-justify p-2 overflow-y-scroll">
+                
+              </div>
 
               <section className="space-y-2    md:space-y-5">
                 <div>
