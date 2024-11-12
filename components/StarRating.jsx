@@ -35,9 +35,9 @@ export function StarRating({ rating, review }) {
   var isInteger = !(star_num?.indexOf(".") == -1);
   var whole_stars = [];
   for (let i = 0; i < Math.floor(star_num); i++) {
-    whole_stars.push(<IoStarSharp />);
+    whole_stars.push(<IoStarSharp key={`star-${i}`}/>);
   }
-  whole_stars.push(isInteger ? <IoStarHalfSharp /> : null);
+  whole_stars.push(isInteger ? <IoStarHalfSharp key="school-half-star" /> : null);
 
   return (
     <>
@@ -62,9 +62,9 @@ export function StarRatingschool({ rating, review }) {
   var isInteger = !(star_num?.indexOf(".") == -1);
   var whole_stars = [];
   for (let i = 0; i < Math.floor(star_num); i++) {
-    whole_stars.push(<IoStarSharp />);
+    whole_stars.push(<IoStarSharp  />);
   }
-  whole_stars.push(isInteger ? <IoStarHalfSharp /> : null);
+  whole_stars.push(isInteger ? <IoStarHalfSharp   /> : null);
 
   return (
     <>

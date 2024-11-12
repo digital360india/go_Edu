@@ -8,6 +8,7 @@ import { ToastContainer } from "react-toastify";
 import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import Popup from "@/components/Popup";
+// import Head from "next/head";
 // import Popup from "@/components/Ppoup";
 
 export async function generateMetadata() {
@@ -60,7 +61,7 @@ export async function generateMetadata() {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>{/* Next.js will automatically populate metadata here */}</head>
+      {/* <Head></Head> */}
       <body className="overflow-x-hidden">
         <ToastContainer />
         <Authprovider>
