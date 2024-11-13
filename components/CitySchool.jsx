@@ -25,9 +25,9 @@ const cities = [
       "https://res.cloudinary.com/eduminatti-com/image/upload/v1722253120/Edu123/Eduimages/Dehradun.png",
   },
   {
-    name: "bengaluru",
+    name: "bangalore",
     image:
-      "https://res.cloudinary.com/eduminatti-com/image/upload/v1722253119/Edu123/Eduimages/Bengaluru.png",
+      "https://res.cloudinary.com/eduminatti-com/image/upload/v1722253119/Edu123/Eduimages/bangalore.png",
   },
   {
     name: "shimla",

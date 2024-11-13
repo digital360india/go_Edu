@@ -13,7 +13,7 @@ const schools = [
   {
     school: "Jain International School",
     logo: "/mayoschool.svg",
-    url: "/school/bengaluru/jain-international-residential-school-bangalore-karnataka",
+    url: "/school/bangalore/jain-international-residential-school-bangalore-karnataka",
   },
   {
     school: "Wellham Girls School",

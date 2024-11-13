@@ -8,7 +8,7 @@ const School = [
   {
     school: "Jain International School",
     img: "https://res.cloudinary.com/eduminatti-com/image/upload/v1722253096/Edu123/Eduimages/Jain_International_School.png",
-    url: "/school/bengaluru/jain-international-residential-school-bangalore-karnataka",
+    url: "/school/bangalore/jain-international-residential-school-bangalore-karnataka",
   },
   {
     school: "Wellham Girls School",

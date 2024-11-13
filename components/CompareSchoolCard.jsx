@@ -104,7 +104,7 @@ const CompareSchoolCard = ({ onSchoolDataFetched }) => {
                 <option value="dehradun">Dehradun</option>
                 <option value="mussoorie">Mussoorie</option>
                 <option value="shimla">Shimla</option>
-                <option value="bengaluru">Bengaluru</option>
+                <option value="bangalore">bangalore</option>
                 <option value="india">India</option>
                 <option value="chandigarh">Chandigarh</option>
                 <option value="mumbai">Mumbai</option>

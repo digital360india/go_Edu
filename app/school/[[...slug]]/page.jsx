@@ -479,6 +479,8 @@ export async function generateMetadata({ params }) {
   };
 }
 
+
+
 export default async function SchoolPage({ params }) {
   const schoolData = await get(params.slug);
   const review = await get1(params.slug);

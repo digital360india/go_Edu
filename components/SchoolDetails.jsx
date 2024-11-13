@@ -467,7 +467,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                 </div>
                 <hr className=" h-0.5 pt-[1px] bg-[#1B6EA1] ml-6 mr-6 mb-16 mt-4" />
                 <img
-                  src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${city}/G-${school?.Image_Code}.png`}
+                  src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1729853967/Go%20Edu/${city}/G-${school?.Image_Code}.png`}
                   alt="img"
                   className="w-[625px] h-[285px] mb-5"
                 />
@@ -652,7 +652,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                 </div>
                 <hr className=" h-0.5 pt-[1px] bg-[#1B6EA1] ml-6 mr-6 mb-16 mt-4" />
                 <img
-                  src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${city}/H-${school?.Image_Code}.png`}
+                  src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1729853967/Go%20Edu/${city}/H-${school?.Image_Code}.png`}
                   className="w-[625px] h-[285px] mb-40"
                 />
               </div>
@@ -698,7 +698,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
                 </div>
                 <hr className=" h-0.5 pt-[1px] bg-[#1B6EA1] ml-6 mr-6 mb-16 mt-4" />
                 <img
-                  src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${city}/I-${school?.Image_Code}.png`}
+                  src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1729853967/Go%20Edu/${city}/I-${school?.Image_Code}.png`}
                   className="w-[625px] h-[285px] mb-40"
                 />
               </div>
