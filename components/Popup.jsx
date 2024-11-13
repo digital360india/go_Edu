@@ -164,7 +164,7 @@ export default function Popup() {
                     <option value="Class 2">Class 2</option>
                     <option value="Class 3">Class 3</option>
                   </select>
-                  <select
+                  {/* <select
                     name="board"
                     value={formData.board}
                     onChange={handleChange}
@@ -173,10 +173,10 @@ export default function Popup() {
                     <option value="" className="text-[#898989]">
                       BOARD
                     </option>
-                    <option value="ICSE">ICSE</option>
+                    <option value="ICSE">ICSE</option>  
                     <option value="IGCSE">IGCSE</option>
                     <option value="IB">IB</option>
-                  </select>
+                  </select> */}
                 </div>
                 <div className="md:pt-20 pt-8 cursor-pointer">
                   <button

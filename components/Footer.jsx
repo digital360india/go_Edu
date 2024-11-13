@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { BsFacebook, BsInstagram, BsLinkedin} from "react-icons/bs";
+import { BsFacebook, BsInstagram, BsLinkedin } from "react-icons/bs";
 
 export const Footer = () => {
   return (
@@ -39,9 +39,7 @@ export const Footer = () => {
                     src="/Phone.svg"
                     className="w-[20px] h-[20px]"
                   />
-                  <p>
-                    +91-01353530324
-                  </p>{" "}
+                  <p>+91-01353530324</p>{" "}
                 </div>
 
                 <div className="flex gap-2">
@@ -52,9 +50,7 @@ export const Footer = () => {
                     src="/Phone.svg"
                     className="w-[20px] h-[20px]"
                   />
-                  <p>
-                    +91-9557695360
-                  </p>{" "}
+                  <p>+91-9557695360</p>{" "}
                 </div>
 
                 <div className="flex gap-2">
@@ -66,7 +62,7 @@ export const Footer = () => {
                     className="w-[20px] h-[20px]"
                   />
                   <p>
-                    info@digital360india.com
+                    <a href="mailto:info@goedu.in">info@goedu.in</a>
                   </p>
                 </div>
               </div>
@@ -103,10 +99,13 @@ export const Footer = () => {
               </p>
             </div>
             <div className="text-xl  flex gap-14 md:gap-7 mt-2  md:mt-4">
-              <Link href="https://www.facebook.com/profile.php?id=61552427439719" target="_blank">
+              <Link
+                href="https://www.facebook.com/profile.php?id=61552427439719"
+                target="_blank"
+              >
                 <BsFacebook />
               </Link>
-{/* 
+              {/* 
               <Image
                 src="/TwitterX.svg"
                 alt="twitter"
@@ -114,12 +113,15 @@ export const Footer = () => {
                 height={1000}
                 className="w-[23px] h-[23px]"
               /> */}
-{/* 
+              {/* 
               <Link href="/" target="_blank">
                 <BsLinkedin />
               </Link> */}
 
-              <Link href="https://www.instagram.com/goedu_india?igsh=MWtyaGFocGo4cHA0bQ==" target="_blank">
+              <Link
+                href="https://www.instagram.com/goedu_india?igsh=MWtyaGFocGo4cHA0bQ=="
+                target="_blank"
+              >
                 <BsInstagram />
               </Link>
             </div>
