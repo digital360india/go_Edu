@@ -32,12 +32,18 @@ export const FooterLinks = () => {
               >
                 Boarding Schools in Shimla
               </Link>
+            
+            </div>
+          </div>
+          <div className="flex  flex-col  sm:items-center lg:w-[25vw]       ">
+            <div className="flex flex-col">
+             
               <Link
                 href={
-                  "https://www.edu123.in/category/boarding-schools-in-bengaluru"
+                  "https://www.edu123.in/category/boarding-schools-in-bangaluru"
                 }
               >
-                Boarding Schools in Bengaluru
+                Boarding Schools in Bangalore
               </Link>
               <Link
                 href={
@@ -145,24 +151,30 @@ export const FooterLinks = () => {
               </Link>
               <Link
                 href={
-                  "https://www.edu123.in/category/boarding-schools-in-delhi"
+                  "https://www.edu123.in/category/boarding-schools-in-jaipur"
                 }
               >
-                Boarding Schools in Delhi
+                Boarding Schools in Jaipur
+              </Link>
+            
+            </div>
+          </div>
+          <div className=" flex sm:justify-center sm:mt-0  lg:w-[27vw]">
+            <div className="flex flex-col">
+              
+              <Link
+                href={
+                  "https://www.edu123.in/category/boarding-schools-in-nainital"
+                }
+              >
+                Boarding Schools in Nainital
               </Link>
               <Link
                 href={
-                  "https://www.edu123.in/category/boarding-schools-in-darjeeling"
+                  "https://www.edu123.in/category/boarding-schools-in-panchgani"
                 }
               >
-                Boarding Schools in Darjeeling
-              </Link>
-              <Link
-                href={
-                  "https://www.edu123.in/category/boarding-schools-in-ajmer"
-                }
-              >
-                Boarding Schools in Ajmer
+                Boarding Schools in Panchgani
               </Link>
             </div>
           </div>
