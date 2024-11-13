@@ -523,17 +523,17 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
             </section>
           </div>
 
-          <div className="flex justify-center  md:space-x-20 md:sticky md:top-0 mt-6 md:mt-0 bg-white md:h-[100vh] ">
+          <div className="flex md:justify-center px-6 md:px-0  md:space-x-20 md:sticky md:top-0 mt-6 md:mt-0 bg-white md:h-[100vh] ">
             <section className=" md:w-[570px] md:h-[750px]  md:px-0">
-              <p className="ml-5 md:ml-0 text-[24px] sm:text-[24px] md:text-[32px] md:w-[293px] h-auto md:h-[54px] md:mb-4 mb-4 mt-6 text-[#323232]">
+              <p className="ml-2 md:ml-0 text-[24px] sm:text-[24px] md:text-[32px] md:w-[293px] h-auto md:h-[54px] md:mb-4 mb-4 mt-6 text-[#323232]">
                 School Statistics
               </p>
 
-              <hr className=" w-[300px] ml-5 md:ml-0 md:w-[550px] h-0.5 bg-black mb-6" />
+              <hr className=" w-[300px] ml-2 md:ml-0 md:w-[550px] h-0.5 bg-black mb-6" />
               <div className="flex-col space-y-5 md:flex-wrap md:gap-y-5  md:gap-x-0   sm:gap-y-0   text-[14px] md:text-[18px] md:space-y-8">
                 <div className="md:flex text-center md:w-1/2 sm:w-auto md:items-center ">
                   <div className="space-y-2 flex flex-col items-center ">
-                    <div className="flex md:items-center md:justify-center relative  md:p-6 md:pb-4 lg:p-0 w-full">
+                    <div className="flex md:items-center md:justify-center relative px-2 md:px-0  md:p-6 md:pb-4 lg:p-0 w-full">
                       
                       <div>
                         <CircularProgressWithIcon
@@ -562,7 +562,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
 
                 <div className="md:flex text-center md:w-1/2 sm:w-auto items-center ">
                   <div className="space-y-2 flex flex-col items-center">
-                    <div className="flex md:items-center md:justify-center  relative md:p-6 md:pb-4 lg:p-0 w-full">
+                    <div className="flex md:items-center md:justify-center px-2 md:px-0   relative md:p-6 md:pb-4 lg:p-0 w-full">
                       <div>
                         <CircularProgressWithIcon
                           value={school?.Administration || 0}
@@ -589,7 +589,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
 
                 <div className="md:flex text-center md:w-1/2 sm:w-auto items-center ">
                   <div className="space-y-2 flex flex-col items-center">
-                    <div className="flex md:items-center md:justify-center relative md:p-6 md:pb-4 lg:p-0 w-full">
+                    <div className="flex md:items-center md:justify-center px-2 md:px-0  relative md:p-6 md:pb-4 lg:p-0 w-full">
                       <div>
                         <CircularProgressWithIcon
                           value={school?.Academics || 0}
@@ -616,7 +616,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
 
                 <div className="md:flex text-center md:w-1/2 sm:w-auto items-center">
                   <div className="space-y-2 flex flex-col items-center">
-                    <div className="flex md:items-center md:justify-center relative md:p-6 md:pb-4 lg:p-0 w-full">
+                    <div className="flex md:items-center md:justify-center px-2 md:px-0  relative md:p-6 md:pb-4 lg:p-0 w-full">
                       <div>
                         <CircularProgressWithIcon
                           value={school?.Extracurricular || 0}
@@ -661,11 +661,11 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
 
           <div className="flex md:justify-center  md:space-x-20 md:sticky md:top-0 bg-white  md:h-[97vh]">
             <section className="md:w-[570px] mb-12  md:h-[750px] md:mb-[20px] md:px-0 ">
-              <p className="text-[24px] ml-6 md:ml-0 sm:text-[32px] md:w-[323px] h-[54px]  mt-6 md:mb-6 ">
+              <p className="text-[24px] ml-9 md:ml-0 sm:text-[32px] md:w-[323px] h-[54px] mt-12 md:mt-6 md:mb-6 ">
                 Student Facilities
               </p>
-              <hr className=" w-[300px] ml-6 md:ml-0 md:w-[550px] h-0.5 bg-black mb-6" />
-              <div className=" grid md:gap-4 grid-cols-3 ">
+              <hr className=" w-[300px] ml-9 md:ml-0 md:w-[550px] h-0.5 bg-black mb-6" />
+              <div className="px-7 grid md:gap-4 grid-cols-3 ">
                 {facility.map(
                   (facility, index) =>
                     school[`${facility.check}`] === "checked" && (

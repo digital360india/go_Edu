@@ -29,35 +29,12 @@ const Navbar = () => {
     { name: "Contact", path: "/contact", icon: "tabler:phone" },
     {
       name: "Blogs",
-      path: "https://blog.edu123.in/",
+      path: "",
       external: true,
       icon: "mdi:blog",
     },
   ];
 
-  // const socialLinks = [
-  //   {
-  //     href: "https://www.facebook.com/profile.php?id=100092405190812",
-  //     icon: <BsFacebook />,
-  //   },
-  //   {
-  //     href: "https://www.instagram.com/edu123india/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==",
-  //     icon: <BsInstagram />,
-  //   },
-  //   {
-  //     href: "https://x.com/Edu123India?s=20",
-  //     icon: (
-  //       <svg
-  //         xmlns="http://www.w3.org/2000/svg"
-  //         height="1em"
-  //         fill="white"
-  //         viewBox="0 0 512 512"
-  //       >
-  //         <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
-  //       </svg>
-  //     ),
-  //   },
-  // ];
  
   const socialLinks = [
     {
@@ -259,7 +236,7 @@ const Navbar = () => {
             />
           </div>
           <div className="bg-[#1B6EA1] w-60 h-[1px] mt-5"></div>
-          <ul className="flex flex-col  space-y-12 mt-8">
+          <ul className="flex flex-col  space-y-9 mt-8">
             {navLinks.map((link) => (
               <li key={link.name}>
                 <Link
@@ -278,7 +255,7 @@ const Navbar = () => {
             <li>
               <button
                 onClick={toggleBookingPopupSmall}
-                className="bg-[#02618f] text-white rounded-lg py-2 px-4"
+                className="bg-[#02618f] text-white rounded-lg py-3 px-5 text-[1rem] font-semibold"
               >
                 Get Consultation
               </button>

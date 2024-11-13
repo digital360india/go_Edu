@@ -15,6 +15,10 @@ function FAQ({ categoryData }) {
           /[\x00-\x1F\x7F-\x9F]/g,
           ""
         );
+        //  const authorArticle = categoryData;
+        // const article = JSON.parse(authorArticle);
+        //  console.log(authorArticle);
+
         const obj = JSON.parse(sanitizedJson);
         setCatFaq(obj);
       } catch (error) {
@@ -27,59 +31,49 @@ function FAQ({ categoryData }) {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
+  const text = { __html: categoryData.article };
 
-  const text = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla augue
-  turpis, ultrices sit amet luctus id, condimentum nec metus. Suspendisse potenti.
-  Sed feugiat nulla in nibh mattis, eu dignissim ipsum semper. Sed mollis urna vel
-  est cursus cursus. Suspendisse sit amet quam at odio tempus tempus at eu ipsum.
-  Maecenas mollis non dolor et aliquam. Sed elementum magna dolor, eu eleifend
-  felis dignissim a. Ut eros elit, facilisis scelerisque viverra sed, dapibus semper
-  urna. Mauris ut malesuada lacus. Sed eget laoreet libero. Integer ut efficitur nunc,
-  et bibendum orci. Sed fringilla fermentum convallis. Aliquam erat volutpat. Duis
-  non ullamcorper ipsum, eu bibendum nulla. Suspendisse eu risus ante. Ut eu dolor
-  ante. Mauris bibendum porta dolor ut iaculis. Aliquam placerat non tellus in varius.
-  Sed facilisis interdum rutrum. Aliquam sit amet tortor eget neque luctus pulvinar.
-  Maecenas tempus, nisl et facilisis maximus, ex velit bibendum purus, ac sagittis
-  nisi ipsum non felis. Quisque facilisis, nisi a maximus feugiat, orci est semper
-  neque, vitae posuere tellus est vel nibh. Etiam in consequat mauris.`;
-
-  const words = text.split(" ");
-  const initialText = words.slice(0, 200).join(" ");
+  const words = categoryData.article.split(" ");
+  const initialText = { __html: words.slice(0, 200).join(" ") };
   const fullText = text;
-
 
   return (
     <div className="md:mt-10 mt-8">
       <div className=" w-full h-auto bg-[#D9D9D9] px-4 sm:px-8 md:px-[100px] pt-14 flex flex-col items-center">
         <div className="flex items-center justify-center w-full ">
-      
           <div className="font-bold gap-14 text-[#1B6EA1] flex justify-center items-center text-[18px] sm:text-[24px] px-4 text-center ">
-          <div className="w-64 border-t-2 h-1 bg-[#1B6EA1]"></div>
-
-            <div className="w-[30%]">
-              <span>
-
-            Schools In XYZ
-              </span>
-            </div>
             <div className="w-64 border-t-2 h-1 bg-[#1B6EA1]"></div>
 
+            <div className="w-[30%]">
+              <span>Schools In {categoryData.City}</span>
+            </div>
+            <div className="w-64 border-t-2 h-1 bg-[#1B6EA1]"></div>
           </div>
-        
         </div>
 
         <div className="text-[#323232] text-[12px] sm:text-[14px] pt-8 text-justify sm:max-w-[90%]">
-      <p>{isExpanded ? fullText : `${initialText}...`}</p>
-      <button
-        onClick={() => setIsExpanded(!isExpanded)}
-        className="text-[#1B6EA1] mt-2 underline hover:text-blue-700 focus:outline-none"
-      >
-        {isExpanded ? "Read Less" : "Read More"}
-      </button>
-    </div>
+          <p>
+            {isExpanded ? (
+              <div
+                className="article-container"
+                dangerouslySetInnerHTML={text}
+              />
+            ) : (
+              <div
+                className="article-container"
+                dangerouslySetInnerHTML={initialText}
+              />
+            )}
+          </p>
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="text-[#1B6EA1] mt-2 underline hover:text-blue-700 focus:outline-none"
+          >
+            {isExpanded ? "Read Less" : "Read More"}
+          </button>
+        </div>
         <Link href="/author">
           <p className="text-[#323232] font-semibold text-[12px] sm:text-[16px] text-center pt-8 pb-8">
-           
             Author : Vaibhav Negi
           </p>
         </Link>
