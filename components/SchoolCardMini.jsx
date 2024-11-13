@@ -308,6 +308,8 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                       : null}
                   </p>
                 </div>
+
+                
               </div>
               <div className="space-y-3">
                 <div className="flex flex-col ">
