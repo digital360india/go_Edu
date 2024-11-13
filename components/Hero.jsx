@@ -164,7 +164,7 @@ export default function Hero({ image, height, need }) {
                         "dehradun",
                         "mussoorie",
                         "shimla",
-                        "bengaluru",
+                        "bangalore",
                         "india",
                         "chandigarh",
                         "mumbai",

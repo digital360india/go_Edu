@@ -121,10 +121,10 @@ const SchoolCard = ({ categoryData }) => {
       <div className="">
         <div className="bg-[#1B6EA1] w-full  md:h-[160px] md:flex md:justify-center md:items-center p-3  md:p-10">
           <h2 className="md:px-[45px] my-8 lg:my-4 sm:text-[30px] text-center text-[#FFFFFF] text-[20px]">
-            {" "}
-            {/* List of {Math.ceil(filterdata?.employees.length)} Best Schools in */}
-            List of Best Schools in&nbsp;
-            {citySlug[0]?.toUpperCase() + citySlug.slice(1, citySlug.length)}
+          
+            List of {Math.ceil(filterdata?.employees.length)} Best Schools in
+            {/* List of Best Schools in&nbsp;
+            {citySlug[0]?.toUpperCase() + citySlug.slice(1, citySlug.length)} */}
           </h2>
           <div className="flex  justify-center sm:justify-start    items-center pb-10 md:pb-0 ">
             <div className="flex   justify-start w-[291px] h-[35px] sm:w-[100%] lg:h-[50px] lg:w-[100%] xl:w-[620px]  border-2 outline-none rounded-3xl   bg-[#1B6EA1]">

@@ -21,7 +21,7 @@ const SchoolByCitiesGoedu = () => {
       bottomSrc: "/locationbottom.svg",
     },
     {
-      name: "bengaluru",
+      name: "bangalore",
       bannerSrc: "/banglore.svg",
       bottomSrc: "/locationbottom.svg",
     },

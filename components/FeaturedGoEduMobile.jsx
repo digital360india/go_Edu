@@ -102,7 +102,7 @@
 //           </div>
 
 //           <div className="w-full flex justify-center items-center h-[118px]">
-//             <Link href="/school/bengaluru/jain-international-residential-school-bangalore-karnataka" />
+//             <Link href="/school/bangalore/jain-international-residential-school-bangalore-karnataka" />
 //             <h2 className="text-[24px] text-[#1B6EA1]">Mussoorie International School</h2>
 //           </div>
 //         </SwiperSlide>
@@ -162,7 +162,7 @@ const schools = [
   {
     name: "Jain International School",
     image: "/mayoschool.svg",
-    url: "/school/bengaluru/jain-international-residential-school-bangalore-karnataka",
+    url: "/school/bangalore/jain-international-residential-school-bangalore-karnataka",
   },
   {
     name: "Welham Girls School",
