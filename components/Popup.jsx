@@ -163,6 +163,15 @@ export default function Popup() {
                     <option value="Class 1">Class 1</option>
                     <option value="Class 2">Class 2</option>
                     <option value="Class 3">Class 3</option>
+                    <option value="Class 3">Class 4</option>
+                    <option value="Class 3">Class 5</option>
+                    <option value="Class 3">Class 6</option>
+                    <option value="Class 3">Class 7</option>
+                    <option value="Class 3">Class 8</option>
+                    <option value="Class 3">Class 9</option>
+                    <option value="Class 3">Class 10</option>
+                    <option value="Class 3">Class 11</option>
+                    <option value="Class 3">Class 12</option>
                   </select>
                   {/* <select
                     name="board"

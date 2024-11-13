@@ -86,7 +86,7 @@ const AboutGoEdu = () => {
           }`}
         >
           <button
-            className="absolute w-[30px] h-[30px] rounded-full text-white text-[1.3rem] bg-[#1B6EA1] top-52 left-3"
+            className="absolute w-[30px] h-[30px] rounded-full text-white text-[1.3rem] bg-[#1B6EA1] top-48 left-3"
             onClick={() => setShowContent(false)}
           >
             &lt;
