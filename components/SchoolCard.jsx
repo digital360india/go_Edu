@@ -119,9 +119,8 @@ const SchoolCard = ({ categoryData }) => {
   return (
     <>
       <div className="">
-        <div className="bg-[#1B6EA1] w-full  md:h-[160px] md:flex md:justify-center md:items-center p-3  md:p-10">
+        <div className="bg-[#1B6EA1] w-full   md:h-[160px] md:flex md:justify-center md:items-center p-3  md:p-10">
           <h2 className="md:px-[45px] my-8 lg:my-4 sm:text-[30px] text-center text-[#FFFFFF] text-[20px]">
-          
             List of {Math.ceil(filterdata?.employees.length)} Best Schools in
             {/* List of Best Schools in&nbsp;
             {citySlug[0]?.toUpperCase() + citySlug.slice(1, citySlug.length)} */}
@@ -155,9 +154,7 @@ const SchoolCard = ({ categoryData }) => {
       <div className="  flex justify-center md:justify-start xl:justify-between sm:px-[70px] lg:gap-6">
         <div className="bg-white ">
           <div className=" bg-white">
-            <div className="items-center bg-white justify-between md:mt-8 pb-8">
-             
-            </div>
+            <div className="items-center bg-white justify-between md:mt-8 pb-8"></div>
           </div>
 
           <div>
@@ -181,7 +178,6 @@ const SchoolCard = ({ categoryData }) => {
                       <SchoolCardMini
                         data={items}
                         index={`${index}-${items.fields.name}`}
-                       
                         citySlug={citySlug}
                       />
                     </>
@@ -247,11 +243,10 @@ const SchoolCard = ({ categoryData }) => {
         </div>
 
         <div className="hidden xl:block mt-8 space-y-5">
-          <div className="sticky top-0 z-50">
+          <div className="sticky top-0 z-10">
             <div className="w-[340px] h-[600px] bg-[#F8F8F8] rounded-lg ">
               <Filter filterdata={filterdata} setfilterdata={setfilterdata} />
             </div>
-           
           </div>
         </div>
 
