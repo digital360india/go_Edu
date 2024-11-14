@@ -236,6 +236,16 @@ export default function Filter({ filterdata, setfilterdata }) {
     });
   }
 
+  const handleClearFilter = ()=>{
+    setfilterdata({
+      ...filterdata,
+      classification: [],
+      boards: [],
+      type: [],
+      employees: filterdata?.globaldata,
+    })
+  }
+
   return (
     <>
       <div className="px-5 pt-3 text-[#000000]">
@@ -645,7 +655,7 @@ export default function Filter({ filterdata, setfilterdata }) {
           <div className="pt-3">
             <div className="flex justify-center items-center border rounded-3xl h-[30px] w-[259px] border-[#898989] mx-auto cursor-pointer">
               <button
-                // onClick={resetFilters}
+                onClick={() => handleClearFilter()}
                 className="text-[#898989] text-[12px]"
               >
                 Remove All Filters
