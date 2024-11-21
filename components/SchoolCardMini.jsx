@@ -159,7 +159,7 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                     </p>
                   </div>
                   <div className="flex flex-col items-center space-y-1">
-                    <p className="">School Cetegory</p>
+                    <p className="">School Category</p>
                     <p className="font-normal">
                       {data?.fields?.girls_schools
                         ? "Girls School"

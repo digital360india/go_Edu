@@ -41,11 +41,11 @@ function FAQ({ categoryData }) {
     <div className="md:mt-10 mt-8">
       <div className=" w-full h-auto bg-[#D9D9D9] px-4 sm:px-8 md:px-[100px] pt-14 flex flex-col items-center">
         <div className="flex items-center justify-center w-full ">
-          <div className="font-bold gap-14 text-[#1B6EA1] flex justify-center items-center text-[18px] sm:text-[24px] px-4 text-center ">
+          <div className="font-bold gap-8 md:gap-14 text-[#1B6EA1] flex justify-center items-center text-[18px] sm:text-[24px] px-4 text-center ">
             <div className="w-64 border-t-2 h-1 bg-[#1B6EA1]"></div>
 
-            <div className="w-[30%]">
-              <span>Schools In {categoryData.City}</span>
+            <div className="w-[50%]">
+              <h1>Boarding Schools In {categoryData.City}</h1>
             </div>
             <div className="w-64 border-t-2 h-1 bg-[#1B6EA1]"></div>
           </div>
@@ -60,14 +60,14 @@ function FAQ({ categoryData }) {
               />
             ) : (
               <div
-                className="article-container"
+                className="article-container "
                 dangerouslySetInnerHTML={initialText}
               />
             )}
           </p>
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="text-[#1B6EA1] mt-2 underline hover:text-blue-700 focus:outline-none"
+            className="text-[#1B6EA1] m-3 underline hover:text-blue-700 focus:outline-none"
           >
             {isExpanded ? "Read Less" : "Read More"}
           </button>

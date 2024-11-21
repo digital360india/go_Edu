@@ -265,7 +265,7 @@ body {
     }
 
     .article-container h2 {
-        font-size: 1.8rem;
+        font-size: 12px;
     }
     .article-container h3 {
         font-size: 1.4rem;
@@ -279,19 +279,19 @@ body {
 
 @media (max-width: 480px) {
     .article-container header h1 {
-        font-size: 1.8rem;
+        font-size: 10px;
     }
 
     .article-container h2 {
-        font-size: 1.5rem;
+        font-size: 60px;
     }
     .article-container h3 {
-        font-size: 1.1rem;
+        font-size: 10px;
     }
 
     .article-container p,
     .article-container li {
-        font-size: 0.9rem;
+        font-size: 10px;
     }
 }
 
@@ -302,7 +302,7 @@ body {
 }
 
 .article-container header h1 {
-    font-size: 2.5rem;
+    font-size: 24px;
     color: #333;
 }
 
@@ -313,13 +313,13 @@ body {
 
 /* Blog Title */
 .article-container h2 {
-    font-size: 2rem;
+    font-size: 17px;
     margin-top: 20px;
     color: #333;
     font-weight: bold;
 }
 .article-container h3 {
-    font-size: 1.5rem;
+    font-size: 15px;
     margin-top: 20px;
     color: #333;
     font-weight: bold;
@@ -331,8 +331,14 @@ body {
     line-height: 1.7;
 }
 
+.article-container {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 1rem; 
+}
+
 /* Links */
-.article-container a {
+.article-container a { 
     color: #3498db;
     text-decoration: underline;
     text-decoration-thickness: 1px;
@@ -365,7 +371,7 @@ body {
 .article-container ul,
 .article-container ol {
     margin: 15px 0;
-    padding-left: 40px;
+    padding-left: 20px;
 }
 
 .article-container li {
