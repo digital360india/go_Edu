@@ -11,7 +11,10 @@ const AboutGoEDU2 = () => {
       </div>
 
       <div className="bg-[#1B6EA1]">
-        <h1 className="text-[#FFFFFF] text-[50px] md:text-[200px] text-center pt-40 md:pt-0 md:mt-20">
+        <h1
+          className="text-[#FFFFFF] text-[50px] md:text-[200px] text-center pt-40 md:pt-0 md:mt-20"
+          style={{ fontFamily: "League Gothic" }}
+        >
           About Us
         </h1>
 
@@ -58,6 +61,9 @@ const AboutGoEDU2 = () => {
         <div className="bg-[#F8F8F8] px-7 space-y-10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 md:space-x-10">
             <div className="flex-1 order-2 md:order-none text-center md:text-left">
+              <p className="text-[16px] sm:text-[40px] font-semibold text-center md:text-left hidden md:block">
+                About Us
+              </p>
               <p className="text-[12px] sm:text-[20px] text-justify mt-4 ">
                 At Go Edu, we connect families with the top boarding schools
                 across India, creating a seamless journey for parents and
@@ -68,9 +74,8 @@ const AboutGoEDU2 = () => {
             </div>
             <div className="w-[2px] h-52 bg-[#323232] hidden md:block"></div>
             <div className="flex md:flex-col items-center space-y-2 md:space-y-4 order-1 md:order-none gap-10 md:gap-0">
-              <p className="text-[16px] sm:text-[40px] font-semibold text-center md:text-left">
-              About Us
-
+              <p className="text-[16px] sm:text-[40px] font-semibold text-center md:text-left md:hidden">
+                About Us
               </p>
               <img
                 src="/footerlogo.svg"
@@ -93,7 +98,7 @@ const AboutGoEDU2 = () => {
             </div>
             <div className="w-[2px] h-52 bg-[#323232] hidden md:block"></div>
             <div className="flex-1 text-center md:text-left order-2 md:order-none">
-              <p className="text-[16px] sm:text-[40px] font-semibold hidden md:block">
+              <p className="text-[16px] sm:text-[40px] font-semibold pb-4 hidden md:block">
                 Guided by Educational Excellence
               </p>
               <p className="text-[12px] sm:text-[20px] text-justify">
@@ -107,6 +112,9 @@ const AboutGoEDU2 = () => {
 
           <div className="flex flex-col md:flex-row md:justify-between items-center  md:space-x-10">
             <div className="flex-1 order-2 md:order-none text-center md:text-left">
+              <p className="text-[16px] sm:text-[40px] font-semibold text-center pb-4 md:text-left hidden md:block">
+                Making School Selection Easy
+              </p>
               <p className="text-[12px] sm:text-[20px] text-justify">
                 Our mission is to make the search for the right school easy,
                 informed, and enjoyable. We streamline the admission journey by
@@ -116,7 +124,7 @@ const AboutGoEDU2 = () => {
             </div>
             <div className="w-[2px] h-52 bg-[#323232] hidden md:block"></div>
             <div className="flex md:flex-col items-center order-1 md:order-none gap-10 md:gap-0">
-              <p className="text-[16px] sm:text-[40px] font-semibold text-center md:text-left">
+              <p className="text-[16px] sm:text-[40px] font-semibold text-center md:text-left md:hidden">
                 Making School Selection Easy
               </p>
               <img
@@ -140,7 +148,7 @@ const AboutGoEDU2 = () => {
             </div>
             <div className="w-[2px] h-52 bg-[#323232] hidden md:block"></div>
             <div className="flex-1 text-center md:text-left order-2 md:order-none">
-              <p className="text-[16px] sm:text-[40px] font-semibold hidden md:block">
+              <p className="text-[16px] sm:text-[40px] font-semibold pb-4 hidden md:block">
                 Join Our Community
               </p>
               <p className="text-[12px] sm:text-[20px] text-justify">
@@ -153,6 +161,9 @@ const AboutGoEDU2 = () => {
 
           <div className="flex flex-col md:flex-row justify-between items-center md:space-x-10">
             <div className="flex-1 order-2 md:order-none text-center md:text-left">
+              <p className="text-[16px] sm:text-[40px] font-semibold text-center md:text-left pb-4 hidden md:block">
+                Your Path to Informed Choices
+              </p>
               <p className="text-[12px] sm:text-[20px] text-justify">
                 We&apos;re committed to empowering families with knowledge and
                 confidence. With Go Edu, finding the right boarding school
@@ -161,7 +172,7 @@ const AboutGoEDU2 = () => {
             </div>
             <div className="w-[2px] h-52 bg-[#323232] hidden md:block"></div>
             <div className="flex md:flex-col items-center order-1 md:order-none gap-10 md:gap-0">
-              <p className="text-[16px] sm:text-[40px] font-semibold text-center md:text-left">
+              <p className="text-[16px] sm:text-[40px] font-semibold text-center md:text-left md:hidden">
                 Your Path to Informed Choices
               </p>
               <img
