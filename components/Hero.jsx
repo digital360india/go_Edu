@@ -52,7 +52,7 @@ export default function Hero({ image, height, need }) {
           className={`relative bg-center bg-cover bg-no-repeat min-h-[${height}] md:max-h-[${height}]`}
           style={{ backgroundImage: `url(${image})` }}
         >
-          <div className="px-8 md:px-20 mb-48 lg:py-32 space-y-10 md:space-y-6 lg:space-y-10">
+          <div className="px-8 md:px-20  lg:py-32 space-y-10 md:space-y-6 lg:space-y-10">
             {currentPath === "/" ? (
               <>
                 <div className="headfont text-[40px] md:text-[60px] font-bold">

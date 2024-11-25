@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import Image from "next/image"; // Import Image from Next.js
 import { RxCross1 } from "react-icons/rx";
+import axios from "axios";
+
 
 export default function ConsultationPopup({ setClose }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    class: "",
-    board: "",
+    classes: "",
   });
 
   const handleChange = (e) => {
@@ -19,9 +20,19 @@ export default function ConsultationPopup({ setClose }) {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // console.log(formData);
+    console.log(formData);
+
+    const response = await axios.post(
+      "https://goedunodemailer.onrender.com/send-email",
+      formData
+    );
+    if (response.status == 200) {
+      alert("Your message has been sent successfully!");
+    } else {
+      alert("Try again later.");
+    }
     setClose();
   };
 
@@ -133,8 +144,8 @@ export default function ConsultationPopup({ setClose }) {
 
             <div className="flex md:gap-20 gap-8">
               <select
-                name="class"
-                value={formData.class}
+                name="classes"
+                value={formData.classes}
                 onChange={handleChange}
                 className="p-2 border-b-2 border-[#D9D9D9] rounded md:w-[143px] w-[120px] h-[39px] placeholder:text-[#898989] md:border md:rounded "
               >
@@ -146,29 +157,17 @@ export default function ConsultationPopup({ setClose }) {
                 <option value="Class 1">Class 1</option>
                 <option value="Class 2">Class 2</option>
                 <option value="Class 3">Class 3</option>
-                <option value="Class 3">Class 4</option>
-                <option value="Class 3">Class 5</option>
-                <option value="Class 3">Class 6</option>
-                <option value="Class 3">Class 7</option>
-                <option value="Class 3">Class 8</option>
-                <option value="Class 3">Class 9</option>
-                <option value="Class 3">Class 10</option>
-                <option value="Class 3">Class 11</option>
-                <option value="Class 3">Class 12</option>
+                <option value="Class 4">Class 4</option>
+                <option value="Class 5">Class 5</option>
+                <option value="Class 6">Class 6</option>
+                <option value="Class 7">Class 7</option>
+                <option value="Class 8">Class 8</option>
+                <option value="Class 9">Class 9</option>
+                <option value="Class 10">Class 10</option>
+                <option value="Class 11">Class 11</option>
+                <option value="Class 12">Class 12</option>
               </select>
-              {/* <select
-                name="board"
-                value={formData.board}
-                onChange={handleChange}
-                className="p-2 border-b-2 border-[#D9D9D9] rounded md:w-[143px] w-[120px] h-[39px] placeholder:text-[#898989] md:border md:rounded"
-              >
-                <option value="" className="text-[#898989]">
-                  BOARD
-                </option>
-                <option value="ICSE">ICSE</option>
-                <option value="IGCSE">IGCSE</option>
-                <option value="IB">IB</option>
-              </select> */}
+              
             </div>
             <div className="md:pt-20 pt-8 cursor-pointer">
               <button

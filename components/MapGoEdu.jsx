@@ -44,7 +44,7 @@ const MapGoEdu = () => {
       >
         <div className="">
           <Image
-            src="/india.svg"
+            src="/indiamap.png"
             alt="map"
             width={1000}
             height={1000}

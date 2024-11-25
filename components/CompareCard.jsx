@@ -14,7 +14,7 @@ export default function CompareCard() {
 
   return (
     <>
-      <h1 className="text-center text-[#323232] text-[24px] bg-gray-100 pt-10">
+      <h1 className="text-center text-[#323232] text-[24px] bg-gray-100 md:pt-20 pt-40">
         Compare By
       </h1>
       <div className="bg-gray-100 py-12 px-20">
