@@ -1,15 +1,15 @@
 "use client";
+import axios from "axios";
 import Image from "next/image";
 import { useState } from "react";
-// import Hero from "./Hero";
 
 const FormGoEdu = () => {
+  const [loading, setLoading] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
+
     phone: "",
-    class: "",
-    board: "",
   });
 
   const handleChange = (e) => {
@@ -20,9 +20,29 @@ const FormGoEdu = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); 
     console.log(formData);
+    try {
+      const response = await axios.post(
+        "https://goedunodemailer.onrender.com/send-email",
+        formData
+      );
+      if (response.status === 200) {
+        alert("Form submitted successfully.");
+        setFormData({
+          name: "",
+          phone: "",
+        });
+      } else {
+        alert("Try again");
+      }
+    } catch (error) {
+      alert("An error occurred. Please try again.");
+    } finally {
+      setLoading(false); 
+    }
   };
 
   return (
@@ -47,6 +67,7 @@ const FormGoEdu = () => {
           </h3>
           <form onSubmit={handleSubmit} className="space-y-7">
             <input
+            required
               type="text"
               name="name"
               placeholder="Your name"
@@ -116,6 +137,7 @@ const FormGoEdu = () => {
                 <option value="🇭🇺">🇭🇺 +36</option>
               </select>
               <input
+              required
                 type="tel"
                 name="phone"
                 placeholder="Your mobile number"
@@ -150,18 +172,28 @@ const FormGoEdu = () => {
             </select>
           </div> */}
             <div className="md:pt-2 pt-8 cursor-pointer">
-              <button
+              {/* <button
                 type="submit"
                 className="md:w-[160px] md:h-[50px] md:px-0 px-8 md:py-0 py-3  bg-[#1B6EA1] text-white p-2 rounded-lg hover:bg-[#1b6ea1c9]"
               >
                 Submit
+              </button> */}
+              <button
+                type="submit"
+                disabled={loading}
+                className={`md:w-[160px] md:h-[50px] md:px-0 px-8 md:py-0 py-3 bg-[#1B6EA1] text-white p-2 rounded-lg ${
+                  loading
+                    ? "cursor-not-allowed opacity-70"
+                    : "hover:bg-[#1b6ea1c9]"
+                }`}
+              >
+                {loading ? "Submitting..." : "Submit"}
               </button>
+              
             </div>
           </form>
         </div>
       </div>
-
-      {/* <Hero/> */}
     </>
   );
 };
