@@ -3,8 +3,9 @@ import Image from "next/image"; // Import Image from Next.js
 import { RxCross1 } from "react-icons/rx";
 import axios from "axios";
 
-
 export default function ConsultationPopup({ setClose }) {
+  const [loading, setLoading] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -22,20 +23,30 @@ export default function ConsultationPopup({ setClose }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Show loader and disable button
     console.log(formData);
-
-    const response = await axios.post(
-      "https://goedunodemailer.onrender.com/send-email",
-      formData
-    );
-    if (response.status == 200) {
-      alert("Your message has been sent successfully!");
-    } else {
-      alert("Try again later.");
+    try {
+      const response = await axios.post(
+        "https://goedunodemailer.onrender.com/send-email",
+        formData
+      );
+      if (response.status === 200) {
+        alert("Form submitted successfully.");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          classes: "",
+        });
+      } else {
+        alert("Try again");
+      }
+    } catch (error) {
+      alert("An error occurred. Please try again.");
+    } finally {
+      setLoading(false); // Re-enable button
     }
-    setClose();
   };
-
   return (
     <div className="fixed inset-0 z-[9999] bg-black bg-opacity-50 flex justify-center items-center">
       <div className="relative md:flex   gap-5  md:items-center bg-white rounded-lg shadow-lg w-full max-w-[90vw] md:max-w-[80vw] ">
@@ -64,6 +75,7 @@ export default function ConsultationPopup({ setClose }) {
           </h3>
           <form onSubmit={handleSubmit} className="space-y-7 md:space-y-6">
             <input
+              required
               type="text"
               name="name"
               placeholder="Your name"
@@ -72,6 +84,7 @@ export default function ConsultationPopup({ setClose }) {
               className="p-2 border-b-2 border-[#D9D9D9] w-full h-[39px] placeholder:text-[#898989] sm:border sm:rounded sm:w-[462px] sm:border-[#D9D9D9]"
             />
             <input
+              required
               type="email"
               name="email"
               placeholder="Your email"
@@ -133,6 +146,7 @@ export default function ConsultationPopup({ setClose }) {
                 <option value="🇭🇺">🇭🇺 +36</option>
               </select>
               <input
+                required
                 type="tel"
                 name="phone"
                 placeholder="Your mobile number"
@@ -144,6 +158,7 @@ export default function ConsultationPopup({ setClose }) {
 
             <div className="flex md:gap-20 gap-8">
               <select
+                required
                 name="classes"
                 value={formData.classes}
                 onChange={handleChange}
@@ -167,14 +182,20 @@ export default function ConsultationPopup({ setClose }) {
                 <option value="Class 11">Class 11</option>
                 <option value="Class 12">Class 12</option>
               </select>
-              
             </div>
             <div className="md:pt-20 pt-8 cursor-pointer">
+
+
               <button
                 type="submit"
-                className="md:w-[177px] md:h-[60px] md:px-0 px-8 md:py-0 py-3  bg-[#1B6EA1] text-white p-2 rounded-lg hover:bg-[#1b6ea1c9]"
+                disabled={loading}
+                className={`md:w-[177px] md:h-[60px] md:px-0 px-8 md:py-0 py-3  bg-[#1B6EA1] text-white p-2 rounded-lg ${
+                  loading
+                    ? "cursor-not-allowed opacity-70"
+                    : "hover:bg-[#1b6ea1c9]"
+                }`}
               >
-                Submit
+                {loading ? "Submitting..." : "Submit"}
               </button>
             </div>
           </form>
