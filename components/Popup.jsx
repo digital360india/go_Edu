@@ -19,7 +19,7 @@ export default function Popup() {
   useEffect(() => {
     const timer = setInterval(() => {
       setIsPopupVisible(true);
-    }, 5000);
+    }, 60000);
 
     return () => clearInterval(timer);
   }, []);
