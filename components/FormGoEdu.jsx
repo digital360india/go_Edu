@@ -10,6 +10,8 @@ const FormGoEdu = () => {
     name: "",
 
     phone: "",
+    source: "Goedu - https://www.goedu.in/",
+
   });
 
   const handleChange = (e) => {
@@ -34,6 +36,8 @@ const FormGoEdu = () => {
         setFormData({
           name: "",
           phone: "",
+          source: "Goedu - https://www.goedu.in/",
+
         });
       } else {
         alert("Try again");
