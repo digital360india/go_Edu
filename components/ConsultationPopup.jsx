@@ -11,6 +11,8 @@ export default function ConsultationPopup({ setClose }) {
     email: "",
     phone: "",
     classes: "",
+    source: "Goedu - https://www.goedu.in/",
+
   });
 
   const handleChange = (e) => {
@@ -37,6 +39,8 @@ export default function ConsultationPopup({ setClose }) {
           email: "",
           phone: "",
           classes: "",
+          source: "Goedu - https://www.goedu.in/",
+
         });
       } else {
         alert("Try again");
