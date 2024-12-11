@@ -18,13 +18,13 @@ export default function Popup() {
 
   const [isPopupVisible, setIsPopupVisible] = useState(false);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setIsPopupVisible(true);
-    }, 60000);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setIsPopupVisible(true);
+  //   }, 60000);
 
-    return () => clearInterval(timer);
-  }, []);
+  //   return () => clearInterval(timer);
+  // }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
