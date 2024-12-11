@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
@@ -8,12 +8,15 @@ import { RxCross2 } from "react-icons/rx";
 export default function Hero({ image, height, need }) {
   const router = useRouter();
   const [value, setValue] = useState("");
-  const [valueSchool, setValueSchool] = useState(""); 
+  const [valueSchool, setValueSchool] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenLocation, setIsOpenLocation] = useState(false);
   const [selectedSchoolType, setSelectedSchoolType] = useState("School Type"); // Default label
   const [selectedSchoolLocation, setSelectedSchoolLocation] =
     useState("Location"); // Default label
+
+    const dropdownRef = useRef(null); 
+    const locationDropdownRef = useRef(null);
 
   const handleSchoolType = () => {
     setIsOpen(!isOpen);
@@ -26,7 +29,7 @@ export default function Hero({ image, height, need }) {
   const handleSelectSchoolType = (schoolType) => {
     const formattedSchoolType = schoolType.toLowerCase().replace(/\s+/g, "-");
     setSelectedSchoolType(schoolType);
-    console.log(formattedSchoolType);
+    // console.log(formattedSchoolType);
     setValueSchool(formattedSchoolType);
     setIsOpen(false);
   };
@@ -45,6 +48,23 @@ export default function Hero({ image, height, need }) {
 
   const currentPath = usePathname();
 
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+      if (locationDropdownRef.current && !locationDropdownRef.current.contains(event.target)) {
+        setIsOpenLocation(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+  
   return (
     <>
       <div className="bg-white text-black">
@@ -65,7 +85,7 @@ export default function Hero({ image, height, need }) {
                     Explore the best Boarding Schools for you, all over India
                   </p>
                 </div>
-              </> 
+              </>
             ) : (
               <>
                 <div className="headfont text-[28px] md:text-[60px] text-[#1B6EA1] font-bold w-full text-center pt-10 mt-20 mb-16 md:mt-0 md:mb-0 ">
@@ -104,7 +124,7 @@ export default function Hero({ image, height, need }) {
               </div>
 
               {isOpen && (
-                <div className="absolute top-[16%] lg:top-[20%] left-[2%] md:left-[10%] lg:left-[40%] bg-white shadow-md w-[400px] h-fit rounded-md z-10 ">
+                <div ref={dropdownRef} className="absolute top-[16%] lg:top-[20%] left-[2%] md:left-[10%] lg:left-[40%] bg-white shadow-md w-[400px]  h-fit overflow-y-scroll rounded-md z-10 scroll-hidden ">
                   <div className="bg-[#02618f70] h-full rounded-md py-4 px-2">
                     <ul className="p-2 text-[20px]">
                       <div className="flex justify-between items-center text-[#02618f] p-4">
@@ -151,7 +171,7 @@ export default function Hero({ image, height, need }) {
               )}
 
               {isOpenLocation && (
-                <div className="absolute top-[16%] lg:top-[20%] left-[2%] md:left-[10%] lg:left-[40%] bg-white shadow-md w-[400px] h-[550px] overflow-y-scroll rounded-md z-10 scroll-hidden ">
+                <div ref={locationDropdownRef} className="absolute top-[16%] lg:top-[20%] left-[2%] md:left-[10%] lg:left-[40%] bg-white shadow-md w-[400px] h-[550px] overflow-y-scroll rounded-md z-10 scroll-hidden ">
                   <div className="bg-[#02618f70] rounded-md py-4 px-2">
                     <ul className="p-2 text-[20px]">
                       <div className="flex justify-between items-center text-[#02618f] p-4">
@@ -169,21 +189,13 @@ export default function Hero({ image, height, need }) {
                         "shimla",
                         "bangalore",
                         "india",
-                        
-                        
-                        
+
                         "nainital",
-                        
-                        
-                        
-                        
+
                         "panchgani",
-                        
+
                         "hyderabad",
                         "pune",
-                        
-                        
-                        
                       ].map((schoolLocation, index, array) => {
                         return (
                           <div key={index}>
