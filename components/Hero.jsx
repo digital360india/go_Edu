@@ -123,6 +123,9 @@ export default function Hero({ image, height, need }) {
                         "Full Boarding",
                         "Girls Boarding",
                         "Day Boarding",
+                        "Coed Boarding",
+                        "ICSE Boarding",
+                        "CBSE Boarding",
                       ].map((schoolType, index) => (
                         <div key={index}>
                           <li
@@ -137,7 +140,7 @@ export default function Hero({ image, height, need }) {
                             />
                             <span>{`${schoolType} School`}</span>
                           </li>
-                          {index < 4 && (
+                          {index < 7 && (
                             <hr className="h-[2px] bg-[#02618f] border-0 w-[350px] m-2" />
                           )}
                         </div>
@@ -166,21 +169,21 @@ export default function Hero({ image, height, need }) {
                         "shimla",
                         "bangalore",
                         "india",
-                        "chandigarh",
-                        "mumbai",
-                        "faridabad",
+                        
+                        
+                        
                         "nainital",
-                        "varanasi",
-                        "kolkata",
-                        "udaipur",
-                        "jaipur",
+                        
+                        
+                        
+                        
                         "panchgani",
-                        "sikar",
+                        
                         "hyderabad",
                         "pune",
-                        "delhi",
-                        "darjeeling",
-                        "ajmer",
+                        
+                        
+                        
                       ].map((schoolLocation, index, array) => {
                         return (
                           <div key={index}>
