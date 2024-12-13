@@ -11,7 +11,7 @@ async function fetchAllRecords(tableName) {
 }
 
 export default async function sitemap() {
-  const hostname = "edu123.in";
+  const hostname = "goedu.in";
 
   const citySheet = await fetchAllRecords("city");
 
