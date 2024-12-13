@@ -13,21 +13,21 @@ export const FooterLinks = () => {
             <div className="flex flex-col">
               <Link
                 href={
-                  "https://www.edu123.in/category/boarding-schools-in-dehradun"
+                  "https://www.goedu.in/category/boarding-schools-in-dehradun"
                 }
               >
                 Boarding Schools in Dehradun
               </Link>
               <Link
                 href={
-                  "https://www.edu123.in/category/boarding-schools-in-mussoorie"
+                  "https://www.goedu.in/category/boarding-schools-in-mussoorie"
                 }
               >
                 Boarding Schools in Mussoorie
               </Link>
               <Link
                 href={
-                  "https://www.edu123.in/category/boarding-schools-in-shimla"
+                  "https://www.goedu.in/category/boarding-schools-in-shimla"
                 }
               >
                 Boarding Schools in Shimla
@@ -40,14 +40,14 @@ export const FooterLinks = () => {
              
               <Link
                 href={
-                  "https://www.edu123.in/category/boarding-schools-in-bangaluru"
+                  "https://www.goedu.in/category/boarding-schools-in-bangaluru"
                 }
               >
                 Boarding Schools in Bangalore
               </Link>
               <Link
                 href={
-                  "https://www.edu123.in/category/boarding-schools-in-india"
+                  "https://www.goedu.in/category/boarding-schools-in-india"
                 }
               >
                 Boarding Schools in India
@@ -59,35 +59,35 @@ export const FooterLinks = () => {
             <div className="flex flex-col">
               <Link
                 href={
-                  "https://www.edu123.in/category/boarding-schools-in-chandigarh"
+                  "https://www.goedu.in/category/boarding-schools-in-chandigarh"
                 }
               >
                 Boarding Schools in Chandigarh
               </Link>
               <Link
                 href={
-                  "https://www.edu123.in/category/boarding-schools-in-mumbai"
+                  "https://www.goedu.in/category/boarding-schools-in-mumbai"
                 }
               >
                 Boarding Schools in Mumbai
               </Link>
               <Link
                 href={
-                  "https://www.edu123.in/category/boarding-schools-in-faridabad"
+                  "https://www.goedu.in/category/boarding-schools-in-faridabad"
                 }
               >
                 Boarding Schools in Faridabad
               </Link>
               <Link
                 href={
-                  "https://www.edu123.in/category/boarding-schools-in-nainital"
+                  "https://www.goedu.in/category/boarding-schools-in-nainital"
                 }
               >
                 Boarding Schools in Nainital
               </Link>
               <Link
                 href={
-                  "https://www.edu123.in/category/boarding-schools-in-varanasi"
+                  "https://www.goedu.in/category/boarding-schools-in-varanasi"
                 }
               >
                 Boarding Schools in Varanasi
@@ -99,35 +99,35 @@ export const FooterLinks = () => {
             <div className="flex flex-col">
               <Link
                 href={
-                  "https://www.edu123.in/category/boarding-schools-in-kolkata"
+                  "https://www.goedu.in/category/boarding-schools-in-kolkata"
                 }
               >
                 Boarding Schools in Kolkata
               </Link>
               <Link
                 href={
-                  "https://www.edu123.in/category/boarding-schools-in-udaipur"
+                  "https://www.goedu.in/category/boarding-schools-in-udaipur"
                 }
               >
                 Boarding Schools in Udaipur
               </Link>
               <Link
                 href={
-                  "https://www.edu123.in/category/boarding-schools-in-jaipur"
+                  "https://www.goedu.in/category/boarding-schools-in-jaipur"
                 }
               >
                 Boarding Schools in Jaipur
               </Link>
               <Link
                 href={
-                  "https://www.edu123.in/category/boarding-schools-in-panchgani"
+                  "https://www.goedu.in/category/boarding-schools-in-panchgani"
                 }
               >
                 Boarding Schools in Panchgani
               </Link>
               <Link
                 href={
-                  "https://www.edu123.in/category/boarding-schools-in-sikar"
+                  "https://www.goedu.in/category/boarding-schools-in-sikar"
                 }
               >
                 Boarding Schools in Sikar
@@ -139,19 +139,19 @@ export const FooterLinks = () => {
             <div className="flex flex-col">
               <Link
                 href={
-                  "https://www.edu123.in/category/boarding-schools-in-hyderabad"
+                  "https://www.goedu.in/category/boarding-schools-in-hyderabad"
                 }
               >
                 Boarding Schools in Hyderabad
               </Link>
               <Link
-                href={"https://www.edu123.in/category/boarding-schools-in-pune"}
+                href={"https://www.goedu.in/category/boarding-schools-in-pune"}
               >
                 Boarding Schools in Pune
               </Link>
               <Link
                 href={
-                  "https://www.edu123.in/category/boarding-schools-in-jaipur"
+                  "https://www.goedu.in/category/boarding-schools-in-jaipur"
                 }
               >
                 Boarding Schools in Jaipur
@@ -164,14 +164,14 @@ export const FooterLinks = () => {
               
               <Link
                 href={
-                  "https://www.edu123.in/category/boarding-schools-in-nainital"
+                  "https://www.goedu.in/category/boarding-schools-in-nainital"
                 }
               >
                 Boarding Schools in Nainital
               </Link>
               <Link
                 href={
-                  "https://www.edu123.in/category/boarding-schools-in-panchgani"
+                  "https://www.goedu.in/category/boarding-schools-in-panchgani"
                 }
               >
                 Boarding Schools in Panchgani
