@@ -242,6 +242,9 @@ const SchoolCard = ({ categoryData }) => {
           </div>
         </div>
 
+
+
+
         <div className="hidden xl:block mt-8 space-y-5">
           <div className="sticky top-0 z-10">
             <div className="w-[340px] h-[630px] bg-[#F8F8F8] rounded-lg ">
