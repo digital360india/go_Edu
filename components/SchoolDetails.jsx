@@ -521,6 +521,54 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
             </section>
           </div>
 
+          <div className="overflow-hidden pl-12">
+            <section
+              className={`bg-[#1B6EA1] mb-10 mt-10 text-white p-4 w-full max-w-[631px] h-[161px] flex rounded-l-xl justify-center items-center top-20 right-0 transform transition-transform duration-[1800ms] ease-in-out ${slideClass} sm:hidden`}
+            >
+              <div className="text-left text-[16px] w-full p-2">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-4">
+                    <div className="font-semibold text-white">School Type</div>
+                    <p className="text-white">
+                      {school?.day_schools ? "Day-Boarding" : "Full-Boarding"}
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="font-semibold text-white">Curriculum</div>
+                    <p className="text-white">
+                      {school?.cbse_schools && "CBSE "}
+                      {school?.icse_isc_schools && "ICSE/ISC "}
+                      {school?.cie_schools && "CIE "}
+                      {school?.ib_schools && "IB "}
+                      {school?.igcse_schools && "IGCSE"}
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="font-semibold text-white">Classes</div>
+                    <p className="text-white">
+                      {school?.classfrom} to {school?.classto}
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="font-semibold text-white">
+                      School Gender
+                    </div>
+                    <p className="text-white">
+                      {school?.coed_schools
+                        ? "Co-Ed"
+                        : school?.girls_schools
+                        ? "Girls School"
+                        : "Boys School"}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
           <div className="flex md:justify-center px-6 md:px-0  md:space-x-20 md:sticky md:top-0 mt-6 md:mt-0 bg-white md:h-[100vh] ">
             <section className=" md:w-[570px] md:h-[750px]  md:px-0">
               <p className="ml-2 md:ml-0 text-[24px] sm:text-[24px] md:text-[32px] md:w-[293px] h-auto md:h-[54px] md:mb-4 mb-4 mt-6 text-[#323232]">
