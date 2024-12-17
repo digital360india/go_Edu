@@ -8,8 +8,7 @@ import { ToastContainer } from "react-toastify";
 import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import Popup from "@/components/Popup";
-// import Head from "next/head";
-// import Popup from "@/components/Ppoup";
+import Head from "next/head";
 
 export async function generateMetadata() {
   return {
@@ -42,31 +41,33 @@ export async function generateMetadata() {
         content: "education, GoEdu, online learning",
       },
     ],
-    customMeta: (
-      <meta
-        name="google-analytics"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-51DFFSG7NZ');
-          `,
-        }}
-      />
-    ),
   };
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* <Head></Head> */}
+      <Head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-YKMGLKBTB1"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-YKMGLKBTB1');
+            `,
+          }}
+        />
+      </Head>
       <body className="overflow-x-hidden">
         <ToastContainer />
         <Authprovider>
           <Navbar />
-          <Popup/>
+          <Popup />
           {children}
           <Footer />
           <FooterLinks />
@@ -74,14 +75,14 @@ export default function RootLayout({ children }) {
         <div className="fixed bottom-4 left-4 z-50">
           <Link href="tel:+9557695360" aria-label="Phone">
             <button className="bg-blue-500 text-white p-4 rounded-full shadow-lg hover:bg-blue-600">
-              <FaPhoneAlt className="text-2xl " />
+              <FaPhoneAlt className="text-2xl" />
             </button>
           </Link>
         </div>
         <div className="fixed bottom-4 right-4 z-50">
           <Link href="https://wa.me/9557695360" aria-label="WhatsApp">
-            <button className="bg-green-500 text-white p-[12px] rounded-full shadow-lg hover:bg-green-600">
-              <FaWhatsapp className="md:text-[33px] text-3xl md:text-2xl" />
+            <button className="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600">
+              <FaWhatsapp className="text-3xl" />
             </button>
           </Link>
         </div>
