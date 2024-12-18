@@ -25,6 +25,10 @@ export async function generateMetadata() {
         content: "1OK7AS59HEPlQx7IVp_HdfQIX6PApYm5hRxOTlD9aYc",
       },
       {
+        name: "google-site-verification",
+        content: "r2lMDe_0IlOZt1AmGXidtsjJSRhI8RkQd6jZs-kDoPk",
+      },
+      {
         name: "application-name",
         content: "GoEdu",
       },
@@ -41,28 +45,28 @@ export async function generateMetadata() {
         content: "education, GoEdu, online learning",
       },
     ],
+    scripts: [
+      {
+        src: "https://www.googletagmanager.com/gtag/js?id=G-YKMGLKBTB1",
+        async: true,
+      },
+      {
+        type: "application/javascript",
+        dangerouslySetInnerHTML: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-YKMGLKBTB1');
+        `,
+      },
+    ],
   };
 }
+
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-YKMGLKBTB1"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-YKMGLKBTB1');
-            `,
-          }}
-        />
-      </Head>
       <body className="overflow-x-hidden">
         <ToastContainer />
         <Authprovider>
