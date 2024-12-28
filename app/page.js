@@ -99,7 +99,7 @@ export default function Home() {
       <FormGoEdu />
       <MapGoEdu />
       <WhyChooseUsGoEdu />
-      <div className="md:hidden">
+      <div className="xl:hidden">
         <MobileAnimation />
       </div>
       <AboutGoEdu />

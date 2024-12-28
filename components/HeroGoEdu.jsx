@@ -175,37 +175,11 @@
 
 // export default HeroGoEdu;
 
-
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
-import ConsultationPopup from "./ConsultationPopup";
 
 const HeroGoEdu = () => {
-  const messages = [
-    "Hi there! How can we help?",
-    "Click me to book a Consultation!",
-    "Find the best school with GoEdu!",
-  ];
-  const [isOpenpopup, setIsOpenpopup] = useState(false);
-  const [currentMessage, setCurrentMessage] = useState(0);
-
-  const toggleBookingPopup = () => {
-    setIsOpenpopup(true);
-  };
-
-  const toggleBookingClosePopup = () => {
-    setIsOpenpopup(false);
-  };
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentMessage((prevMessage) =>
-        prevMessage === messages.length - 1 ? 0 : prevMessage + 1
-      );
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [messages.length]);
   return (
     <>
       <div className="mt-20 flex justify-center items-center relative">
@@ -214,39 +188,27 @@ const HeroGoEdu = () => {
           width={1000}
           height={1000}
           alt="image"
-          className="w-full h-auto"
+          className="w-full h-auto hidden lg:block"
         />
 
-        <div className="absolute right-40 animate-slide-left">
+        <Image
+          src="/goedu12.png"
+          width={1000}
+          height={1000}
+          alt="image"
+          className="w-full h-auto lg:hidden"
+        />
+
+        <div className="absolute -bottom-24 lg:right-5 animate-slide-left">
           <Image
-            src="/messageowl.svg"
+            src="/messageowl2.png"
             width={1000}
             height={1000}
             alt="owl"
-            className="w-[450px] h-[510px] cursor-pointer"
-            onClick={toggleBookingPopup}
+            className="w-[300px] h-[500px]  xl:w-[450px] xl:h-[640px] cursor-pointer"
           />
         </div>
-        <div className="relative owl-message-container animate-slide-up">
-          <div
-            className="relative w-[200px] h-[200px]  cursor-pointer mb-40 "
-            onClick={toggleBookingPopup}
-          >
-            <Image
-              src="/messagebox.svg"
-              width={1000}
-              height={1000}
-              alt="message box"
-              className="w-full h-full"
-            />
-            <p className="absolute top-[70px] w-[150px] cursor-pointer left-[18px] text-center text-[12px] text-black font-semibold">
-              {messages[currentMessage]}
-            </p>
-          </div>
-        </div>
       </div>
-
-      {isOpenpopup && <ConsultationPopup setClose={toggleBookingClosePopup} />}
 
       <style jsx>{`
         .animate-slide-left {
