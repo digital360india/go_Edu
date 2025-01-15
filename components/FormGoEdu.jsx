@@ -2,6 +2,8 @@
 import axios from "axios";
 import Image from "next/image";
 import { useState } from "react";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const FormGoEdu = () => {
   const [loading, setLoading] = useState(false);
@@ -11,7 +13,6 @@ const FormGoEdu = () => {
 
     phone: "",
     source: "Goedu - https://www.goedu.in/",
-
   });
 
   const handleChange = (e) => {
@@ -22,9 +23,13 @@ const FormGoEdu = () => {
     }));
   };
 
+  const handlePhoneChange = (value) => {
+    setFormData({ ...formData, phone: value });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); 
+    setLoading(true);
     console.log(formData);
     try {
       const response = await axios.post(
@@ -37,7 +42,6 @@ const FormGoEdu = () => {
           name: "",
           phone: "",
           source: "Goedu - https://www.goedu.in/",
-
         });
       } else {
         alert("Try again");
@@ -45,7 +49,7 @@ const FormGoEdu = () => {
     } catch (error) {
       alert("An error occurred. Please try again.");
     } finally {
-      setLoading(false); 
+      setLoading(false);
     }
   };
 
@@ -71,7 +75,7 @@ const FormGoEdu = () => {
           </h3>
           <form onSubmit={handleSubmit} className="space-y-7">
             <input
-            required
+              required
               type="text"
               name="name"
               placeholder="Your name"
@@ -87,67 +91,20 @@ const FormGoEdu = () => {
             onChange={handleChange}
             className="p-2 border-b-2 border-[#D9D9D9] w-full h-[39px] placeholder:text-[#898989] sm:border sm:rounded sm:w-[462px] sm:border-[#D9D9D9]"
           /> */}
-            <div className="flex">
-              <select className="w-[80px] md:w-[100px] h-[39px] border-b-2 border-[#D9D9D9] rounded-l placeholder:text-[#898989] sm:border sm:rounded-l sm:p-2 sm:border-[#D9D9D9]">
-                <option value="🇮🇳">🇮🇳 +91</option>
-                <option value="🇺🇸">🇺🇸 +1</option>
-                <option value="🇬🇧">🇬🇧 +44</option>
-                <option value="🇨🇦">🇨🇦 +1</option>
-                <option value="🇦🇺">🇦🇺 +61</option>
-                <option value="🇳🇿">🇳🇿 +64</option>
-                <option value="🇿🇦">🇿🇦 +27</option>
-                <option value="🇸🇬">🇸🇬 +65</option>
-                <option value="🇦🇪">🇦🇪 +971</option>
-                <option value="🇸🇦">🇸🇦 +966</option>
-                <option value="🇫🇷">🇫🇷 +33</option>
-                <option value="🇩🇪">🇩🇪 +49</option>
-                <option value="🇮🇹">🇮🇹 +39</option>
-                <option value="🇪🇸">🇪🇸 +34</option>
-                <option value="🇧🇷">🇧🇷 +55</option>
-                <option value="🇲🇽">🇲🇽 +52</option>
-                <option value="🇯🇵">🇯🇵 +81</option>
-                <option value="🇰🇷">🇰🇷 +82</option>
-                <option value="🇨🇳">🇨🇳 +86</option>
-                <option value="🇹🇷">🇹🇷 +90</option>
-                <option value="🇷🇺">🇷🇺 +7</option>
-                <option value="🇮🇩">🇮🇩 +62</option>
-                <option value="🇵🇭">🇵🇭 +63</option>
-                <option value="🇻🇳">🇻🇳 +84</option>
-                <option value="🇹🇭">🇹🇭 +66</option>
-                <option value="🇲🇾">🇲🇾 +60</option>
-                <option value="🇳🇬">🇳🇬 +234</option>
-                <option value="🇪🇬">🇪🇬 +20</option>
-                <option value="🇮🇱">🇮🇱 +972</option>
-                <option value="🇰🇪">🇰🇪 +254</option>
-                <option value="🇦🇷">🇦🇷 +54</option>
-                <option value="🇨🇱">🇨🇱 +56</option>
-                <option value="🇵🇪">🇵🇪 +51</option>
-                <option value="🇨🇴">🇨🇴 +57</option>
-                <option value="🇻🇪">🇻🇪 +58</option>
-                <option value="🇺🇦">🇺🇦 +380</option>
-                <option value="🇵🇱">🇵🇱 +48</option>
-                <option value="🇳🇱">🇳🇱 +31</option>
-                <option value="🇧🇪">🇧🇪 +32</option>
-                <option value="🇸🇪">🇸🇪 +46</option>
-                <option value="🇨🇭">🇨🇭 +41</option>
-                <option value="🇦🇹">🇦🇹 +43</option>
-                <option value="🇩🇰">🇩🇰 +45</option>
-                <option value="🇫🇮">🇫🇮 +358</option>
-                <option value="🇮🇪">🇮🇪 +353</option>
-                <option value="🇳🇴">🇳🇴 +47</option>
-                <option value="🇨🇿">🇨🇿 +420</option>
-                <option value="🇸🇰">🇸🇰 +421</option>
-                <option value="🇷🇴">🇷🇴 +40</option>
-                <option value="🇭🇺">🇭🇺 +36</option>
-              </select>
-              <input
-              required
-                type="tel"
-                name="phone"
-                placeholder="Your mobile number"
+            <div className="flex  w-full lg:w-[498px]">
+              <PhoneInput
+                className="w-full border-[#D9D9D9] border-b-2 rounded md:border md:rounded"
+                country={"in"}
                 value={formData.phone}
-                onChange={handleChange}
-                className="w-full h-[39px] p-2 border-b-2 border-[#D9D9D9] placeholder:text-[#898989] sm:border sm:rounded-r sm:w-[398px] sm:border-[#D9D9D9]"
+                onChange={handlePhoneChange}
+                inputStyle={{
+                  width: "100%",
+                  height: "39px",
+                  border: "none",
+                }}
+                buttonStyle={{
+                  border: "2px solid #D9D9D9",
+                }}
               />
             </div>
 
@@ -193,7 +150,6 @@ const FormGoEdu = () => {
               >
                 {loading ? "Submitting..." : "Submit"}
               </button>
-              
             </div>
           </form>
         </div>
