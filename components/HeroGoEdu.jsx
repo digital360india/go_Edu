@@ -182,7 +182,7 @@ import Image from "next/image";
 const HeroGoEdu = () => {
   return (
     <>
-      <div className="mt-20 flex justify-center items-center relative">
+      <div className="mt-14 md:mt-20 flex justify-center items-center relative">
         <Image
           src="/goedu11.png"
           width={1000}

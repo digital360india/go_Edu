@@ -37,50 +37,47 @@ const SchoolByCitiesGoedu = () => {
       {/* mobile school by cities */}
 
       <div>
-        <div
-          className="w-full h-auto  bg-no-repeat bg-cover bg-center"
-          style={{ backgroundImage: `url(${schoolbycities.src})` }}
-        >
-          <div className="p-12">
-            <h1 className="text-center text-[1rem] text-[#323232]">
+      <div className="w-full h-auto bg-no-repeat bg-cover  bg-[url('/schoolbycities.svg')]">
+
+          <div className="py-8 md:p-12">
+            <h1 className="text-center text-[#323232] text-2xl font-bold  ">
               School By Cities
             </h1>
 
-            <div className="grid grid-cols-2  justify-center items-center gap-12 mt-6">
+            <div className="md:grid md:grid-cols-2 flex justify-center  items-center flex-wrap md:gap-12 mt-6">
               {cities.map((city, index) => (
                 <div key={index} className=" text-center">
                   <div className={`bounce-slow ${index} custom-shadow`}>
-                  <Link href={`/category/boarding-schools-in-${city.name}`}>
-
-                    <Image
-                      src={city.bannerSrc}
-                      alt="location banner"
-                      width={1000}
-                      height={1000}
-                      className="w-[140px] h-[150px] mx-4"
-                    />
+                    <Link href={`/category/boarding-schools-in-${city.name}`}>
+                      <Image
+                        src={city.bannerSrc}
+                        alt="location banner"
+                        width={1000}
+                        height={1000}
+                        className="w-[120px] h-[150px] mx-6 md:mx-4"
+                      />
                     </Link>
                   </div>
                   <div
-                    className={`resize-bottom ${index} custom-shadow-bottom`}
+                    className={`resize-bottom ${index} custom-shadow-bottom flex justify-center items-center`}
                   >
                     <Image
                       src={city.bottomSrc}
                       alt="location bottom"
                       width={1000}
                       height={1000}
-                      className="w-[120px] h-[6px] mx-6"
+                      className="w-[105px] h-[6px] mx-2 md:mx-6"
                     />
                   </div>
                   <Link href={`/category/boarding-schools-in-${city.name}`}>
-                  {/* <p className="mt-4">{city.name}</p> */}
-                  <p className="mt-4 mx-10">{city.name.charAt(0).toUpperCase() + city.name.slice(1)}</p>
-                </Link>
+                    {/* <p className="mt-4">{city.name}</p> */}
+                    <p className="mt-4 mx-10">
+                      {city.name.charAt(0).toUpperCase() + city.name.slice(1)}
+                    </p>
+                  </Link>
                 </div>
               ))}
             </div>
-
-            
           </div>
         </div>
 
