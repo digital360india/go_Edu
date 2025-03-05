@@ -66,11 +66,11 @@ const FormGoEdu = () => {
           />
         </div>
 
-        <div className="absolute right-10 top-1/2 transform -translate-y-1/2 z-10 md:w-fit w-full p-6 bg-white bg-opacity-90 rounded-lg shadow-lg">
+        <div className="absolute md:right-10  top-1/2 transform -translate-y-1/2 z-10 md:w-fit w-full p-6 bg-white bg-opacity-90 rounded-lg shadow-lg">
           <div className="md:hidden block  text-[20px] font-bold text-center">
             Confuse to choose the Best School ?
           </div>
-          <h3 className="md:text-xl  text-[12px] my-6 text-[#323232]">
+          <h3 className="md:text-xl  text-[16px] my-6 text-[#323232]">
             Fill this form and get in touch with our counsellor
           </h3>
           <form onSubmit={handleSubmit} className="space-y-7">
