@@ -43,7 +43,7 @@ const FormGoEdu = () => {
         {
           name: formData.name,
           phoneNumber: formData.phone,
-          url: "https://www.goedu.in/",
+          url: window.location.href,
           source: "Goedu - Confuse to choose the Best School",
           date: new Date().toISOString(),
         }

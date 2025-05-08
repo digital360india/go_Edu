@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { RxCross1 } from "react-icons/rx";
 import axios from "axios";
@@ -30,10 +30,7 @@ export default function ConsultationPopup({ setClose }) {
     setFormData({ ...formData, phone: value });
   };
 
-
- 
-
-   const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
@@ -69,21 +66,21 @@ export default function ConsultationPopup({ setClose }) {
         formData
       );
 
-       // Submit to your LMS
-       const lmsResponse = await axios.post(
+      // Submit to your LMS
+      const lmsResponse = await axios.post(
         "https://digitalleadmanagement.vercel.app/api/add-lead",
         {
           name: formData.name,
           phoneNumber: formData.phone,
-          url: "https://www.goedu.in/",
+          url: window.location.href,
           source: "Goedu - Get Consultation Popup",
           email: formData.email,
-          currentClass  : formData.classes,
+          currentClass: formData.classes,
           date: new Date().toISOString(),
         }
       );
 
-      if (emailResponse.status === 200  && lmsResponse.status === 200) {
+      if (emailResponse.status === 200 && lmsResponse.status === 200) {
         toast.success("Form Submitted Successfully!");
         setFormData({
           name: "",
@@ -159,7 +156,6 @@ export default function ConsultationPopup({ setClose }) {
                   height: "39px",
                   border: "none",
                 }}
-               
               />
             </div>
             <div className="flex md:gap-20 gap-8">
