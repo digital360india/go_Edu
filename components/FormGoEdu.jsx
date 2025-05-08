@@ -36,7 +36,20 @@ const FormGoEdu = () => {
         "https://goedunodemailer.onrender.com/send-email",
         formData
       );
-      if (response.status === 200) {
+
+      // Submit to your LMS
+      const lmsResponse = await axios.post(
+        "https://digitalleadmanagement.vercel.app/api/add-lead",
+        {
+          name: formData.name,
+          phoneNumber: formData.phone,
+          url: "https://www.goedu.in/",
+          source: "Goedu - Confuse to choose the Best School",
+          date: new Date().toISOString(),
+        }
+      );
+  
+      if (response.status === 200 && lmsResponse.status === 200) {
         alert("Form submitted successfully.");
         setFormData({
           name: "",
@@ -77,17 +90,16 @@ const FormGoEdu = () => {
             <div>
               <label htmlFor="">Name</label>
               <div>
-
-              <input
-                required
-                type="text"
-                name="name"
-                placeholder="Your name"
-                value={formData.name}
-                onChange={handleChange}
-                className="p-2 border-b-2 border-[#D9D9D9] w-full h-[39px] placeholder:text-[#898989] sm:border sm:rounded lg:w-[498px] sm:border-[#D9D9D9]"
+                <input
+                  required
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="p-2 border-b-2 border-[#D9D9D9] w-full h-[39px] placeholder:text-[#898989] sm:border sm:rounded lg:w-[498px] sm:border-[#D9D9D9]"
                 />
-                </div>
+              </div>
             </div>
             {/* <input
             type="email"
