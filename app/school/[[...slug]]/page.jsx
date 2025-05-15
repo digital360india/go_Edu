@@ -392,7 +392,7 @@ export async function generateMetadata({ params }) {
   const sheetName = categoryData.sheetName;
   
   return {
-    title: `${categoryData?.name} | Admissions 2024-25`,
+    title: `${categoryData?.name} | Admissions 2025-26`,
     description: categoryData?.Meta_description,
     keywords: categoryData?.Meta_keywords,
     alternates: {
@@ -406,8 +406,8 @@ export async function generateMetadata({ params }) {
       "max-image-preview": "standard",
     },
     openGraph: {
-      title: "Find the Best Boarding Schools in Seconds | Edu123",
-      description: "Find your dream boarding school in seconds with Edu123. Unlock a world of educational possibilities. Your path to the perfect education begins here.",
+      title: "Find the Best Boarding Schools in Seconds | Goedu",
+      description: "Find your dream boarding school in seconds with Goedu. Unlock a world of educational possibilities. Your path to the perfect education begins here.",
       url: "https://www.edu123.in/",
       images: [
         `https://res.cloudinary.com/infoedu123/image/upload/v1703243169/EDU123/edu123HomeD.png`,
@@ -418,8 +418,8 @@ export async function generateMetadata({ params }) {
     twitter: {
       card: "summary",
       site: "@Edu123India",
-      title: "Find the Best Boarding Schools in Seconds | Edu123",
-      description: "Find your dream boarding school in seconds with Edu123. Unlock a world of educational possibilities. Your path to the perfect education begins here.",
+      title: "Find the Best Boarding Schools in Seconds | Goedu",
+      description: "Find your dream boarding school in seconds with Goedu. Unlock a world of educational possibilities. Your path to the perfect education begins here.",
       image: "https://res.cloudinary.com/infoedu123/image/upload/v1703243169/EDU123/edu123HomeD.png",
       url: "https://x.com/edu123india",
     },

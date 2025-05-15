@@ -10,7 +10,7 @@ export async function generateMetadata() {
   return {
     title: "Contact Us",
     description:
-      "Welcome to GoEdu - The ultimate guide to the best schools in the United Arab Emirates! ",
+      "Welcome to GoEdu - The ultimate guide to the best schools in India! ",
   };
 }
 
@@ -20,9 +20,9 @@ const Contact = () => {
       {/* <Hero /> */}
       <div className="sm:mt-5 mt-16 sm:p-[35px] md:p-[100px] ">
         <div className=" sm:bg-[#F8F8F8] p-[40px] space-y-5 mt-10">
-          <p className=" text-[22px] sm:text-[28px] font-semibold">
+          <h1 className=" text-[22px] sm:text-[28px] font-semibold">
             Contact Us
-          </p>
+          </h1>
           <div className=" mt-16 md:mt-24 text-black ">
             <div className="flex flex-col items-center gap-2">
               <ul className=" w-full  p-5 sm:w-[270px] sm:h-[450px] lg:w-[750px] sm:p-9 lg:p-8  lg:h-[310px] flex flex-col gap-4 bg-white">
