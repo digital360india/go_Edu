@@ -27,13 +27,7 @@ const Contact = () => {
             <div className="flex flex-col items-center gap-2">
               <ul className=" w-full  p-5 sm:w-[270px] sm:h-[450px] lg:w-[750px] sm:p-9 lg:p-8  lg:h-[310px] flex flex-col gap-4 bg-white">
                 <li className="flex gap-3">
-                  {/*   <div className="w-6 h-8 flex items-center">
-                    <TfiLocationPin className="   " />
-                  </div>
-                <div>
-                    3rd Floor Amar Plaza Near St.Judes School, West Canal Road,
-                    Dehradun -248002
-                  </div> */}
+                  
                 </li>
                 <li className="flex gap-3 items-center">
                   {" "}
