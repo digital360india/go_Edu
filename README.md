@@ -7,7 +7,7 @@ First, run the development server:
 ```bash.                
 dc# ords
 yarn dev    
-# or               
+# or                
 pnpm dev                                  
 # or     
 bun dev 
