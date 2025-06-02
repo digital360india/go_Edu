@@ -5,7 +5,7 @@ df
 First, run the development server:     
                        
 ```bash.                
-dc# ords
+dc# ords  
 yarn dev    
 # or                
 pnpm dev                                  
