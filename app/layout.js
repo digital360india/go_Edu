@@ -8,7 +8,7 @@ import { ToastContainer } from "react-toastify";
 import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import Popup from "@/components/Popup";
-import Head from "next/head";
+import Script from "next/script";
 
 export async function generateMetadata() {
   return {
@@ -20,11 +20,6 @@ export async function generateMetadata() {
         name: "google-site-verification",
         content: "qgn6MqFJA53sQvYVhpT70fVxndZfM0zTF1uSq0Uiy1g",
       },
-      {
-        name: "google-site-verification",
-        content: "1OK7AS59HEPlQx7IVp_HdfQIX6PApYm5hRxOTlD9aYc",
-      },
-
       {
         name: "google-site-verification",
         content: "1OK7AS59HEPlQx7IVp_HdfQIX6PApYm5hRxOTlD9aYc",
@@ -65,21 +60,6 @@ export async function generateMetadata() {
         `,
       },
     ],
-    scripts: [
-      {
-        src: "https://www.googletagmanager.com/gtag/js?id=G-ZB62BEDP2",
-        async: true,
-      },
-      {
-        type: "application/javascript",
-        dangerouslySetInnerHTML: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-ZB62BEDP2S');
-        `,
-      },
-    ],
   };
 }
 
@@ -87,6 +67,32 @@ export async function generateMetadata() {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZB62BEDP2"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZB62BEDP2');
+          `}
+        </Script>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-YKMGLKBTB1"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YKMGLKBTB1');
+          `}
+        </Script>
+      </head>
       <body className="overflow-x-hidden">
         <ToastContainer />
         <Authprovider>
