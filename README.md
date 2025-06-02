@@ -6,7 +6,7 @@ First, run the development server:
                        
 ```bash.                
 dc# ords
-yarn dev   
+yarn dev    
 # or               
 pnpm dev                                  
 # or     
