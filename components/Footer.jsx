@@ -83,7 +83,7 @@ export const Footer = () => {
                   <Link href={"/sitemap.xml"}>Sitemap</Link>
                 </div>
                 <div className="flex flex-col space-y-3 ">
-                  <Link href={"/"}>Blogs</Link>
+                  <Link href={"https://blog.goedu.in/"}>Blogs</Link>
                   <Link href={"/privacy-policy"}>Privacy Policies</Link>
 
                   <Link href={"/terms-and-condition"}>Terms & Condition</Link>

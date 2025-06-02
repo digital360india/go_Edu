@@ -25,12 +25,12 @@ export async function generateMetadata({ params }) {
     keywords: categoryData?.keywords,
     authors: [{ name: categoryData?.author }],
     alternates: {
-      canonical: `https://www.edu123.in/category/${params.slug}`,
+      canonical: `https://www.goedu.in/category/${params.slug}`,
     },
     openGraph: {
       title: categoryData?.title,
       description: categoryData?.meta_description,
-      url: `https://www.edu123.in/category/${params.slug}`,
+      url: `https://www.goedu.in/category/${params.slug}`,
       locale: "en_US",
       type: "website",
       images: [{ url: categoryData?.featuredImg }],
@@ -49,8 +49,8 @@ export async function generateMetadata({ params }) {
       description: categoryData?.meta_description,
       card: categoryData?.featuredImg,
       image: categoryData?.featuredImg,
-      site: "@edu123",
-      creator: "@edu123",
+      site: "@goedu",
+      creator: "@goedu",
     },
   };
 }

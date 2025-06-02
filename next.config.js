@@ -13,13 +13,13 @@ module.exports = {
       return [
         {
           source: '/blogs/:slug',
-          destination: 'https://blog.edu123.in/:slug',
+          destination: 'https://blog.goedu.in/:slug',
           basePath:false,
           permanent:false
         },
         {
           source: '/blogs',
-          destination: 'https://blog.edu123.in',
+          destination: 'https://blog.goedu.in',
           basePath:false,
           permanent:false
         },

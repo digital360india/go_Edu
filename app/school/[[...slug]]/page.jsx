@@ -396,7 +396,7 @@ export async function generateMetadata({ params }) {
     description: categoryData?.Meta_description,
     keywords: categoryData?.Meta_keywords,
     alternates: {
-      canonical: `https://www.edu123.in/school/${params.slug[0]}/${params.slug[1]}`,
+      canonical: `https://www.goedu.in/school/${params.slug[0]}/${params.slug[1]}`,
     },
     robots: {
       index: true,
@@ -408,26 +408,25 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: "Find the Best Boarding Schools in Seconds | Goedu",
       description: "Find your dream boarding school in seconds with Goedu. Unlock a world of educational possibilities. Your path to the perfect education begins here.",
-      url: "https://www.edu123.in/",
+      url: "https://www.goedu.in/",
       images: [
         `https://res.cloudinary.com/infoedu123/image/upload/v1703243169/EDU123/edu123HomeD.png`,
       ],
-      siteName: "Edu123",
+      siteName: "goedu",
       locale: "en_US",
     },
     twitter: {
       card: "summary",
-      site: "@Edu123India",
+      site: "@goeduIndia",
       title: "Find the Best Boarding Schools in Seconds | Goedu",
       description: "Find your dream boarding school in seconds with Goedu. Unlock a world of educational possibilities. Your path to the perfect education begins here.",
       image: "https://res.cloudinary.com/infoedu123/image/upload/v1703243169/EDU123/edu123HomeD.png",
-      url: "https://x.com/edu123india",
     },
     structuredData: [
       {
         "@context": "http://schema.org",
         "@type": "WebPage",
-        url: `https://www.edu123.in/school/${sheetName}/${categoryData.slug}`,
+        url: `https://www.goedu.in/school/${sheetName}/${categoryData.slug}`,
         name: categoryData.name,
         description: categoryData.Meta_description,
       },
@@ -438,19 +437,19 @@ export async function generateMetadata({ params }) {
           {
             "@type": "ListItem",
             position: 1,
-            name: "Edu123",
-            item: "https://www.edu123.in",
+            name: "goedu",
+            item: "https://www.goedu.in",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: categoryData.Town,
-            item: `https://www.edu123.in/category/boarding-schools-in-${sheetName}`,
+            item: `https://www.goedu.in/category/boarding-schools-in-${sheetName}`,
           },
           {
             "@type": "ListItem",
             position: 3,
-            url: `https://www.edu123.in/school/${sheetName}/${categoryData.slug}`,
+            url: `https://www.goedu.in/school/${sheetName}/${categoryData.slug}`,
             name: categoryData.name,
           },
         ],
@@ -460,7 +459,7 @@ export async function generateMetadata({ params }) {
         "@type": "School",
         name: categoryData.name,
         description: categoryData.Meta_description,
-        url: `https://www.edu123.in/school/${sheetName}/${categoryData.slug}`,
+        url: `https://www.goedu.in/school/${sheetName}/${categoryData.slug}`,
         image: [
           `https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${sheetName}/G-${imageCode}.png`,
           `https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${sheetName}/H-${imageCode}.png`,

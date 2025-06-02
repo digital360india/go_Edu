@@ -27,7 +27,7 @@ export default function Counsltation({ setClose }) {
     e.preventDefault();
 
     const templateParams = {
-      from_name: "edu123 popup",
+      from_name: "goedu popup",
       name: formData.name,
       email: formData.email,
       number: formData.number,

@@ -40,7 +40,7 @@ export const FooterLinks = () => {
              
               <Link
                 href={
-                  "https://www.goedu.in/category/boarding-schools-in-bangaluru"
+                  "https://www.goedu.in/category/boarding-schools-in-bangalore"
                 }
               >
                 Boarding Schools in Bangalore

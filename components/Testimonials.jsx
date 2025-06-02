@@ -39,7 +39,7 @@ const swiperSlides = [
       "https://res.cloudinary.com/eduminatti-com/image/upload/v1725877951/Edu123/Eduimages/WhatsApp_Image_2024-09-09_at_3.54.31_PM.jpg",
     name: "Shivam Panwar",
     description:
-      "Edu123 caught my attention while researching boarding schools in India, and I'm thrilled with the results. The platform's listings are thorough, and the consultants are knowledgeable. ",
+      "Goedu caught my attention while researching boarding schools in India, and I'm thrilled with the results. The platform's listings are thorough, and the consultants are knowledgeable. ",
   },
 ];
 const swiperSlides1 = [
