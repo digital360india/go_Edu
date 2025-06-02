@@ -24,6 +24,11 @@ export async function generateMetadata() {
         name: "google-site-verification",
         content: "1OK7AS59HEPlQx7IVp_HdfQIX6PApYm5hRxOTlD9aYc",
       },
+
+      {
+        name: "google-site-verification",
+        content: "1OK7AS59HEPlQx7IVp_HdfQIX6PApYm5hRxOTlD9aYc",
+      },
       {
         name: "google-site-verification",
         content: "r2lMDe_0IlOZt1AmGXidtsjJSRhI8RkQd6jZs-kDoPk",
@@ -57,6 +62,21 @@ export async function generateMetadata() {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-YKMGLKBTB1');
+        `,
+      },
+    ],
+    scripts: [
+      {
+        src: "https://www.googletagmanager.com/gtag/js?id=G-ZB62BEDP2",
+        async: true,
+      },
+      {
+        type: "application/javascript",
+        dangerouslySetInnerHTML: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-ZB62BEDP2S');
         `,
       },
     ],
