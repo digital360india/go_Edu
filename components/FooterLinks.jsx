@@ -28,8 +28,8 @@ export const FooterLinks = () => {
                 <Link href="https://www.goedu.in/category/boarding-schools-in-shimla">
                   Boarding Schools in Shimla
                 </Link>
-                <Link href="https://www.goedu.in/category/boarding-schools-in-bengaluru">
-                  Boarding Schools in Bengaluru
+                <Link href="https://www.goedu.in/category/boarding-schools-in-bangalore">
+                  Boarding Schools in Bangalore
                 </Link>
                 <Link href="https://www.goedu.in/category/boarding-schools-in-india">
                   Boarding Schools in India
@@ -76,8 +76,8 @@ export const FooterLinks = () => {
                 <Link href="https://www.goedu.in/category/girls-boarding-schools-in-shimla">
                   Girls Boarding Schools in Shimla
                 </Link>
-                <Link href="https://www.goedu.in/category/girls-boarding-schools-in-bengaluru">
-                  Girls Boarding Schools in Bengaluru
+                <Link href="https://www.goedu.in/category/girls-boarding-schools-in-bangalore">
+                  Girls Boarding Schools in Bangalore
                 </Link>
                 <Link href="https://www.goedu.in/category/girls-boarding-schools-in-india">
                   Girls Boarding Schools in India
