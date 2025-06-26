@@ -14,7 +14,7 @@ const swiperSlides = [
       "https://res.cloudinary.com/eduminatti-com/image/upload/v1725877951/Edu123/Eduimages/WhatsApp_Image_2024-09-09_at_3.53.37_PM.jpg ",
     name: "Parul Rawat",
     description:
-      "As a concerned sibling, Edu123 was a lifesaver in the daunting quest for the right boarding school in India. Highly recommended for siblings navigating the complex landscape of boarding school admissions.",
+      "As a concerned sibling, GoEdu was a lifesaver in the daunting quest for the right boarding school in India. Highly recommended for siblings navigating the complex landscape of boarding school admissions.",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const swiperSlides = [
       "https://res.cloudinary.com/eduminatti-com/image/upload/v1725877951/Edu123/Eduimages/WhatsApp_Image_2024-09-09_at_4.01.42_PM.jpg",
     name: "Priyangini",
     description:
-      "I stumbled upon Edu123 in my search for the ideal boarding school for my niece. The platform's extensive listings and transparent information made the decision-making process smooth.",
+      "I stumbled upon GoEdu in my search for the ideal boarding school for my niece. The platform's extensive listings and transparent information made the decision-making process smooth.",
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const swiperSlides = [
       "https://res.cloudinary.com/eduminatti-com/image/upload/v1725877951/Edu123/Eduimages/WhatsApp_Image_2024-09-09_at_3.59.49_PM.jpg",
     name: "Priya",
     description:
-      "Edu123 exceeded my expectations during our search for the perfect boarding school in India. The comprehensive listings provided a wealth of information, making the decision-making process much smoother. ",
+      "GoEdu exceeded my expectations during our search for the perfect boarding school in India. The comprehensive listings provided a wealth of information, making the decision-making process much smoother. ",
   },
   {
     id: 4,
@@ -49,7 +49,7 @@ const swiperSlides1 = [
       "https://res.cloudinary.com/eduminatti-com/image/upload/v1725877951/Edu123/Eduimages/WhatsApp_Image_2024-09-09_at_3.53.37_PM.jpg ",
     name: "Parul Rawat",
     description:
-      "As a concerned sibling, Edu123 was a lifesaver in the daunting quest for the right boarding school in India. Highly recommended for siblings navigating the complex landscape of boarding school admissions.",
+      "As a concerned sibling, GoEdu was a lifesaver in the daunting quest for the right boarding school in India. Highly recommended for siblings navigating the complex landscape of boarding school admissions.",
   },
   {
     id: 2,
@@ -58,7 +58,7 @@ const swiperSlides1 = [
       "https://res.cloudinary.com/eduminatti-com/image/upload/v1725877951/Edu123/Eduimages/WhatsApp_Image_2024-09-09_at_4.01.42_PM.jpg",
     name: "Priyangini",
     description:
-      "I stumbled upon Edu123 in my search for the ideal boarding school for my niece. The platform's extensive listings and transparent information made the decision-making process smooth.",
+      "I stumbled upon GoEdu in my search for the ideal boarding school for my niece. The platform's extensive listings and transparent information made the decision-making process smooth.",
   },
   {
     id: 3,
@@ -66,7 +66,7 @@ const swiperSlides1 = [
       "https://res.cloudinary.com/eduminatti-com/image/upload/v1725877951/Edu123/Eduimages/WhatsApp_Image_2024-09-09_at_3.59.49_PM.jpg",
     name: "Priya",
     description:
-      "Edu123 exceeded my expectations during our search for the perfect boarding school in India. The comprehensive listings provided a wealth of information, making the decision-making process much smoother. ",
+      "GoEdu exceeded my expectations during our search for the perfect boarding school in India. The comprehensive listings provided a wealth of information, making the decision-making process much smoother. ",
   },
   {
     id: 4,
@@ -74,7 +74,7 @@ const swiperSlides1 = [
       "https://res.cloudinary.com/eduminatti-com/image/upload/v1725877951/Edu123/Eduimages/WhatsApp_Image_2024-09-09_at_3.54.31_PM.jpg",
     name: "Shivam Panwar",
     description:
-      "Edu123 caught my attention while researching boarding schools in India, and I'm thrilled with the results. The platform's listings are thorough, and the consultants are knowledgeable. ",
+      "GoEdu caught my attention while researching boarding schools in India, and I'm thrilled with the results. The platform's listings are thorough, and the consultants are knowledgeable. ",
   },
 ];
 
