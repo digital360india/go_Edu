@@ -3,187 +3,120 @@ import React from "react";
 
 export const FooterLinks = () => {
   return (
-    <div className="w-[98.9vw] text-[14px] text-[#323232] bg-[#F3F3F3] pb-2 h-fit">
-      <div className=" px-8 sm:px-10 ">
-        <div className="md:text-center text-[20px] md:text-[24px] underline text-[#323232] font-semibold pb-3">
-          <p>Explore top Cities</p>
-        </div>
-        <div className=" flex flex-col sm:flex-row gap-2 sm:gap-0 text-[12px] text-[#323232] pb-4   md:p-6 ">
-          <div className="flex  flex-col  sm:items-center lg:w-[25vw]       ">
-            <div className="flex flex-col">
-              <Link
-                href={
-                  "https://www.goedu.in/category/boarding-schools-in-dehradun"
-                }
-              >
-                Boarding Schools in Dehradun
-              </Link>
-              <Link
-                href={
-                  "https://www.goedu.in/category/boarding-schools-in-mussoorie"
-                }
-              >
-                Boarding Schools in Mussoorie
-              </Link>
-              <Link
-                href={
-                  "https://www.goedu.in/category/boarding-schools-in-shimla"
-                }
-              >
-                Boarding Schools in Shimla
-              </Link>
-            
-            </div>
-          </div>
-          <div className="flex  flex-col  sm:items-center lg:w-[25vw]       ">
-            <div className="flex flex-col">
-             
-              <Link
-                href={
-                  "https://www.goedu.in/category/boarding-schools-in-bangalore"
-                }
-              >
-                Boarding Schools in Bangalore
-              </Link>
-              <Link
-                href={
-                  "https://www.goedu.in/category/boarding-schools-in-india"
-                }
-              >
-                Boarding Schools in India
-              </Link>
+    <div className="w-full bg-[#F3F3F3]  text-[#323232] py-10 px-4">
+      <div className="max-w-7xl mx-auto">
+        {/* Title */}
+        <h2 className="text-center text-xl md:text-2xl font-semibold mb-8">
+          Explore Top Boarding Cities
+        </h2>
+
+        {/* Layout */}
+        <div className="flex flex-col lg:flex-row justify-center items-start gap-8 md:gap-16 text-[12px] md:text-[14px] relative">
+          {/* Left Column */}
+          <div className="flex-1">
+            <h3 className="font-semibold mb-4 text-center ">
+              Boarding Schools in Popular Cities
+            </h3>
+            <div className="flex flex-col sm:flex-row gap-8 sm:gap-12">
+              <div className="flex flex-col gap-2">
+                <Link href="https://www.goedu.in/category/boarding-schools-in-dehradun">
+                  Boarding Schools in Dehradun
+                </Link>
+                <Link href="https://www.goedu.in/category/boarding-schools-in-mussoorie">
+                  Boarding Schools in Mussoorie
+                </Link>
+                <Link href="https://www.goedu.in/category/boarding-schools-in-shimla">
+                  Boarding Schools in Shimla
+                </Link>
+                <Link href="https://www.goedu.in/category/boarding-schools-in-bangalore">
+                  Boarding Schools in Bangalore
+                </Link>
+                <Link href="https://www.goedu.in/category/boarding-schools-in-india">
+                  Boarding Schools in India
+                </Link>
+              </div>
+              <div className="flex flex-col gap-2">
+                <Link href="https://www.goedu.in/category/boarding-schools-in-jaipur">
+                  Boarding Schools in Jaipur
+                </Link>
+                <Link href="https://www.goedu.in/category/boarding-schools-in-panchgani">
+                  Boarding Schools in Panchgani
+                </Link>
+
+                <Link href="https://www.goedu.in/category/boarding-schools-in-nainital">
+                  Boarding Schools in Nainital
+                </Link>
+
+                <Link href="https://www.goedu.in/category/boarding-schools-in-hyderabad">
+                  Boarding Schools in Hyderabad
+                </Link>
+                <Link href="https://www.goedu.in/category/boarding-schools-in-pune">
+                  Boarding Schools in Pune
+                </Link>
+              </div>
             </div>
           </div>
 
-          {/* <div className="lg:w-[25vw]     sm:flex sm:justify-center ">
-            <div className="flex flex-col">
-              <Link
-                href={
-                  "https://www.goedu.in/category/boarding-schools-in-chandigarh"
-                }
-              >
-                Boarding Schools in Chandigarh
-              </Link>
-              <Link
-                href={
-                  "https://www.goedu.in/category/boarding-schools-in-mumbai"
-                }
-              >
-                Boarding Schools in Mumbai
-              </Link>
-              <Link
-                href={
-                  "https://www.goedu.in/category/boarding-schools-in-faridabad"
-                }
-              >
-                Boarding Schools in Faridabad
-              </Link>
-              <Link
-                href={
-                  "https://www.goedu.in/category/boarding-schools-in-nainital"
-                }
-              >
-                Boarding Schools in Nainital
-              </Link>
-              <Link
-                href={
-                  "https://www.goedu.in/category/boarding-schools-in-varanasi"
-                }
-              >
-                Boarding Schools in Varanasi
-              </Link>
-            </div>
-          </div> */}
+          {/* Vertical Divider */}
+          <div className="hidden lg:block w-[1.5px] bg-[#323232] mx-4 my-auto h-[200px]" />
 
-          {/* <div className="   flex  sm:justify-center lg:w-[25vw]">
-            <div className="flex flex-col">
-              <Link
-                href={
-                  "https://www.goedu.in/category/boarding-schools-in-kolkata"
-                }
-              >
-                Boarding Schools in Kolkata
-              </Link>
-              <Link
-                href={
-                  "https://www.goedu.in/category/boarding-schools-in-udaipur"
-                }
-              >
-                Boarding Schools in Udaipur
-              </Link>
-              <Link
-                href={
-                  "https://www.goedu.in/category/boarding-schools-in-jaipur"
-                }
-              >
-                Boarding Schools in Jaipur
-              </Link>
-              <Link
-                href={
-                  "https://www.goedu.in/category/boarding-schools-in-panchgani"
-                }
-              >
-                Boarding Schools in Panchgani
-              </Link>
-              <Link
-                href={
-                  "https://www.goedu.in/category/boarding-schools-in-sikar"
-                }
-              >
-                Boarding Schools in Sikar
-              </Link>
-            </div>
-          </div> */}
-
-          <div className=" flex sm:justify-center sm:mt-0  lg:w-[27vw]">
-            <div className="flex flex-col">
-              <Link
-                href={
-                  "https://www.goedu.in/category/boarding-schools-in-hyderabad"
-                }
-              >
-                Boarding Schools in Hyderabad
-              </Link>
-              <Link
-                href={"https://www.goedu.in/category/boarding-schools-in-pune"}
-              >
-                Boarding Schools in Pune
-              </Link>
-              <Link
-                href={
-                  "https://www.goedu.in/category/boarding-schools-in-jaipur"
-                }
-              >
-                Boarding Schools in Jaipur
-              </Link>
-            
-            </div>
-          </div>
-          <div className=" flex sm:justify-center sm:mt-0  lg:w-[27vw]">
-            <div className="flex flex-col">
+          {/* Right Column */}
+          <div className="flex-1">
+            <h3 className="font-semibold mb-4 text-center ">
+              Girls Boarding Schools in Popular Cities
+            </h3>
+            <div className="flex flex-col sm:flex-row gap-8 sm:gap-12">
+              <div className="flex flex-col gap-2">
+                <Link href="https://www.goedu.in/category/girls-boarding-schools-in-dehradun">
+                  Girls Boarding Schools in Dehradun
+                </Link>
+                <Link href="https://www.goedu.in/category/girls-boarding-schools-in-mussoorie">
+                  Girls Boarding Schools in Mussoorie
+                </Link>
+                <Link href="https://www.goedu.in/category/girls-boarding-schools-in-shimla">
+                  Girls Boarding Schools in Shimla
+                </Link>
+                <Link href="https://www.goedu.in/category/girls-boarding-schools-in-bangalore">
+                  Girls Boarding Schools in Bangalore
+                </Link>
+                <Link href="https://www.goedu.in/category/girls-boarding-schools-in-india">
+                  Girls Boarding Schools in India
+                </Link>
+               
+                
+              </div>
+              <div className="flex flex-col gap-2">
+                
+               
+                <Link href="https://www.goedu.in/category/girls-boarding-schools-in-jaipur">
+                  Girls Boarding Schools in Jaipur
+                </Link>
+                <Link href="https://www.goedu.in/category/girls-boarding-schools-in-panchgani">
+                  Girls Boarding Schools in Panchgani
+                </Link>
+               
               
-              <Link
-                href={
-                  "https://www.goedu.in/category/boarding-schools-in-nainital"
-                }
-              >
-                Boarding Schools in Nainital
-              </Link>
-              <Link
-                href={
-                  "https://www.goedu.in/category/boarding-schools-in-panchgani"
-                }
-              >
-                Boarding Schools in Panchgani
-              </Link>
+                <Link href="https://www.goedu.in/category/girls-boarding-schools-in-nainital">
+                  Girls Boarding Schools in Nainital
+                </Link>
+                
+                <Link href="https://www.goedu.in/category/girls-boarding-schools-in-hyderabad">
+                  Girls Boarding Schools in Hyderabad
+                </Link>
+                <Link href="https://www.goedu.in/category/girls-boarding-schools-in-pune">
+                  Girls Boarding Schools in Pune
+                </Link>
+               
+                
+               
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="text-center  pb-4">
-          <p>
-            <a href="mailto:info@goedu.in">info@goedu.in</a>
-          </p>
+        {/* Copyright */}
+        <div className="text-center text-xs md:text-sm mt-10">
+          copyright@GoEdu_2025
         </div>
       </div>
     </div>

@@ -15,10 +15,6 @@ function FAQ({ categoryData }) {
           /[\x00-\x1F\x7F-\x9F]/g,
           ""
         );
-        //  const authorArticle = categoryData;
-        // const article = JSON.parse(authorArticle);
-        //  console.log(authorArticle);
-
         const obj = JSON.parse(sanitizedJson);
         setCatFaq(obj);
       } catch (error) {
@@ -31,10 +27,16 @@ function FAQ({ categoryData }) {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  const text = { __html: categoryData.article };
+  const text = categoryData?.article
+    ? { __html: categoryData.article }
+    : { __html: "" };
 
-  const words = categoryData.article.split(" ");
-  const initialText = { __html: words.slice(0, 200).join(" ") };
+  const words = categoryData?.article ? categoryData.article.split(" ") : [];
+
+  const initialText = {
+    __html: words.slice(0, 200).join(" "),
+  };
+
   const fullText = text;
 
   return (
@@ -44,9 +46,10 @@ function FAQ({ categoryData }) {
           <div className="font-bold gap-8 md:gap-14 text-[#1B6EA1] flex justify-center items-center text-[18px] sm:text-[24px] px-4 text-center ">
             <div className="w-64 border-t-2 h-1 bg-[#1B6EA1]"></div>
 
-            <div className="w-[50%]">
-              <h1>Boarding Schools In {categoryData.City}</h1>
+            <div className="w-[50%] uppercase">
+              <h1>{categoryData?.slug?.split("-").join(" ")}</h1>
             </div>
+
             <div className="w-64 border-t-2 h-1 bg-[#1B6EA1]"></div>
           </div>
         </div>
@@ -56,11 +59,11 @@ function FAQ({ categoryData }) {
             {isExpanded ? (
               <div
                 className="article-container"
-                dangerouslySetInnerHTML={text}
+                dangerouslySetInnerHTML={fullText}
               />
             ) : (
               <div
-                className="article-container "
+                className="article-container"
                 dangerouslySetInnerHTML={initialText}
               />
             )}
@@ -72,6 +75,7 @@ function FAQ({ categoryData }) {
             {isExpanded ? "Read Less" : "Read More"}
           </button>
         </div>
+
         <Link href="/author">
           <p className="text-[#323232] font-semibold text-[12px] sm:text-[16px] text-center pt-8 pb-8">
             Author : Vaibhav Negi
@@ -87,6 +91,7 @@ function FAQ({ categoryData }) {
             FAQs
           </h2>
         </div>
+
         <div className="container">
           {catFaq.map((faq, index) => (
             <div key={index}>

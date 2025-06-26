@@ -9,7 +9,7 @@ const CategoryHeroGoEdu = () => {
         <Blink />
         <div className="absolute top-0 max-h-screen">
           <div className=" top-[50vh] absolute text-[#0C263F] text-[40px] text-center md:left-[50vh]">
-            <h1 className="font-bold text-center">Confusion!? </h1>
+            <p className="font-bold text-center">Confusion!? </p>
 
             <h2 className="text-center">
               to choose the <span className="font-bold">Right School</span> for
