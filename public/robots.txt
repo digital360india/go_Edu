@@ -1,4 +1,4 @@
 User-agent:*
 Allow: /
 
-Sitemap: https://www.edu123.in/sitemap.xml
+Sitemap: https://www.goedu.in/sitemap.xml
