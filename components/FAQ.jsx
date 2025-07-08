@@ -47,7 +47,7 @@ function FAQ({ categoryData }) {
             <div className="w-64 border-t-2 h-1 bg-[#1B6EA1]"></div>
 
             <div className="w-[50%] uppercase">
-              <h1>{categoryData?.slug?.split("-").join(" ")}</h1>
+              <h3>{categoryData?.slug?.split("-").join(" ")}</h3>
             </div>
 
             <div className="w-64 border-t-2 h-1 bg-[#1B6EA1]"></div>

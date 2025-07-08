@@ -83,9 +83,9 @@ const FormGoEdu = () => {
           <div className="md:hidden block  text-[20px] font-bold text-center">
             Confuse to choose the Best School ?
           </div>
-          <h3 className="md:text-xl  text-[16px] my-6 text-[#323232]">
+          <p className="md:text-xl  text-[16px] my-6 text-[#323232]">
             Fill this form and get in touch with our counsellor
-          </h3>
+          </p>
           <form onSubmit={handleSubmit} className="space-y-7">
             <div>
               <label htmlFor="">Name</label>

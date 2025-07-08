@@ -288,9 +288,9 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
           <div className=" ">
             <div className="md:text-[#1B6EA1]  text-center flex flex-col md:justify-center md:items-center ">
               <div className="flex flex-col gap-6 font-bold p-2">
-                <h1 className="text-4xl  text-left  md:text-center">
+                <h2 className="text-4xl  text-left  md:text-center">
                   {school?.name}
-                </h1>
+                </h2>
                 <div className="text-left flex justify-center ">
                   <button
                     className="w-[180px]  shadow-md h-[40px] bg-[#02618f] text-white rounded-lg"
@@ -330,7 +330,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
           <div className=" ">
             <div className="text-[#02618f] text-center flex flex-col justify-center items-center ">
               <div className="flex flex-col gap-6 font-bold p-2">
-                <h1 className="text-3xl text-center">{school?.name}</h1>
+                <h2 className="text-3xl text-center">{school?.name}</h2>
                 <div className="text-left flex justify-center ">
                   <button
                     className="w-[180px]  shadow-md h-[40px] bg-[#02618f] text-white rounded-lg"

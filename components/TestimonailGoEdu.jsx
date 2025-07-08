@@ -227,7 +227,7 @@ const TestimonialGoEdu = () => {
     <div className="bg-[#1B6EA1] p-1 ">
       <div className="px-8 pt-8  md:px-14 md:pt-14">
 
-      <h2 className="text-[#FFFFFF] text-[14px] md:text-[20px]">Get Inspired by stories</h2>
+      <p className="text-[#FFFFFF] text-[14px] md:text-[20px]">Get Inspired by stories</p>
       <h2 className="text-[#FFFFFF] text-[24px] md:text-[46px]">
         Experience of Clients with Us...
       </h2>

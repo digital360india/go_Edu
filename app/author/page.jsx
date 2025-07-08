@@ -15,9 +15,9 @@ export default function page() {
       {/* <Hero /> */}
       <div className="">
         <div className="flex flex-col  items-center p-16">
-          <h1 className="text-4xl lg:text-5xl text-center font-bold py-4 lg:py-10">
+          <h2 className="text-4xl lg:text-5xl text-center font-bold py-4 lg:py-10">
             Author
-          </h1>
+          </h2>
 
           <div className="px-2 lg:px-10 py-5 flex  bg-white rounded-lg flex-col lg:flex lg:flex-row  w-[400px] md:w-[800px] lg:w-[1200px]  items-center gap-10">
             <div className="relative h-[350px] w-[300px] rounded-2xl shadow-2xl">
@@ -36,9 +36,9 @@ export default function page() {
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
               <div className="absolute bottom-4 left-4 text-left">
-                <h1 className="text-lg font-semibold  text-white">
+                <h3 className="text-lg font-semibold  text-white">
                   Vaibhav Negi
-                </h1>
+                </h3>
                 <p className="text-sm text-gray-300 pb-2">Author</p>
               </div>
             </div>

@@ -60,7 +60,7 @@ const MapGoEdu = () => {
           }`}
           style={{ backgroundImage: `url(${Mapbanner.src})` }}
         >
-          <h1 className="text-center text-4xl mb-20">School By Cities</h1>
+          <h2 className="text-center text-4xl mb-20">School By Cities</h2>
 
           <div className="flex justify-center items-center gap-10">
             {cities.map((city, index) => (
@@ -87,7 +87,7 @@ const MapGoEdu = () => {
                 </div>
                 <Link href={`/category/boarding-schools-in-${city.name}`}>
                   {/* <p className="mt-4">{city.name}</p> */}
-                  <p className="mt-4">{city.name.charAt(0).toUpperCase() + city.name.slice(1)}</p>
+                  <h3 className="mt-4">{city.name.charAt(0).toUpperCase() + city.name.slice(1)}</h3>
 
                 </Link>
               </div>

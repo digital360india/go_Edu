@@ -104,7 +104,7 @@ function ReviewForm({ toggle1, setToggle1, id, school, user }) {
       // className='w-[90vw] sm:w-[50vw]'
     >
       <div className="text-black relative  w-[100vw] sm:w-[50vw] p-5 rounded-2xl bg-white ">
-        <h1 className=" text-xl sm:text-3xl text-center">LEAVE A REVIEW</h1>
+        <p className=" text-xl sm:text-3xl text-center">LEAVE A REVIEW</p>
         <div className=" flex  justify-between sm:justify-around gap-0 sm:gap-16 w-[100%]  mt-2  sm:mt-5 ">
           <p className=" text-sm sm:text-2xl pt-2 sm:pt-0  w-[20%]  ">
             Academics

@@ -71,7 +71,7 @@ const AboutHero = () => {
         />
 
         <div className="absolute inset-0 flex flex-col justify-center items-center">
-          <h1 className="text-[36px] text-[#1B6EA1]">School Name</h1>
+          <h2 className="text-[36px] text-[#1B6EA1]">School Name</h2>
           <div className="mt-4">
             <button className="w-[160px] h-[44px] bg-[#1B6EA1] text-[#FFFFFF] rounded-md">
               Enquiry Now
@@ -83,9 +83,9 @@ const AboutHero = () => {
       <div className="pb-40 w-full">
         <div className="flex gap-20 ml-14 sticky top-0">
           <div className="p-10">
-            <h1 className="text-[36px] text-[#323232] pb-5 pl-14">
+            <h3 className="text-[36px] text-[#323232] pb-5 pl-14">
               About School
-            </h1>
+            </h3>
             <hr className="w-[570px] ml-14 h-0.5 bg-black" />
 
             <div className="">
@@ -202,9 +202,9 @@ const AboutHero = () => {
         </div>
         <div className="flex gap-20 ml-14 sticky top-0 bg-white">
           <div className="p-10 pb-16">
-            <h1 className="text-[36px] text-[#323232] pb-5 pl-14">
+            <p className="text-[36px] text-[#323232] pb-5 pl-14">
               School Statistics
-            </h1>
+            </p>
             <hr className="w-[570px] ml-14 h-0.5 bg-black" />
 
             <div className=" mt-8 p-4 gap-8 space-y-6 border-white ">
@@ -252,9 +252,9 @@ const AboutHero = () => {
         </div>{" "}
         <div className="flex gap-20 ml-14 sticky top-0 bg-white">
           <div className="p-10">
-            <h1 className="text-[36px] text-[#323232] pb-5 pl-14">
+            <p className="text-[36px] text-[#323232] pb-5 pl-14">
               Students Facilities
-            </h1>
+            </p>
             <hr className="w-[570px] ml-14 h-0.5 bg-black" />
 
             <div className="grid grid-cols-3 gap-6 pt-6">

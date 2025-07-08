@@ -40,9 +40,9 @@ const SchoolByCitiesGoedu = () => {
       <div className="w-full h-auto bg-no-repeat bg-cover  bg-[url('/schoolbycities.svg')]">
 
           <div className="py-8 md:p-12">
-            <h1 className="text-center text-[#323232] text-2xl font-bold  ">
+            <h3 className="text-center text-[#323232] text-2xl font-bold  ">
               School By Cities
-            </h1>
+            </h3>
 
             <div className="md:grid md:grid-cols-2 flex justify-center  items-center flex-wrap md:gap-12 mt-6">
               {cities.map((city, index) => (

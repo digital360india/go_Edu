@@ -93,11 +93,14 @@ const AboutGoEdu = () => {
           </button>
 
           <div className="p-[46px] text-justify overflow-y-auto h-full text-[13px]">
-            Go Edu is India&apos;s trusted platform for discovering the best boarding
-            schools, dedicated to offering unbiased, detailed information to
-            help families make well-informed choices. We simplify school
-            selection, bringing clarity and confidence to parents and students
-            alike.
+            <h1 className=" text-[#323232] text-xl my-4 font-semibold">
+              GoEdu - Best School Listing Portal in India
+            </h1>
+            Go Edu is India&apos;s trusted platform for discovering the best
+            boarding schools, dedicated to offering unbiased, detailed
+            information to help families make well-informed choices. We simplify
+            school selection, bringing clarity and confidence to parents and
+            students alike.
             <br />
             <br />
             Driven by a commitment to educational transparency, Go Edu combines
@@ -236,6 +239,9 @@ const AboutGoEdu = () => {
               <div
                 className={`h-full px-[100px] overflow-y-auto  text-[1rem]  `}
               >
+                <h1 className=" text-[#323232] text-2xl my-4 font-semibold">
+                  GoEdu - Best School Listing Portal in India
+                </h1>
                 Go Edu is India&apos;s trusted platform for discovering the best
                 boarding schools, dedicated to offering unbiased, detailed
                 information to help families make well-informed choices. We

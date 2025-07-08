@@ -6,17 +6,17 @@ export const FooterLinks = () => {
     <div className="w-full bg-[#F3F3F3]  text-[#323232] py-10 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
-        <h2 className="text-center text-xl md:text-2xl font-semibold mb-8">
+        <h3 className="text-center text-xl md:text-2xl font-semibold mb-8">
           Explore Top Boarding Cities
-        </h2>
+        </h3>
 
         {/* Layout */}
         <div className="flex flex-col lg:flex-row justify-center items-start gap-8 md:gap-16 text-[12px] md:text-[14px] relative">
           {/* Left Column */}
           <div className="flex-1">
-            <h3 className="font-semibold mb-4 text-center ">
+            <p className="font-semibold mb-4 text-center ">
               Boarding Schools in Popular Cities
-            </h3>
+            </p>
             <div className="flex flex-col sm:flex-row gap-8 sm:gap-12">
               <div className="flex flex-col gap-2">
                 <Link href="https://www.goedu.in/category/boarding-schools-in-dehradun">
@@ -62,9 +62,9 @@ export const FooterLinks = () => {
 
           {/* Right Column */}
           <div className="flex-1">
-            <h3 className="font-semibold mb-4 text-center ">
+            <p className="font-semibold mb-4 text-center ">
               Girls Boarding Schools in Popular Cities
-            </h3>
+            </p>
             <div className="flex flex-col sm:flex-row gap-8 sm:gap-12">
               <div className="flex flex-col gap-2">
                 <Link href="https://www.goedu.in/category/girls-boarding-schools-in-dehradun">

@@ -5,16 +5,16 @@ const WhyChooseUsGoEdu = () => {
   return (
     <>
       <div className="bg-[#FFFFF] hidden xl:block ">
-        <h1 className="text-center text-[#323232] text-[2.25rem] mt-10">
+        <h3 className="text-center text-[#323232] text-[2.25rem] mt-10">
           Why Choose Us?
-        </h1>
+        </h3>
 
         <div className="flex justify-center items-center">
           <div className="space-y-12 w-[200px] h-[410px]">
             <div className="w-[200px] h-[141px]">
-              <h1 className="text-[#323232] text-[1rem]">
+              <p className="text-[#323232] text-[1rem]">
                 Authentic Recommendations
-              </h1>
+              </p>
               <p className="text-[#898989] text-[12px]">
                 We prioritize your child&apos;s unique needs over school preferences.
                 Our unbiased recommendations are based solely on what suits your
@@ -22,7 +22,7 @@ const WhyChooseUsGoEdu = () => {
               </p>
             </div>
             <div className="w-[200px] h-[141px]">
-              <h1 className="text-[#323232] text-[1rem]">Expert Counseling</h1>
+              <p className="text-[#323232] text-[1rem]">Expert Counseling</p>
               <p className="text-[#898989] text-[12px]">
                 Our experienced consultants guide you through each step,
                 offering personalized counseling to help you feel confident
@@ -30,9 +30,9 @@ const WhyChooseUsGoEdu = () => {
               </p>
             </div>
             <div className="w-[300px] h-[115px]">
-              <h1 className="text-[#323232] text-[1rem]">
+              <p className="text-[#323232] text-[1rem]">
                 Mock Tests & Assessments
-              </h1>
+              </p>
               <p className="text-[#898989] text-[12px]">
                 We offer mock tests and customized assessments to evaluate your
                 child&apos;s strengths and needs, allowing for a more accurate school
@@ -73,9 +73,9 @@ const WhyChooseUsGoEdu = () => {
 
           <div className="space-y-14 w-[200px] h-[410px]">
             <div className="w-[280px] h-[138px] pt-1">
-              <h1 className="text-[#323232] text-[1rem]">
+              <p className="text-[#323232] text-[1rem]">
                 Comprehensive School Insights
-              </h1>
+              </p>
               <p className="text-[#898989] text-[12px]">
                 Go Edu provides detailed information on each school, from
                 academic programs to extracurriculars, so you can make fully
@@ -83,9 +83,9 @@ const WhyChooseUsGoEdu = () => {
               </p>
             </div>
             <div className="w-[280px] h-[130px]">
-              <h1 className="text-[#323232] text-[1rem]">
+              <p className="text-[#323232] text-[1rem]">
                 Transparent and Trustworthy Service
-              </h1>
+              </p>
               <p className="text-[#898989] text-[12px]">
                 Built on trust, our approach is straightforward and transparent.
                 We charge parents, not schools, to ensure our advice is honest,
@@ -93,7 +93,7 @@ const WhyChooseUsGoEdu = () => {
               </p>
             </div>
             <div className="w-[300px] h-[135px]">
-              <h1 className="text-[#323232] text-[1rem]">End-to-End Support</h1>
+              <p className="text-[#323232] text-[1rem]">End-to-End Support</p>
               <p className="text-[#898989] text-[12px]">
                 From initial consultations to application guidance and admission
                 follow-ups, we&apos;re here to support you throughout the entire
