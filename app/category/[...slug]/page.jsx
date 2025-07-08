@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import FAQ from "@/components/FAQ";
 import CategoryPage from "@/components/CategoryPage";
 import CategoryHeroGoEdu from "@/components/CategoryHeroGoEdu";
-import Head from "next/head";
 import Script from "next/script";
 
 async function getCategoryData(slug) {
@@ -34,7 +33,7 @@ export async function generateMetadata({ params }) {
       locale: "en_US",
       type: "website",
       images: [{ url: categoryData?.featuredImg }],
-     
+
       siteName: "Goedu School Search Portal",
     },
     robots: {
@@ -60,50 +59,31 @@ export default async function ListingPage({ params }) {
 
   return (
     <>
-      <Head>
-        {categoryData?.schema && (
-          <Script
-            defer
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: categoryData.schema,
-            }}
-          />
-        )}
-        {categoryData?.schema2 && (
-          <Script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: categoryData.schema2,
-            }}
-          />
-        )}
-        {categoryData?.schema3 && (
-          <Script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: categoryData.schema3,
-            }}
-          />
-        )}
-      </Head>
-      {/* <div className="bg-white overflow-x-hidden">
-        <div className="hidden sm:block">
-          <Hero
-            image="https://res.cloudinary.com/eduminatti-com/image/upload/v1726733029/Edu123/Eduimages/banner_desktop_2.jpg"
-            height="67vh"
-          />
-        </div>
-        <div className="sm:hidden">
-          <Hero
-            need="no"
-            image="https://res.cloudinary.com/eduminatti-com/image/upload/v1726733028/Edu123/Eduimages/mobile_banner.png"
-            height="65vh"
-          />
-        </div>
-        <CategoryPage categoryData={categoryData} />
-        <FAQ categoryData={categoryData} />
-      </div> */}
+      {categoryData?.schema && (
+        <Script
+          defer
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: categoryData.schema,
+          }}
+        />
+      )}
+      {categoryData?.schema2 && (
+        <Script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: categoryData.schema2,
+          }}
+        />
+      )}
+      {categoryData?.schema3 && (
+        <Script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: categoryData.schema3,
+          }}
+        />
+      )}
 
       <div className="overflow-hidden md:overflow-visible">
         <CategoryHeroGoEdu />
