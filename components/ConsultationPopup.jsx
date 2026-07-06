@@ -58,16 +58,16 @@ export default function ConsultationPopup({ setClose }) {
           records.forEach(() => {
             console.log("Airtable submission successful!");
           });
-        }
+        },
       );
 
-      const emailResponse = await axios.post(
-        "https://goedunodemailer.onrender.com/send-email",
-        formData
-      );
+      // const emailResponse = await axios.post(
+      //   "https://goedunodemailer.onrender.com/send-email",
+      //   formData
+      // );
 
       // Submit to your LMS
-      const lmsResponse = await axios.post(
+      await axios.post(
         "https://digitalleadmanagement.vercel.app/api/add-lead",
         {
           name: formData.name,
@@ -75,26 +75,30 @@ export default function ConsultationPopup({ setClose }) {
           url: window.location.href,
           source: "Goedu - Get Consultation Popup",
           email: formData.email,
-          currentClass: formData.classes,
+          seekingClass: formData.classes,
           date: new Date().toISOString(),
-        }
+        },
       );
 
-      if (emailResponse.status === 200 && lmsResponse.status === 200) {
-        toast.success("Form Submitted Successfully!");
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          classes: "",
-          source: "Goedu - https://www.goedu.in/",
-        });
-      } else {
-        alert("Email submission failed. Please try again.");
-      }
+      toast.success("Form Submitted Successfully!");
+      
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        classes: "",
+        source: "Goedu - https://www.goedu.in/",
+      });
+
     } catch (error) {
-      console.error("Error occurred:", error);
-      alert("An error occurred. Please try again.");
+      if (axios.isAxiosError(error)) {
+        console.error(error.response?.status);
+        console.error(error.response?.data);
+      } else {
+        console.error(error);
+      }
+
+      toast.error("Failed to submit form. Please try again.");
     } finally {
       setLoading(false);
     }

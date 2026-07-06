@@ -3,6 +3,7 @@ import axios from "axios";
 import Image from "next/image";
 import { useState } from "react";
 import PhoneInput from "react-phone-input-2";
+import { toast} from "react-toastify";
 import "react-phone-input-2/lib/style.css";
 
 const FormGoEdu = () => {
@@ -10,7 +11,6 @@ const FormGoEdu = () => {
 
   const [formData, setFormData] = useState({
     name: "",
-
     phone: "",
     source: "Goedu - https://www.goedu.in/",
   });
@@ -32,13 +32,13 @@ const FormGoEdu = () => {
     setLoading(true);
     console.log(formData);
     try {
-      const response = await axios.post(
-        "https://goedunodemailer.onrender.com/send-email",
-        formData
-      );
+      // const response = await axios.post(
+      //   "https://goedunodemailer.onrender.com/send-email",
+      //   formData
+      // );
 
       // Submit to your LMS
-      const lmsResponse = await axios.post(
+      await axios.post(
         "https://digitalleadmanagement.vercel.app/api/add-lead",
         {
           name: formData.name,
@@ -46,21 +46,24 @@ const FormGoEdu = () => {
           url: window.location.href,
           source: "Goedu - Confuse to choose the Best School",
           date: new Date().toISOString(),
-        }
+        },
       );
-  
-      if (response.status === 200 && lmsResponse.status === 200) {
-        alert("Form submitted successfully.");
-        setFormData({
-          name: "",
-          phone: "",
-          source: "Goedu - https://www.goedu.in/",
-        });
-      } else {
-        alert("Try again");
-      }
+
+      toast.success("Form submitted successfully.");
+      setFormData({
+        name: "",
+        phone: "",
+        source: "Goedu - https://www.goedu.in/",
+      });
     } catch (error) {
-      alert("An error occurred. Please try again.");
+      if (axios.isAxiosError(error)) {
+        console.error(error.response?.status);
+        console.error(error.response?.data);
+      } else {
+        console.error(error);
+      }
+
+      toast.error("Failed to submit form. Please try again.");
     } finally {
       setLoading(false);
     }
